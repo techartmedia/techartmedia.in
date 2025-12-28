@@ -129,6 +129,15 @@
         .price-card:hover { transform: translateY(-5px); }
         .amount { font-size: 2.2rem; font-weight: 800; color: var(--dark); margin: 15px 0; }
         
+        /* SERVICE IMAGE STYLES */
+        .service-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
         /* SERVICE LIST TOGGLE LOGIC */
         .service-list { 
             max-height: 0; 
@@ -256,7 +265,7 @@
         
         <div class="pricing-grid">
             <div class="price-card" style="border-top: 5px solid var(--primary);">
-                <i class="fas fa-robot" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
+                <img src="Automation Projets.jpg" alt="Automation Projects" class="service-img">
                 <h3>1️⃣ Automation Projects</h3>
                 <button class="view-details-btn" onclick="toggleServices('list1', this)">View Details ↓</button>
                 <ul id="list1" class="service-list">
@@ -271,7 +280,7 @@
             </div>
 
             <div class="price-card" style="border-top: 5px solid var(--secondary);">
-                <i class="fas fa-palette" style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 15px;"></i>
+                <img src="graphic-design.avif" alt="Graphic Design" class="service-img">
                 <h3>2️⃣ Graphic Design</h3>
                 <button class="view-details-btn" onclick="toggleServices('list2', this)" style="color: var(--secondary);">View Details ↓</button>
                 <ul id="list2" class="service-list">
@@ -285,7 +294,7 @@
             </div>
 
             <div class="price-card" style="border-top: 5px solid var(--primary);">
-                <i class="fas fa-bullhorn" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
+                <img src="digital-marketing.jpg" alt="Digital Marketing" class="service-img">
                 <h3>3️⃣ Digital Marketing</h3>
                 <button class="view-details-btn" onclick="toggleServices('list3', this)">View Details ↓</button>
                 <ul id="list3" class="service-list">
