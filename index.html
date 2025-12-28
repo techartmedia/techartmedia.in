@@ -14,6 +14,8 @@
             --whatsapp-green: #3bc300;
             --instagram-pink: #E4405F;
             --facebook-blue: #1877f2;
+            /* CHANGE FOOTER TEXT COLOR HERE */
+            --footer-text: #ffffff; 
         }
 
         * { box-sizing: border-box; }
@@ -129,6 +131,13 @@
         .price-card:hover { transform: translateY(-5px); }
         .amount { font-size: 2.2rem; font-weight: 800; color: var(--dark); margin: 15px 0; }
         
+        /* SERVICE TITLE SIZE INCREASE */
+        .price-card h3 {
+            font-size: 1.8rem; /* Increased size as requested */
+            font-weight: 800;
+            margin: 10px 0;
+        }
+
         /* SERVICE IMAGE STYLES */
         .service-img {
             width: 100%;
@@ -212,8 +221,16 @@
         }
 
         /* FOOTER & LOGO STYLE */
+        footer { 
+            background: #000000; 
+            color: var(--footer-text) !important; /* Controlled by variable */
+            text-align: center; 
+            padding: 70px 20px 40px; 
+        }
+        footer p, footer a, footer div { color: var(--footer-text) !important; } /* Ensures all nested text changes */
+        
         .footer-logo { height: 80px; width: auto; margin-bottom: 20px; border-radius: 10px; object-fit: contain; }
-        .mandatory-details { font-size: 0.85rem; color: #ccc; margin-top: 20px; line-height: 1.6; border-top: 1px solid #333; padding-top: 20px; }
+        .mandatory-details { font-size: 0.85rem; color: var(--footer-text); margin-top: 20px; line-height: 1.6; border-top: 1px solid #333; padding-top: 20px; opacity: 0.8; }
     </style>
 </head>
 <body>
@@ -266,7 +283,7 @@
         <div class="pricing-grid">
             <div class="price-card" style="border-top: 5px solid var(--primary);">
                 <img src="Automation Projets.jpg" alt="Automation Projects" class="service-img">
-                <h3> Automation Projects</h3>
+                <h3>Automation Projects</h3>
                 <button class="view-details-btn" onclick="toggleServices('list1', this)">View Details ↓</button>
                 <ul id="list1" class="service-list">
                     <li>Industrial Automation</li>
@@ -281,7 +298,7 @@
 
             <div class="price-card" style="border-top: 5px solid var(--secondary);">
                 <img src="graphic-design.avif" alt="Graphic Design" class="service-img">
-                <h3> Graphic Design</h3>
+                <h3>Graphic Design</h3>
                 <button class="view-details-btn" onclick="toggleServices('list2', this)" style="color: var(--secondary);">View Details ↓</button>
                 <ul id="list2" class="service-list">
                     <li>Logo & Branding</li>
@@ -295,7 +312,7 @@
 
             <div class="price-card" style="border-top: 5px solid var(--primary);">
                 <img src="digital-marketing.jpg" alt="Digital Marketing" class="service-img">
-                <h3> Digital Marketing</h3>
+                <h3>Digital Marketing</h3>
                 <button class="view-details-btn" onclick="toggleServices('list3', this)">View Details ↓</button>
                 <ul id="list3" class="service-list">
                     <li>Social Media Management</li>
@@ -318,7 +335,7 @@
         <p style="text-align:center; color: var(--secondary); font-weight: bold; margin-bottom: 50px;">PHASE 1: BRAND BUILD-UP (MONTH 1)</p>
         <div class="pricing-grid">
             <div class="price-card">
-                <h3>Starter Pack </h3>
+                <h3 style="font-size: 1.5rem;">Starter Pack</h3>
                  <div class="amount" style="color: #ff6b00;">₹20,000/-</div>
                 <ul style="list-style: none; padding: 0;">
                     <li>→ Initial Strategy Consultation</li>
@@ -332,25 +349,23 @@
                 </ul>
             </div>
             <div class="price-card" style="border-top-color: var(--secondary);">
-    <h3>Standard Pack</h3>
-    
-    <div class="amount" style="color: #007bff;">₹25,000/-</div>
-    
-    <ul style="list-style: none; padding: 0;">
-        <li>→ Initial Strategy Consultation</li>
-        <li>→ Profile Setup & Logo</li>
-        <li>→ WhatsApp Business API</li>
-        <li>→ Basic Front-End Web</li>
-        <li>→ 8 Posts + 4 Reels Monthly</li>
-        <li>→ Post Scheduling</li>
-        <li>→ Content Calender</li>
-        <li>→ Ad Campaingn Management</li>
-        <li>→ Monthly Analytics & Reporting</li>
-        <li>→ Advanced Hastags Research</li>
-    </ul>
-</div>
+                <h3 style="font-size: 1.5rem;">Standard Pack</h3>
+                <div class="amount" style="color: #007bff;">₹25,000/-</div>
+                <ul style="list-style: none; padding: 0;">
+                    <li>→ Initial Strategy Consultation</li>
+                    <li>→ Profile Setup & Logo</li>
+                    <li>→ WhatsApp Business API</li>
+                    <li>→ Basic Front-End Web</li>
+                    <li>→ 8 Posts + 4 Reels Monthly</li>
+                    <li>→ Post Scheduling</li>
+                    <li>→ Content Calender</li>
+                    <li>→ Ad Campaingn Management</li>
+                    <li>→ Monthly Analytics & Reporting</li>
+                    <li>→ Advanced Hastags Research</li>
+                </ul>
+            </div>
             <div class="price-card">
-                <h3>Premium Pack </h3>
+                <h3 style="font-size: 1.5rem;">Premium Pack</h3>
                 <div class="amount" style="color: #ff6b00;">₹30,000/-</div>
                 <ul style="list-style: none; padding: 0;">
                     <li>→ Initial Strategy Consultation</li>
@@ -373,7 +388,7 @@
         <p style="text-align:center; color: var(--primary); font-weight: bold; margin-bottom: 50px;">PHASE 2: MAINTENANCE & GROWTH (MONTH 2 ONWARDS)</p>
         <div class="pricing-grid">
             <div class="price-card" style="border-top: 8px solid #ff8400;">
-                <h3>Basic Renewal</h3>
+                <h3 style="font-size: 1.5rem;">Basic Renewal</h3>
                 <div class="amount" style="color: #007bff;">₹8,999<span style="font-size: 1rem; color: #000000;">/Mo</span></div>
                 <ul style="list-style: none; padding: 0;">
                     <li>✓ 6 Posts + 3 Reels Monthly</li>
@@ -383,20 +398,20 @@
                 </ul>
             </div>
             <div class="price-card" style="border-top: 8px solid var(--primary); transform: scale(1.05); z-index: 10; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-    <div style="position: absolute; top: -15px; right: 20px; background: var(--secondary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">BEST VALUE</div>
- <h3>Growth Renewal</h3>
-    <div class="amount" style="color: #ff6b00;">₹11,999<span style="font-size: 1rem; color: #000000;">/Mo</span></div>
-    <ul style="list-style: none; padding: 0;">
-        <li>✓ 8 Posts + 4 Reels Monthly</li>
-        <li>✓ Post Scheduling</li>
-        <li>✓ Content Calender</li>
-        <li>✓ Ad Campaingn Management</li>
-        <li>✓ Monthly Analytics & Reporting</li>
-        <li>✓ Advanced Hastags Research</li>
-    </ul>
-</div>
+                <div style="position: absolute; top: -15px; right: 20px; background: var(--secondary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">BEST VALUE</div>
+                <h3 style="font-size: 1.5rem;">Growth Renewal</h3>
+                <div class="amount" style="color: #ff6b00;">₹11,999<span style="font-size: 1rem; color: #000000;">/Mo</span></div>
+                <ul style="list-style: none; padding: 0;">
+                    <li>✓ 8 Posts + 4 Reels Monthly</li>
+                    <li>✓ Post Scheduling</li>
+                    <li>✓ Content Calender</li>
+                    <li>✓ Ad Campaingn Management</li>
+                    <li>✓ Monthly Analytics & Reporting</li>
+                    <li>✓ Advanced Hastags Research</li>
+                </ul>
+            </div>
             <div class="price-card" style="border-top: 8px solid #ff8400;">
-                <h3>Elite Renewal</h3>
+                <h3 style="font-size: 1.5rem;">Elite Renewal</h3>
                 <div class="amount" style="color: #007bff;">₹13,999<span style="font-size: 1rem; color: #000000;">/Mo</span></div>
                 <ul style="list-style: none; padding: 0;">
                     <li>✓ 12 Posts + 6 Reels Monthly</li>
@@ -468,7 +483,7 @@
         </div>
     </section>
 
-    <footer style="background: #000000; color: #ffffff; text-align: center; padding: 70px 20px 40px;">
+    <footer>
         <img src="Techartmedia logo.jpg" alt="TechArtMedia Logo" class="footer-logo">
         
         <div class="social-links">
@@ -484,7 +499,7 @@
             <p><strong>Contact:</strong> +91 8087084597</p>
         </div>
         
-        <p style="margin-top: 30px; font-size: 1.5rem; opacity: 3;">&copy; 2025 TechArtMedia. All Rights Reserved.</p>
+        <p style="margin-top: 30px; font-size: 1.5rem; opacity: 1;">&copy; 2025 TechArtMedia. All Rights Reserved.</p>
     </footer>
 
     <script>
