@@ -129,7 +129,6 @@
         .price-card:hover { transform: translateY(-5px); }
         .amount { font-size: 2.2rem; font-weight: 800; color: var(--dark); margin: 15px 0; }
         
-        /* SERVICE IMAGE STYLES */
         .service-img {
             width: 100%;
             height: 180px;
@@ -138,7 +137,6 @@
             margin-bottom: 20px;
         }
 
-        /* SERVICE LIST TOGGLE LOGIC */
         .service-list { 
             max-height: 0; 
             overflow: hidden; 
@@ -170,36 +168,29 @@
             font-size: 1rem;
         }
 
-        /* ABOUT SECTION */
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; padding: 100px 20px; max-width: 1200px; margin: auto; }
         .founder-img img { width: 100%; border-radius: 30px; box-shadow: 20px 20px 0px var(--primary); }
 
-        /* CONTACT */
         .contact-container { background: var(--dark); color: white; padding: 80px 40px; border-radius: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; margin: 50px auto; }
         .btn { background: var(--secondary); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.3s; border: none; cursor: pointer; text-align: center; }
         .btn:hover { background: #e65c00; box-shadow: 0 10px 20px rgba(255,107,0,0.3); }
 
-        /* SOCIAL LINKS */
         .social-links { display: flex; gap: 15px; justify-content: center; margin-top: 20px; }
         .social-links a { color: white; font-size: 1.5rem; transition: 0.3s; text-decoration: none;}
         .social-links a:hover { transform: scale(1.2); }
         .social-links .fa-instagram:hover { color: var(--instagram-pink); }
         .social-links .fa-facebook:hover { color: var(--facebook-blue); }
 
-        /* FLOATING WHATSAPP */
         .floating-wa { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 1001; text-decoration: none; transition: 0.3s; }
         .floating-wa:hover { transform: scale(1.1); background: #128c7e; }
 
-        /* FORM STYLES */
         input, textarea, select { padding: 15px; border-radius: 10px; border: none; font-family: 'Inter', sans-serif; width: 100%; }
         select { background-color: white; cursor: pointer; }
 
-        /* THANK YOU MSG STYLES */
         #form-status { display: none; padding: 15px; border-radius: 10px; text-align: center; font-weight: bold; margin-top: 10px; }
         #form-status.success { display: block; background: var(--whatsapp-green); color: white; }
         #form-status.error { display: block; background: #ff4444; color: white; }
 
-        /* MOBILE UPDATES */
         .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: var(--primary); }
         @media (max-width: 768px) {
             .logo-container img { height: 48px; }
@@ -220,7 +211,6 @@
             .hamburger { display: block; }
         }
 
-        /* FOOTER */
         .footer-logo { height: 80px; width: auto; margin-bottom: 20px; border-radius: 10px; object-fit: contain; }
         .mandatory-details { font-size: 0.85rem; color: #ccc; margin-top: 20px; line-height: 1.6; border-top: 1px solid #333; padding-top: 20px; }
     </style>
