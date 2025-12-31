@@ -70,12 +70,42 @@
             100% { left: 100%; }
         }
 
-        /* REVEAL ON SCROLL ANIMATIONS - FIXED: Initial state improved */
+        /* NEW: CONTINUOUS SCROLLING LINE (MARQUEE) */
+        .marquee-container {
+            background: var(--dark);
+            color: white;
+            padding: 15px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+
+        .marquee-content span {
+            display: inline-block;
+            padding-left: 50px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* REVEAL ON SCROLL ANIMATIONS */
         .reveal { 
             opacity: 0; 
-            transform: translateY(30px); 
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
-            visibility: hidden; /* Added to prevent accidental clicks on invisible elements */
+            transform: translateY(50px); 
+            transition: all 1s cubic-bezier(0.17, 0.67, 0.83, 0.67); 
+            visibility: hidden;
         }
         .reveal.active { 
             opacity: 1; 
@@ -106,9 +136,9 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .logo-container:hover { transform: scale(1.05); }
+        .logo-container:hover { transform: scale(1.1) rotate(-2deg); }
         .logo-container img { 
             height: 60px;
             width: auto;
@@ -134,13 +164,15 @@
         .hero { 
             background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://t4.ftcdn.net/jpg/08/29/92/35/360_F_829923583_Q9qvQUSqXo0URtHNzwwFqU0H0ByKXz1Y.jpg') center/cover;
             height: 100vh; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px;
+            position: relative;
+            overflow: hidden;
         }
-        /* Fixed Hero Animations to trigger only after preloader is gone */
+
         .hero h1 { font-size: clamp(2.5rem, 8vw, 5rem); margin: 0; opacity: 0; transform: translateY(30px); }
         .hero p { font-size: 1.5rem; opacity: 0; transform: translateY(20px); }
         .hero .btn-wrap { opacity: 0; }
 
-        .hero.start-anim h1 { animation: fadeInUp 1s forwards 0.2s; }
+        .hero.start-anim h1 { animation: fadeInUp 1s forwards 0.2s, float 4s ease-in-out infinite; }
         .hero.start-anim p { animation: fadeInUp 1s forwards 0.5s; }
         .hero.start-anim .btn-wrap { animation: fadeInUp 1s forwards 0.8s; }
 
@@ -148,33 +180,50 @@
             to { opacity: 1; transform: translateY(0); } 
         }
 
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
         /* WHATSAPP DEMO BANNER */
-        .demo-banner { background: var(--whatsapp-green); padding: 40px 20px; display: flex; justify-content: center; align-items: center; gap: 30px; color: white; flex-wrap: wrap; text-align: center; }
-        .demo-banner h2 { font-size: 1.8rem; margin: 0; font-weight: 700; }
+        .demo-banner { background: var(--whatsapp-green); padding: 40px 20px; display: flex; justify-content: center; align-items: center; gap: 30px; color: white; flex-wrap: wrap; text-align: center; position: relative; z-index: 10; }
+        .demo-banner h2 { font-size: 1.8rem; margin: 0; font-weight: 700; animation: pulse 2s infinite; }
         .demo-btn { background: rgba(0,0,0,0.2); border: 2px solid white; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; cursor: pointer; }
-        .demo-btn:hover { background: white; color: var(--whatsapp-green); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .demo-btn:hover { background: white; color: var(--whatsapp-green); transform: scale(1.1); box-shadow: 0 5px 25px rgba(255,255,255,0.4); }
 
         /* PRICING & SERVICE GRID */
         .pricing-section { padding: 100px 20px; max-width: 1200px; margin: auto; }
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
-        .price-card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 8px solid var(--primary); transition: 0.4s ease; position: relative; }
-        .price-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .amount { font-size: 2.2rem; font-weight: 800; color: var(--dark); margin: 15px 0; }
         
+        .price-card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+            border-top: 8px solid var(--primary); 
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            position: relative; 
+            overflow: hidden;
+        }
+        .price-card:hover { 
+            transform: translateY(-15px) rotate(1deg); 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15); 
+        }
+
         .service-img {
             width: 100%;
             height: 180px;
             object-fit: cover;
             border-radius: 12px;
             margin-bottom: 20px;
-            transition: transform 0.5s ease;
+            transition: 0.5s ease;
         }
-        .price-card:hover .service-img { transform: scale(1.05); }
+        .price-card:hover .service-img { transform: scale(1.1); }
 
         .service-list { 
             max-height: 0; 
             overflow: hidden; 
-            transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); 
+            transition: max-height 0.5s ease, opacity 0.5s ease; 
             padding: 0; 
             list-style: none; 
             font-size: 0.95rem; 
@@ -188,9 +237,9 @@
             margin-top: 15px;
             padding-bottom: 10px;
             opacity: 1;
-            transition: max-height 0.8s ease, opacity 0.5s ease;
         }
-        .service-list li::before { content: "→"; color: var(--secondary); margin-right: 10px; font-weight: bold; }
+        .service-list li { transform: translateX(-20px); transition: 0.4s; }
+        .service-list.open li { transform: translateX(0); }
 
         .view-details-btn { 
             color: var(--primary); 
@@ -205,14 +254,32 @@
             font-size: 1rem;
             transition: 0.3s;
         }
-        .view-details-btn:hover { letter-spacing: 1px; }
+        .view-details-btn:hover { letter-spacing: 2px; color: var(--secondary); }
 
+        /* ABOUT GRID ANIMATION */
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; padding: 100px 20px; max-width: 1200px; margin: auto; }
-        .founder-img img { width: 100%; border-radius: 30px; box-shadow: 20px 20px 0px var(--primary); transition: 0.5s ease; }
-        .about-grid:hover .founder-img img { transform: translate(10px, 10px); box-shadow: 10px 10px 0px var(--secondary); }
+        .founder-img { position: relative; overflow: hidden; border-radius: 30px; }
+        .founder-img img { 
+            width: 100%; 
+            border-radius: 30px; 
+            box-shadow: 20px 20px 0px var(--primary); 
+            transition: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+        .reveal.active .founder-img img:hover { transform: scale(1.05) rotate(-2deg); box-shadow: 10px 10px 40px var(--secondary); }
 
-        .contact-container { background: var(--dark); color: white; padding: 80px 40px; border-radius: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; margin: 50px auto; }
-        
+        .contact-container { 
+            background: var(--dark); 
+            color: white; 
+            padding: 80px 40px; 
+            border-radius: 40px; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 50px; 
+            margin: 50px auto; 
+            transition: 0.5s;
+        }
+        .contact-container:hover { box-shadow: 0 0 50px rgba(0, 123, 255, 0.3); }
+
         /* CTA BUTTON ANIMATION */
         .btn { 
             background: var(--secondary); 
@@ -229,26 +296,33 @@
             animation: pulse-button 2s infinite;
         }
         @keyframes pulse-button {
-            0% { box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(255, 107, 0, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.6); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 107, 0, 0); }
             100% { box-shadow: 0 0 0 0 rgba(255, 107, 0, 0); }
         }
-        .btn:hover { background: #e65c00; transform: scale(1.05); animation: none; }
+        .btn:hover { background: #e65c00; transform: scale(1.1) translateY(-5px); animation: none; }
 
         .social-links { display: flex; gap: 15px; justify-content: center; margin-top: 20px; }
         .social-links a { color: white; font-size: 1.5rem; transition: 0.3s; text-decoration: none;}
-        .social-links a:hover { transform: translateY(-5px) scale(1.2); }
-        .social-links .fa-instagram:hover { color: var(--instagram-pink); }
-        .social-links .fa-facebook:hover { color: var(--facebook-blue); }
+        .social-links a:hover { transform: translateY(-10px) scale(1.3); color: var(--secondary); }
 
-        .floating-wa { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 1001; text-decoration: none; transition: 0.3s; }
-        .floating-wa:hover { transform: scale(1.1) rotate(15deg); background: #128c7e; }
+        .floating-wa { 
+            position: fixed; bottom: 30px; right: 30px; 
+            background: var(--whatsapp-green); color: white; 
+            width: 65px; height: 65px; border-radius: 50%; 
+            display: flex; justify-content: center; align-items: center; 
+            font-size: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+            z-index: 1001; text-decoration: none; 
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
 
-        input, textarea, select { padding: 15px; border-radius: 10px; border: 2px solid transparent; font-family: 'Inter', sans-serif; width: 100%; transition: 0.3s; }
-        input:focus, textarea:focus { border-color: var(--secondary); outline: none; }
-
-        #form-status { display: none; padding: 15px; border-radius: 10px; text-align: center; font-weight: bold; margin-top: 10px; animation: slideIn 0.5s ease; }
-        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        input, textarea, select { padding: 15px; border-radius: 10px; border: 2px solid rgba(255,255,255,0.1); font-family: 'Inter', sans-serif; width: 100%; transition: 0.3s; background: rgba(255,255,255,0.05); color: white; }
+        input:focus, textarea:focus { border-color: var(--secondary); outline: none; background: rgba(255,255,255,0.1); }
 
         .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: var(--primary); }
         
@@ -268,12 +342,10 @@
                 box-shadow: 0 10px 10px rgba(0,0,0,0.1); 
             }
             .nav-links.active { display: flex; animation: slideDown 0.4s ease forwards; }
-            @keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
             .hamburger { display: block; }
         }
 
-        .footer-logo { height: 80px; width: auto; margin-bottom: 20px; border-radius: 10px; object-fit: contain; }
-        .mandatory-details { font-size: 0.85rem; color: #ccc; margin-top: 20px; line-height: 1.6; border-top: 1px solid #333; padding-top: 20px; }
+        .footer-logo { height: 80px; width: auto; margin-bottom: 20px; border-radius: 10px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2)); }
     </style>
 </head>
 <body>
@@ -314,6 +386,23 @@
         </div>
     </section>
 
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>🚀 Digital Marketing</span>
+            <span>⚡ Automation Projects</span>
+            <span>🎨 Graphic Design</span>
+            <span>📈 Business Growth</span>
+            <span>📱 Social Media Management</span>
+            <span>🛠 IoT Solutions</span>
+            <span>🚀 Digital Marketing</span>
+            <span>⚡ Automation Projects</span>
+            <span>🎨 Graphic Design</span>
+            <span>📈 Business Growth</span>
+            <span>📱 Social Media Management</span>
+            <span>🛠 IoT Solutions</span>
+        </div>
+    </div>
+
     <div class="demo-banner">
         <h2>Get demo at your WhatsApp Number</h2>
         <a href="https://wa.me/918087084597" class="demo-btn">Get Demo →</a>
@@ -324,7 +413,7 @@
         <p style="text-align: center; color: #666; margin-bottom: 50px;">Click "View Details" to see our specialized solutions.</p>
         
         <div class="pricing-grid">
-            <div class="price-card" style="border-top: 5px solid var(--primary);">
+            <div class="price-card">
                 <img src="Automation Projets.jpg" alt="Automation Projects" class="service-img">
                 <h3> Automation Projects</h3>
                 <button class="view-details-btn" onclick="toggleServices('list1', this)">View Details ↓</button>
@@ -335,11 +424,10 @@
                     <li>PLC, SCADA, HMI Programming</li>
                     <li>Robotics Integration</li>
                     <li>Machine Automation & Control Systems</li>
-                    <li>VFD, Servo & Stepper Motor Automation</li>
                 </ul>
             </div>
 
-            <div class="price-card" style="border-top: 5px solid var(--secondary);">
+            <div class="price-card" style="border-top: 8px solid var(--secondary);">
                 <img src="graphic-design.avif" alt="Graphic Design" class="service-img">
                 <h3> Graphic Design</h3>
                 <button class="view-details-btn" onclick="toggleServices('list2', this)" style="color: var(--secondary);">View Details ↓</button>
@@ -352,7 +440,7 @@
                 </ul>
             </div>
 
-            <div class="price-card" style="border-top: 5px solid var(--primary);">
+            <div class="price-card">
                 <img src="digital-marketing.jpg" alt="Digital Marketing" class="service-img">
                 <h3> Digital Marketing</h3>
                 <button class="view-details-btn" onclick="toggleServices('list3', this)">View Details ↓</button>
@@ -362,10 +450,7 @@
                     <li>Content Creation</li>
                     <li>SEO Optimization</li>
                     <li>Website Development</li>
-                    <li>Reels Shoot / Edit</li>
                     <li>Bulk SMS / WhatsApp Marketing</li>
-                    <li>Lead Generation Campaigns</li>
-                    <li>Brand Promotion & Online Growth</li>
                 </ul>
             </div>
         </div>
@@ -378,39 +463,30 @@
             <div class="price-card">
                 <h3>Starter Pack </h3>
                  <div class="amount" style="color: #ff6b00;">₹20,000/-</div>
-                <ul style="list-style: none; padding: 0;">
+                <ul style="list-style: none; padding: 0; line-height: 2;">
                     <li>→ Initial Strategy Consultation</li>
                     <li>→ Profile Setup & Logo</li>
                     <li>→ WhatsApp Business API</li>
                     <li>→ Basic Front-End Web</li>
                     <li>→ 6 Posts + 3 Reels Monthly</li>
-                    <li>→ Post Scheduling</li>
-                    <li>→ 3 Months Insights Overview</li>
-                    <li>→ Basic Hastags Research</li>
                 </ul>
             </div>
             <div class="price-card" style="border-top-color: var(--secondary);">
                 <h3>Standard Pack</h3>
                 <div class="amount" style="color: #007bff;">₹25,000/-</div>
-                <ul style="list-style: none; padding: 0;">
-                    <li>→ Initial Strategy Consultation</li>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
                     <li>→ Profile Setup & Logo</li>
                     <li>→ WhatsApp Business API</li>
-                    <li>→ Basic Front-End Web</li>
                     <li>→ 8 Posts + 4 Reels Monthly</li>
                     <li>→ Ad Campaingn Management</li>
                     <li>→ Monthly Analytics & Reporting</li>
-                    <li>→ Advanced Hastags Research</li>
                 </ul>
             </div>
             <div class="price-card">
                 <h3>Premium Pack </h3>
                 <div class="amount" style="color: #ff6b00;">₹30,000/-</div>
-                <ul style="list-style: none; padding: 0;">
-                    <li>→ Initial Strategy Consultation</li>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
                     <li>→ Profile Setup & Logo</li>
-                    <li>→ WhatsApp Business API</li>
-                    <li>→ Basic Front-End Web</li>
                     <li>→ 12 Posts + 6 Reels Monthly</li>
                     <li>→ Multi-Language Content</li>
                     <li>→ Advanced Ad Campaingn</li>
@@ -420,42 +496,22 @@
         </div>
     </section>
 
-    <section id="renewal-pricing" class="pricing-section reveal" style="background: #f1f5f9; padding: 100px 20px;">
+    <section id="renewal-pricing" class="pricing-section reveal" style="background: #f1f5f9;">
         <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 0; font-weight: 800;">Monthly Renewal Packages</h2>
-        <p style="text-align:center; color: var(--primary); font-weight: bold; margin-bottom: 50px; letter-spacing: 2px;">PHASE 2: MAINTENANCE & GROWTH (MONTH 2 ONWARDS)</p>
+        <p style="text-align:center; color: var(--primary); font-weight: bold; margin-bottom: 50px; letter-spacing: 2px;">PHASE 2: MAINTENANCE & GROWTH</p>
         <div class="pricing-grid">
             <div class="price-card" style="border-top: 8px solid #ff8400;">
                 <h3>Basic Renewal</h3>
-                <div class="amount" style="color: #007bff;">₹8,999<span style="font-size: 1rem; color: #000000;">/Mo</span></div>
-                <ul style="list-style: none; padding: 0;">
-                    <li>✓ 6 Posts + 3 Reels Monthly</li>
-                    <li>✓ Post Scheduling</li>
-                    <li>✓ Content Calender</li>
-                    <li>✓ Basic Hastags Research</li>
-                </ul>
+                <div class="amount" style="color: #007bff;">₹8,999<small>/Mo</small></div>
             </div>
-            <div class="price-card" style="border-top: 8px solid var(--primary); transform: scale(1.05); z-index: 10; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-                <div style="position: absolute; top: -15px; right: 20px; background: var(--secondary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">BEST VALUE</div>
+            <div class="price-card" style="border-top: 8px solid var(--primary); transform: scale(1.05); z-index: 5;">
+                <div style="position: absolute; top: 10px; right: 20px; background: var(--secondary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; font-weight: bold;">BEST VALUE</div>
                 <h3>Growth Renewal</h3>
-                <div class="amount" style="color: #ff6b00;">₹11,999<span style="font-size: 1rem; color: #000000;">/Mo</span></div>
-                <ul style="list-style: none; padding: 0;">
-                    <li>✓ 8 Posts + 4 Reels Monthly</li>
-                    <li>✓ Post Scheduling</li>
-                    <li>✓ Ad Campaingn Management</li>
-                    <li>✓ Monthly Analytics & Reporting</li>
-                    <li>✓ Advanced Hastags Research</li>
-                </ul>
+                <div class="amount" style="color: #ff6b00;">₹11,999<small>/Mo</small></div>
             </div>
             <div class="price-card" style="border-top: 8px solid #ff8400;">
                 <h3>Elite Renewal</h3>
-                <div class="amount" style="color: #007bff;">₹13,999<span style="font-size: 1rem; color: #000000;">/Mo</span></div>
-                <ul style="list-style: none; padding: 0;">
-                    <li>✓ 12 Posts + 6 Reels Monthly</li>
-                    <li>✓ Multi-Language Content</li>
-                    <li>✓ Post Scheduling</li>
-                    <li>✓ Advanced Ad Campaingn</li>
-                    <li>✓ Weekly Analytics & Reporting</li>
-                </ul>
+                <div class="amount" style="color: #007bff;">₹13,999<small>/Mo</small></div>
             </div>
         </div>
     </section>
@@ -469,129 +525,70 @@
             <h2 style="font-size: 3rem; margin: 10px 0; font-weight: 800;">Durvesh Bhavsar</h2>
             <p style="font-size: 1.1rem; line-height: 1.8; color: #333;">
                 Hi, I’m Durvesh Bhavsar, Founder & CEO of <strong>Techartmedia</strong>. With a passion for technology, creativity, and digital growth, I founded <strong>Techartmedia</strong> to help businesses build a strong online presence.
-                Our focus is on delivering result-oriented services and creating long-term value for clients.
             </p>
-            <p style="font-size: 1.1rem;"><strong><i class="fas fa-phone-alt" style="color:var(--primary)"></i> Contact:</strong> +91 8087084597 </p>
-            <p style="font-size: 1.1rem;"><strong><i class="fas fa-envelope" style="color:var(--primary)"></i> Email:</strong> techartmedia.info@gmail.com </p>
         </div>
     </section>
 
-    <section id="contact" class="reveal" style="max-width: 100%; background: #f8fafc; padding: 100px 20px;">
+    <section id="contact" class="reveal" style="padding: 100px 20px;">
         <div class="contact-container reveal">
             <div>
-                <h2 style="font-size: 2.5rem; font-weight: 800;">🚀 Ready to Grow? <br><span style="color: var(--secondary); font-size: 1.8rem;">Contact us today for a free discussion.</span></h2>
-                <div style="margin-top: 30px; font-size: 1.1rem;">
-                    <p><i class="fas fa-phone-alt" style="margin-right: 10px; color: var(--secondary);"></i> +91 8087084597</p>
-                    <p><i class="fas fa-envelope" style="margin-right: 10px; color: var(--secondary);"></i> techartmedia.info@gmail.com</p>
-                </div>
-                <div class="social-links" style="justify-content: flex-start;">
-                    <a href="https://instagram.com/techartmedia" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/share/1CtAY4T1aF/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <h2 style="font-size: 2.5rem; font-weight: 800;">🚀 Ready to Grow? <br><span style="color: var(--secondary); font-size: 1.8rem;">Contact us today.</span></h2>
+                <div style="margin-top: 30px;">
+                    <p><i class="fas fa-phone-alt" style="color: var(--secondary);"></i> +91 8087084597</p>
+                    <p><i class="fas fa-envelope" style="color: var(--secondary);"></i> techartmedia.info@gmail.com</p>
                 </div>
             </div>
             
             <form id="contactForm" action="https://formspree.io/f/mykyygpk" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
                 <input type="text" name="Name" placeholder="Your Name" required>
                 <input type="tel" name="Contact" placeholder="Contact Number" required>
-                <select name="Service/Package Required" required>
-                    <option value="" disabled selected>Select Services / Package Needed</option>
-                    <optgroup label="Main Packages">
-                        <option value="Starter Package">Starter Package (₹20,000)</option>
-                        <option value="Standard Package">Standard Package (₹25,000)</option>
-                        <option value="Premium Package">Premium Package (₹30,000)</option>
-                    </optgroup>
-                    <optgroup label="Renewal Plans">
-                        <option value="Basic Renewal">Basic Renewal (₹8,999)</option>
-                        <option value="Growth Renewal">Growth Renewal (₹11,999)</option>
-                        <option value="Elite Renewal">Elite Renewal (₹13,999)</option>
-                    </optgroup>
-                    <optgroup label="Individual Services">
-                        <option value="Automation Project">Automation Projects</option>
-                        <option value="Graphic Design">Graphic Design</option>
-                        <option value="Digital Marketing">Digital Marketing</option>
-                    </optgroup>
+                <select name="Service" required>
+                    <option value="" disabled selected>Select Service</option>
+                    <option value="Starter">Starter Package (₹20,000)</option>
+                    <option value="Standard">Standard Package (₹25,000)</option>
+                    <option value="Premium">Premium Package (₹30,000)</option>
                 </select>
-                <textarea name="Message" placeholder="Any specific requirements?" rows="4"></textarea>
+                <textarea name="Message" placeholder="How can we help?" rows="4"></textarea>
                 <button type="submit" id="submitBtn" class="btn" style="animation: none;">Send Inquiry</button>
                 <div id="form-status"></div>
             </form>
         </div>
     </section>
 
-    <footer style="background: #000000; color: #ffffff; text-align: center; padding: 70px 20px 40px;">
-        <img src="Techartmedia logo.jpg" alt="TechArtMedia Logo" class="footer-logo">
-        
-        <div class="social-links">
-            <a href="https://instagram.com/techartmedia" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="https://www.facebook.com/share/1CtAY4T1aF/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-        </div>
-
-        <div class="mandatory-details">
-            <p><strong>TechArtMedia</strong> | Digital Growth Partners</p>
-            <p><strong>Proprietor:</strong> Durvesh Bhavsar</p>
-            <p><strong>Location:</strong> Nashik, Maharashtra</p>
-            <p><strong>Email:</strong> techartmedia.info@gmail.com </p> 
-            <p><strong>Contact:</strong> +91 8087084597</p>
-        </div>
-        
-        <p style="margin-top: 30px; font-size: 1rem; opacity: 0.6;">&copy; 2025 TechArtMedia. All Rights Reserved.</p>
+    <footer style="background: #000; color: #fff; text-align: center; padding: 60px 20px;">
+        <img src="Techartmedia logo.jpg" alt="Logo" class="footer-logo">
+        <p>&copy; 2025 TechArtMedia. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; opacity: 0.5;">Proprietor: Durvesh Bhavsar | Nashik, Maharashtra</p>
     </footer>
 
     <script>
-        // FIXED PRELOADER LOGIC
+        // PRELOADER & HERO START
         window.addEventListener('load', function() {
             setTimeout(function() {
                 const loader = document.getElementById('preloader');
                 const hero = document.getElementById('home');
-                
                 loader.style.opacity = '0';
                 loader.style.transform = 'translateY(-100%)';
-                
                 setTimeout(() => {
                     loader.style.display = 'none';
-                    // Trigger hero animations after loader is gone
                     hero.classList.add('start-anim');
-                    // Check for other sections in view
                     reveal(); 
                 }, 800);
             }, 1500);
         });
 
-        var form = document.getElementById("contactForm");
-        async function handleSubmit(event) {
-          event.preventDefault();
-          var status = document.getElementById("form-status");
-          var btn = document.getElementById("submitBtn");
-          var data = new FormData(event.target);
-          btn.disabled = true;
-          btn.innerHTML = "Sending...";
-          fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: { 'Accept': 'application/json' }
-          }).then(response => {
-            if (response.ok) {
-              status.innerHTML = "✅ Thank You! We have received your inquiry. We will contact you shortly.";
-              status.className = "success";
-              status.style.display = "block";
-              form.reset();
-              btn.style.display = "none"; 
-            } else {
-              status.innerHTML = "❌ Oops! There was a problem.";
-              status.className = "error";
-              status.style.display = "block";
-              btn.disabled = false;
-              btn.innerHTML = "Try Again";
+        // REVEAL ON SCROLL
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                if (revealTop < windowHeight - 100) {
+                    reveals[i].classList.add('active');
+                }
             }
-          }).catch(error => {
-            status.innerHTML = "❌ Connection error.";
-            status.className = "error";
-            status.style.display = "block";
-            btn.disabled = false;
-            btn.innerHTML = "Try Again";
-          });
         }
-        form.addEventListener("submit", handleSubmit);
 
         function toggleServices(id, btn) {
             const list = document.getElementById(id);
@@ -599,24 +596,30 @@
             btn.innerHTML = list.classList.contains('open') ? "Hide Details ↑" : "View Details ↓";
         }
 
-        // FIXED REVEAL LOGIC
-        window.addEventListener('scroll', reveal);
-        function reveal() {
-            var reveals = document.querySelectorAll('.reveal');
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var revealTop = reveals[i].getBoundingClientRect().top;
-                var revealPoint = 80; // Changed from 100 to 80 for better mobile triggering
-                
-                if (revealTop < windowHeight - revealPoint) {
-                    reveals[i].classList.add('active');
-                }
-            }
-        }
-
         function toggleMenu() {
             document.getElementById('menu').classList.toggle('active');
         }
+
+        // FORM HANDLING
+        var form = document.getElementById("contactForm");
+        form.addEventListener("submit", async function(event) {
+            event.preventDefault();
+            var status = document.getElementById("form-status");
+            var btn = document.getElementById("submitBtn");
+            btn.innerHTML = "Sending...";
+            fetch(event.target.action, {
+                method: 'POST',
+                body: new FormData(event.target),
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "✅ Message Sent Successfully!";
+                    status.style.display = "block";
+                    form.reset();
+                    btn.innerHTML = "Success!";
+                }
+            });
+        });
     </script>
 </body>
 </html>
