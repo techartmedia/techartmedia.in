@@ -6,14 +6,15 @@
     <title>TechArtMedia | Durvesh Bhavsar</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         :root {
             --primary: #007bff; 
             --secondary: #ff6b00; 
             --dark: #0f172a;
             --light: #f8fafc;
-            --whatsapp-green: #05f709;
+            --whatsapp-green: #04db1d;
             --instagram-pink: #E4405F;
             --facebook-blue: #1877f2;
         }
@@ -311,6 +312,9 @@
         .floating-wa { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 1001; text-decoration: none; transition: 0.3s; }
         .floating-wa:hover { transform: scale(1.1); background: #128c7e; }
 
+        .floating-call {position: fixed; bottom: 105px; /* sits above WhatsApp */right: 30px;background: var(--primary);color: white; width: 60px;height: 60px;border-radius: 50%;display: flex;align-items: center;justify-content: center;font-size: 26px;box-shadow: 0 10px 20px rgba(0,0,0,0.2);z-index: 1001;text-decoration: none;transition: 0.3s ease;}
+        .floating-call:hover {transform: scale(1.1);background: #0056b3;}
+
         /* FORM STYLES */
         input, textarea, select { padding: 15px; border-radius: 10px; border: none; font-family: 'Inter', sans-serif; width: 100%; }
         select { background-color: white; cursor: pointer; }
@@ -380,6 +384,9 @@
     <a href="https://wa.me/918087084597" class="floating-wa" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+<a href="tel:+918087084597" class="floating-call">
+    <i class="fa-solid fa-phone"></i>
+</a>
 
     <section id="home" class="hero">
         <h1 style="font-size: 3.5rem; font-weight: bold;">
@@ -408,7 +415,7 @@
         <div class="why-grid">
 
             <div class="why-card">
-                <i class="fa-microchip"></i>
+                <i class="fa-solid fa-microchip"></i>
                 <h4>Engineering & Digital Expertise</h4>
                 
                 <p> TechArtMedia combines automation, technical knowledge, and digital media to deliver solutions that are reliable, practical, and result-oriented.
@@ -416,7 +423,7 @@
             </div>
 
             <div class="why-card">
-                <i class="fa-user-graduate"></i>
+                <i class="fa-solid fa-user-graduate"></i>
                 <h4>Student & Startup-Friendly Solutions</h4>
                 <p>
     Our Services are Structured to be Affordable, Easy to Understand,
@@ -426,7 +433,7 @@
             </div>
 
             <div class="why-card">
-                <i class="fa-project-diagram"></i>
+              <i class="fa-solid fa-diagram-project"></i>
                 <h4>Customized Project Execution</h4>
                <p>
     Every project will be carefully planned based on your specific Requirements,
@@ -436,7 +443,7 @@
             </div>
 
             <div class="why-card">
-                <i class="fa-handshake"></i>
+              <i class="fa-solid fa-handshake"></i>
                 <h4>Transparent Pricing & Reliable Support</h4>
                <p>
     We Follow Honest Pricing practices and ensure Timely Delivery
