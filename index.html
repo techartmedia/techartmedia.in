@@ -165,6 +165,23 @@
     color: #000;
     margin: 0;
 }
+        
+        /* WHY CHOOSE TECHARTMEDIA – ANIMATION */
+        .why-card {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .why-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+        }
         /* ANIMATIONS */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
@@ -381,53 +398,51 @@
     </div>
         <section class="why-choose reveal">
     <div class="why-container">
-        <h2>Why Choose TechArtMedia?</h2>
-        <p>
-            TechArtMedia provides integrated solutions in automation, design, and digital marketing,
-            helping students, startups, and businesses achieve reliable and measurable growth.
-        </p>
+        <h2>Why Choose TechArtMedia</h2>
+<p class="why-subtext">
+    We provide practical Engineering & Digital Solutions designed
+    to support Students, Startups, & Growing Businesses.
+</p>
+
 
         <div class="why-grid">
 
             <div class="why-card">
-                <i class="fas fa-layer-group"></i>
-                <h4>One-Stop Solution</h4>
-                <p>
-                    Engineering automation, websites, graphic design, and digital marketing —
-                    everything under one brand.
-                </p>
+                <i class="fa-microchip"></i>
+                <h4>Engineering & Digital Expertise</h4>
+                
+                <p> TechArtMedia combines automation, technical knowledge, and digital media to deliver solutions that are reliable, practical, and result-oriented.
+    </p>
             </div>
 
             <div class="why-card">
-                <i class="fas fa-sliders-h"></i>
-                <h4>Customized & Scalable</h4>
+                <i class="fa-user-graduate"></i>
+                <h4>Student & Startup-Friendly Solutions</h4>
                 <p>
-                    Solutions designed to match your goals, technical needs, and budget.
-                </p>
+    Our Services are Structured to be Affordable, Easy to Understand,
+    and Effective for Students, Startups, and Small Businesses.
+</p>
+
             </div>
 
             <div class="why-card">
-                <i class="fas fa-cogs"></i>
-                <h4>Technical & Creative Expertise</h4>
-                <p>
-                    A balanced blend of engineering knowledge and creative strategy.
-                </p>
+                <i class="fa-project-diagram"></i>
+                <h4>Customized Project Execution</h4>
+               <p>
+    Every project will be carefully planned based on your specific Requirements,
+    Ensuring Relevant and Scalable Solutions.
+</p>
+
             </div>
 
             <div class="why-card">
-                <i class="fas fa-rupee-sign"></i>
-                <h4>Transparent & Affordable</h4>
-                <p>
-                    Clear pricing, honest communication, and cost-effective services.
-                </p>
-            </div>
+                <i class="fa-handshake"></i>
+                <h4>Transparent Pricing & Reliable Support</h4>
+               <p>
+    We Follow Honest Pricing practices and ensure Timely Delivery
+    with Continued Support even after Project Completion.
+</p>
 
-            <div class="why-card">
-                <i class="fas fa-clock"></i>
-                <h4>Reliable Delivery & Support</h4>
-                <p>
-                    On-time project completion with dependable post-delivery assistance.
-                </p>
             </div>
 
         </div>
@@ -715,5 +730,22 @@
             document.getElementById('menu').classList.toggle('active');
         }
     </script>
+    ...
+<!-- PAGE CONTENT -->
+
+<script>
+const cards = document.querySelectorAll('.why-card');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, { threshold: 0.2 });
+
+cards.forEach(card => observer.observe(card));
+</script>
+
 </body>
 </html>
