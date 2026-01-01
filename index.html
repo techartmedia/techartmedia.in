@@ -102,7 +102,69 @@
             0% { left: -100%; }
             100% { left: 100%; }
         }
+/* WHY CHOOSE US SECTION */
+.why-choose {
+    padding: 100px 20px;
+    background: #f8fafc;
+}
 
+.why-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.why-container h2 {
+    font-size: 2.8rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.why-container p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 1.1rem;
+    color: #000;
+    margin-bottom: 60px;
+    line-height: 1.7;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.why-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    transition: 0.4s;
+    border-top: 6px solid var(--primary);
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+}
+
+.why-card i {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.why-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: var(--dark);
+}
+
+.why-card p {
+    font-size: 0.95rem;
+    color: #000;
+    margin: 0;
+}
         /* ANIMATIONS */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
@@ -154,6 +216,62 @@
         .demo-banner h2 { font-size: 1.8rem; margin: 0; font-weight: 700; }
         .demo-btn { background: rgba(0,0,0,0.2); border: 2px solid white; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; cursor: pointer; }
         .demo-btn:hover { background: white; color: var(--whatsapp-green); }
+
+        <section class="why-choose reveal">
+    <div class="why-container">
+        <h2>Why Choose TechArtMedia?</h2>
+        <p>
+            TechArtMedia provides integrated solutions in automation, design, and digital marketing,
+            helping students, startups, and businesses achieve reliable and measurable growth.
+        </p>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <i class="fas fa-layer-group"></i>
+                <h4>One-Stop Solution</h4>
+                <p>
+                    Engineering automation, websites, graphic design, and digital marketing —
+                    everything under one brand.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-sliders-h"></i>
+                <h4>Customized & Scalable</h4>
+                <p>
+                    Solutions designed to match your goals, technical needs, and budget.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-cogs"></i>
+                <h4>Technical & Creative Expertise</h4>
+                <p>
+                    A balanced blend of engineering knowledge and creative strategy.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-rupee-sign"></i>
+                <h4>Transparent & Affordable</h4>
+                <p>
+                    Clear pricing, honest communication, and cost-effective services.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-clock"></i>
+                <h4>Reliable Delivery & Support</h4>
+                <p>
+                    On-time project completion with dependable post-delivery assistance.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
         /* PRICING & SERVICE GRID */
         .pricing-section { padding: 100px 20px; max-width: 1200px; margin: auto; }
@@ -306,7 +424,8 @@
         <h1 style="font-size: 3.5rem; font-weight: bold;">
             <span style="color: #ffffff;">TechArtMedia</span>
         </h1>
-        <p style="font-size: 1.5rem; opacity: 1; color: #ffffff; max-width: 800px;"> Grow Your Business Online with Smart Digital Solutions.</p>
+        <p style="font-size: 1.5rem; opacity: 1; color: #ffffff; max-width: 800px;"> “Grow Your Business with Automation, Design & Digital Marketing” </p>
+         <p style="font-size: 1.5rem; opacity: 1; color: #ffffff; max-width: 800px;"> One-stop solution for startups, businesses & industries </p>
         <div style="margin-top:30px;">
             <a href="#contact" class="btn">Start Your Transformation</a>
         </div>
