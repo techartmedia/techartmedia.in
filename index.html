@@ -611,32 +611,47 @@
     </div>
 </section>
 
-    <section id="contact" class="reveal" style="background: #f1f5f9; padding: 60px 20px;">
-    <div class="contact-container">
-        <div class="contact-info">
-            <h2>🚀 Ready to Grow?</h2>
-            <p style="color: var(--secondary); font-weight: bold;">Contact us today for a free discussion.</p>
-            <div style="margin-top: 20px;">
-                <p><i class="fa-solid fa-phone"></i> +91 8087084597</p>
-                <p><i class="fa-solid fa-envelope"></i> techartmedia.info@gmail.com</p>
+    <section id="contact" class="reveal" style="max-width: 100%; background: #eee; padding: 100px 20px;">
+        <div class="contact-container">
+            <div>
+                <h2 style="font-size: 2.5rem;">🚀 Ready to Grow? <span style="color: var(--secondary);">Contact us today for a free discussion.</span></h2>
+                <div style="margin-top: 30px;">
+                    <p><i class="fas fa-phone"></i> +91 8087084597</p>
+                    <p><i class="fas fa-envelope"></i> techartmedia.info@gmail.com</p>
+                </div>
+                <div class="social-links" style="justify-content: flex-start;">
+                    <a href="https://instagram.com/techartmedia" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1CtAY4T1aF/" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
             </div>
+            
+            <form id="contactForm" action="https://formspree.io/f/mykyygpk" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="tel" name="Contact" placeholder="Contact Number" required>
+                <select name="Service/Package Required" required>
+                    <option value="" disabled selected>Select Services / Package Needed</option>
+                    <optgroup label="Main Packages">
+                        <option value="Starter Package">Starter Package (₹20,000)</option>
+                        <option value="Standard Package">Standard Package (₹25,000)</option>
+                        <option value="Premium Package">Premium Package (₹30,000)</option>
+                    </optgroup>
+                    <optgroup label="Renewal Plans">
+                        <option value="Basic Renewal">Basic Renewal (₹8,999)</option>
+                        <option value="Growth Renewal">Growth Renewal (₹11,999)</option>
+                        <option value="Elite Renewal">Elite Renewal (₹13,999)</option>
+                    </optgroup>
+                    <optgroup label="Individual Services">
+                        <option value="Automation Project">Automation Projects</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                    </optgroup>
+                </select>
+                <textarea name="Message" placeholder="Any specific requirements?" rows="4"></textarea>
+                <button type="submit" id="submitBtn" class="btn">Send Inquiry</button>
+                <div id="form-status"></div>
+            </form>
         </div>
-        
-        <form id="contactForm" action="https://formspree.io/f/mykyygpk" method="POST" class="contact-form">
-            <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="tel" name="Contact" placeholder="Contact Number" required>
-            <select name="Service" required>
-                <option value="" disabled selected>Select Service Needed</option>
-                <option value="Starter Package">Starter Package (₹20,000)</option>
-                <option value="Standard Package">Standard Package (₹25,000)</option>
-                <option value="Premium Package">Premium Package (₹30,000)</option>
-            </select>
-            <textarea name="Message" placeholder="Your requirements?" rows="4"></textarea>
-            <button type="submit" id="submitBtn" class="btn">Send Inquiry</button>
-            <div id="form-status"></div>
-        </form>
-    </div>
-</section>
+    </section>
 
      <footer style="background: #000000; color: #ffffff; text-align: center; padding: 70px 20px 40px;">
         <img src="Techartmedia logo.jpg" alt="TechArtMedia Logo" class="footer-logo">
