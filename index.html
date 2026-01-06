@@ -294,7 +294,65 @@
 
     display: block;
     margin: 0 auto;   /* ✅ centers image */
+} 
+        .why-choose {
+  padding: 80px 20px;
+  background: #ffffff;
+  text-align: center;
 }
+
+.why-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.why-container h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.why-subtext {
+  font-size: 17px;
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 35px;
+  max-width: 650px;
+  text-align: left;
+}
+
+.why-list li {
+  font-size: 16px;
+  color: #1e293b;
+  padding: 12px 0 12px 35px;
+  position: relative;
+}
+
+.why-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0ea5e9;
+  font-weight: bold;
+}
+
+.why-tagline {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.why-tagline span {
+  color: #0ea5e9;
+}
+
         /* CONTACT */
         .contact-container { background: var(--dark); color: white; padding: 80px 40px; border-radius: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; margin: 50px auto; }
         .btn { background: var(--secondary); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.3s; border: none; cursor: pointer; text-align: center; }
@@ -397,17 +455,28 @@
         <a href="https://wa.me/918087084597" class="demo-btn">Get Demo →</a>
     </div>
 <section class="why-choose reveal">
-    <div class="why-container">
-        <h2>Why Choose TechArtMedia</h2>
-        <p class="why-subtext">We deliver practical Engineering & Digital Solutions tailored for students, startups, and growing businesses. Our focus is on real-world implementation, innovation, and measurable results.
+  <div class="why-container">
+    <h2>Why Choose TechArtMedia</h2>
 
-✔ Industry-ready student projects & training
-✔ Cost-effective solutions for startups
-✔ Engineering, automation & digital services under one roof
-✔ Customized solutions as per your needs
-✔ Reliable support from concept to execution
+    <p class="why-subtext">
+      We deliver practical Engineering & Digital Solutions tailored for students,
+      startups, and growing businesses. Our focus is on real-world implementation,
+      innovation, and measurable results.
+    </p>
 
-TechArtMedia — Where Technology Meets Creativity.</p>
+    <ul class="why-list">
+      <li>Industry-ready student projects & training</li>
+      <li>Cost-effective solutions for startups</li>
+      <li>Engineering, automation & digital services under one roof</li>
+      <li>Customized solutions as per your needs</li>
+      <li>Reliable support from concept to execution</li>
+    </ul>
+
+    <p class="why-tagline">
+      TechArtMedia — <span>Where Technology Meets Creativity.</span>
+    </p>
+  </div>
+
         <div class="why-grid">
             <div class="why-card">
                 <i class="fa-solid fa-microchip"></i>
