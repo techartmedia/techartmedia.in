@@ -27,7 +27,7 @@ export default function Home() {
         <h1 className="text-5xl md:text-8xl font-black mb-6 leading-tight">
           TECHARTMEDIA <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
-            FEST 2026
+            INNOVATION 2026
           </span>
         </h1>
         <p className="max-w-xl text-gray-400 text-lg mb-8">
