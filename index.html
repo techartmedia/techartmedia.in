@@ -6,7 +6,8 @@
     <title>TechArtMedia | Durvesh Bhavsar</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
         :root {
             --primary: #007bff; 
             --secondary: #ff6b00; 
@@ -101,182 +102,6 @@
             0% { left: -100%; }
             100% { left: 100%; }
         }
-
-<!-- CSS STYLES (Add this to your <style> block or stylesheet) -->
-<style>
-    :root {
-        --primary-teal: #00a859;
-        --primary-navy: #003366;
-        --primary-orange: #f26522;
-        --dark-text: #1a1a1a;
-        --light-text: #555555;
-    }
-
-    .pricing-section {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        padding: 80px 20px;
-        background: linear-gradient(135deg, #f6f7f9 0%, #e9edf2 100%); /* Soft background gradient */
-        position: relative;
-        overflow: hidden;
-    }
-
-    /* Subtle background pattern */
-    .pricing-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMCAwaDIwdjIwSDBWMHptMjAgMjBoMjB2MjBIMjBWMjB6TTAgMjBoMjB2MjBIMFYyMHoyMCAwaDIwdjIwSDIWMHoiLz48L2c+PC9nPjwvc3ZnPg==');
-        opacity: 0.3;
-    }
-
-    .section-title {
-        text-align: center;
-        font-size: 3rem;
-        margin-bottom: 10px;
-        color: var(--dark-text);
-        font-weight: 800;
-    }
-
-    .section-subtitle {
-        text-align: center;
-        color: var(--light-text);
-        font-weight: 600;
-        margin-bottom: 60px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .pricing-grid {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto;
-        flex-wrap: wrap;
-        align-items: flex-start;
-    }
-
-    .price-card {
-        background: #ffffff;
-        padding: 40px 30px;
-        border-radius: 25px;
-        width: 100%;
-        max-width: 350px;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.06);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        position: relative;
-        border-top: 8px solid; /* Color stripe on top */
-    }
-
-    .price-card:hover {
-        transform: translateY(-10px); /* Lift on hover */
-        box-shadow: 0 20px 45px rgba(0,0,0,0.12);
-    }
-
-    /* -- Tier Colors -- */
-    .starter-card { border-color: var(--primary-teal); }
-    .standard-card { border-color: var(--primary-navy); }
-    .premium-card {
-        border-color: var(--primary-orange);
-        transform: scale(1.05); /* Make premium card slightly larger by default */
-        z-index: 1;
-    }
-    @media (max-width: 992px) { /* Remove scale on tablets/mobile for better layout */
-        .premium-card { transform: scale(1); }
-        .premium-card:hover { transform: translateY(-10px); }
-    }
-
-
-    .plan-name {
-        font-size: 1.4rem;
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 15px;
-        color: var(--dark-text);
-    }
-
-    .price-amount {
-        font-size: 3.5rem;
-        font-weight: 800;
-        text-align: center;
-        margin-bottom: 30px;
-        color: var(--dark-text);
-    }
-
-    .price-amount span {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: var(--light-text);
-    }
-
-    /* Premium badge */
-    .premium-badge {
-        position: absolute;
-        top: -15px;
-        right: 20px;
-        background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%); /* Gold gradient */
-        color: #333;
-        padding: 6px 15px;
-        border-radius: 50px;
-        font-size: 0.75rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    }
-
-    .feature-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .feature-list li {
-        margin-bottom: 18px;
-        font-size: 0.95rem;
-        color: var(--light-text);
-        display: flex;
-        align-items: flex-start;
-        line-height: 1.4;
-    }
-
-    /* Icons */
-    .feature-list li i {
-        margin-right: 15px;
-        margin-top: 3px;
-        font-size: 1.1rem;
-        width: 20px;
-        text-align: center;
-    }
-    .starter-card .feature-list li i { color: var(--primary-teal); }
-    .standard-card .feature-list li i { color: var(--primary-navy); }
-    .premium-card .feature-list li i { color: var(--primary-orange); }
-
-    /* Select Plan Button */
-    .select-btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 15px;
-        border-radius: 50px;
-        font-weight: 700;
-        text-decoration: none;
-        margin-top: 40px;
-        transition: all 0.3s ease;
-    }
-    .starter-card .select-btn { background-color: var(--primary-teal); color: white; }
-    .standard-card .select-btn { background-color: var(--primary-navy); color: white; }
-    .premium-card .select-btn { background-color: var(--primary-orange); color: white; }
-
-    .select-btn:hover {
-        filter: brightness(1.1); /* Slightly brighter on hover */
-        transform: translateY(2px);
-    }
-</style>
-    
 /* WHY CHOOSE US SECTION */
 .why-choose {
     padding: 100px 20px;
@@ -676,140 +501,135 @@
         </div>
     </section>
 
-i want 3 cards in an horizontal line -<!-- SECTION 1: TECHARTMEDIA DIGITAL & MARKETING PACKAGES -->
-<section id="pricing" class="pricing-section">
-    <h2 class="section-title">Smart Solutions. Real Growth.</h2>
-    <p class="section-subtitle">Choose the perfect plan for your business!</p>
+<!-- SECTION 1: TECHARTMEDIA DIGITAL & MARKETING PACKAGES -->
+<section id="pricing" class="pricing-section reveal">
+    <h2 style="text-align: center; font-size: 3rem; margin-bottom: 0;">Smart Solutions. Real Growth.</h2>
+    <p style="text-align:center; color: var(--secondary); font-weight: bold; margin-bottom: 50px;">CHOOSE THE PERFECT PLAN FOR YOUR BUSINESS!</p>
+    <div class="pricing-grid">
+        <!-- Starter Pack -->
+        <div class="price-card" style="border-top: 8px solid #00a859;">
+            <h3>Starter Pack</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li>→ Initial Strategy Consultation</li>
+                <li>→ Profile Setup & Brand Logo</li>
+                <li>→ Basic Front-End Web</li>
+                <li>→ 6 Posts + 3 Reels Monthly</li>
+                <li>→ Post Scheduling</li>
+                <li>→ Months Insights Overview</li>
+                <li>→ Basic Hashtags Research</li>
+            </ul>
+        </div>
+        
+        <!-- Standard Pack -->
+        <div class="price-card" style="border-top: 8px solid #004085;">
+            <h3>Standard Pack</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li>→ Initial Strategy Consultation</li>
+                <li>→ Profile Setup & Brand Logo</li>
+                <li>→ Basic Front-End Web</li>
+                <li>→ 9 Posts + 6 Reels Monthly</li>
+                <li>→ Ad Campaign Management</li>
+                <li>→ Monthly Analytics & Reporting</li>
+                <li>→ Advanced Hashtags Research</li>
+            </ul>
+        </div>
 
-    <div class="pricing-grid">
-        <!-- STARTER PACK -->
-        <div class="price-card starter-card">
-            <h3 class="plan-name">Starter Pack</h3>
-            <div class="price-amount">₹20,000<span>/-</span></div>
-            <ul class="feature-list">
-                <li><i class="fas fa-chart-line"></i>Initial Strategy Consultation</li>
-                <li><i class="fas fa-paint-brush"></i>Profile Setup & Brand Logo</li>
-                <li><i class="fas fa-globe"></i>Basic Front-End Web</li>
-                <li><i class="fas fa-video"></i>6 Posts + 3 Reels Monthly</li>
-                <li><i class="fas fa-calendar-alt"></i>Post Scheduling</li>
-                <li><i class="fas fa-search"></i>Months Insights Overview</li>
-                <li><i class="fas fa-hashtag"></i>Basic Hashtags Research</li>
-            </ul>
-            <a href="#" class="select-btn">Select Starter</a>
-        </div>
-
-        <!-- STANDARD PACK -->
-        <div class="price-card standard-card">
-            <h3 class="plan-name">Standard Pack</h3>
-            <div class="price-amount">₹25,000<span>/-</span></div>
-            <ul class="feature-list">
-                <li><i class="fas fa-chart-line"></i>Initial Strategy Consultation</li>
-                <li><i class="fas fa-paint-brush"></i>Profile Setup & Brand Logo</li>
-                <li><i class="fas fa-globe"></i>Basic Front-End Web</li>
-                <li><i class="fas fa-video"></i>9 Posts + 6 Reels Monthly</li>
-                <li><i class="fas fa-bullhorn"></i>Ad Campaign Management</li>
-                <li><i class="fas fa-chart-bar"></i>Monthly Analytics & Reporting</li>
-                <li><i class="fas fa-search-plus"></i>Advanced Hashtags Research</li>
-            </ul>
-            <a href="#" class="select-btn">Select Standard</a>
-        </div>
-
-        <!-- PREMIUM PACK -->
-        <div class="price-card premium-card">
-            <div class="premium-badge">Ultimate Choice ✨</div>
-            <h3 class="plan-name">Premium Pack</h3>
-            <div class="price-amount">₹34,999<span>/-</span></div>
-            <ul class="feature-list">
-                <li><i class="fas fa-chart-line"></i>Initial Strategy Consultation</li>
-                <li><i class="fas fa-paint-brush"></i>Profile Setup & Brand Logo</li>
-                <li><i class="fas fa-globe"></i>Basic Front-End Web</li>
-                <li><i class="fas fa-video"></i>12 Posts + 8 Reels Monthly</li>
-                <li><i class="fas fa-rocket"></i>Advanced Ad Campaign</li>
-                <li><i class="fas fa-file-contract"></i>Weekly Analytics & Reporting</li>
-                <li><i class="fas fa-search-plus"></i>Advanced Hashtags Research</li>
-            </ul>
-            <a href="#" class="select-btn">Select Premium</a>
-        </div>
-    </div>
+        <!-- Premium Pack -->
+        <div class="price-card" style="border-top: 8px solid #f26522; transform: scale(1.02); position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+            <div style="position: absolute; top: -18px; right: 20px; background: #0f172a; color: white; padding: 6px 15px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; border: 2px solid #fff; white-space: nowrap;">
+                ULTIMATE CHOICE ✨
+            </div>
+            <h3>Premium Pack</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li>→ Initial Strategy Consultation</li>
+                <li>→ Profile Setup & Brand Logo</li>
+                <li>→ Basic Front-End Web</li>
+                <li>→ 12 Posts + 8 Reels Monthly</li>
+                <li>→ Advanced Ad Campaign</li>
+                <li>→ Weekly Analytics & Reporting</li>
+                <li>→ Advanced Hashtags Research</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
 <!-- SECTION 2: WHATSAPP BUSINESS SOFTWARE PACKAGES -->
 <section id="whatsapp-pricing" class="pricing-section reveal" style="background: #f1f5f9; padding: 100px 20px; margin-top: 60px;">
-    <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 0;">WhatsApp Business Software</h2>
-    <p style="text-align:center; color: var(--secondary); font-weight: bold; margin-bottom: 50px;">SIMPLE & AFFORDABLE PLANS — COMMUNICATE SMARTER. GROW FASTER!</p>
-    <div class="pricing-grid">
-        <!-- Starter Plan -->
-        <div class="price-card" style="border-top: 8px solid #00a859;">
-            <h3>Starter Plan</h3>
-            <p style="font-size: 0.85rem; color: #666; margin-top: -10px; margin-bottom: 15px;">Best for beginners</p>
-            <div class="amount" style="color: #00a859;">₹1,499<span style="font-size: 1rem; color: #000000;">/year</span></div>
-            <ul style="list-style: none; padding: 0;">
-                <li>✓ 3 WhatsApp Devices</li>
-                <li>✓ WhatsApp Bulk Messages</li>
-                <li>✓ Contacts List</li>
-                <li>✓ Message Templates</li>
-                <li>✓ Send Single Message</li>
-                <li>✓ Campaign Reports</li>
-                <li>✓ Opt-Out Management</li>
-                <li>✓ Auto Reply</li>
-                <li>✓ Group Grabber</li>
-                <li>✓ Trust Builder</li>
-            </ul>
-        </div>
+    <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 0;">WhatsApp Business Software</h2>
+    <p style="text-align:center; color: var(--secondary); font-weight: bold; margin-bottom: 50px;">SIMPLE & AFFORDABLE PLANS — COMMUNICATE SMARTER. GROW FASTER!</p>
+    <div class="pricing-grid">
+        <!-- Starter Plan -->
+        <div class="price-card" style="border-top: 8px solid #00a859;">
+            <h3>Starter Plan</h3>
+            <p style="font-size: 0.85rem; color: #666; margin-top: -10px; margin-bottom: 15px;">Best for beginners</p>
+            <div class="amount" style="color: #00a859;">₹1,499<span style="font-size: 1rem; color: #000000;">/year</span></div>
+            <ul style="list-style: none; padding: 0;">
+                <li>✓ 3 WhatsApp Devices</li>
+                <li>✓ WhatsApp Bulk Messages</li>
+                <li>✓ Contacts List</li>
+                <li>✓ Message Templates</li>
+                <li>✓ Send Single Message</li>
+                <li>✓ Campaign Reports</li>
+                <li>✓ Opt-Out Management</li>
+                <li>✓ Auto Reply</li>
+                <li>✓ Group Grabber</li>
+                <li>✓ Trust Builder</li>
+            </ul>
+        </div>
 
-        <!-- Professional Plan -->
-        <div class="price-card" style="border-top: 8px solid #004085; transform: scale(1.02); position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
-            <div style="position: absolute; top: -18px; right: 20px; background: #ffc107; color: #000; padding: 6px 15px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; border: 2px solid #fff; white-space: nowrap;">
-                ★ MOST POPULAR
-            </div>
-            <h3>Professional Plan</h3>
-            <p style="font-size: 0.85rem; color: #666; margin-top: -10px; margin-bottom: 15px;">Most Popular</p>
-            <div class="amount" style="color: #004085;">₹2,499<span style="font-size: 1rem; color: #000000;">/year</span></div>
-            <ul style="list-style: none; padding: 0;">
-                <li>✓ 10 WhatsApp Devices</li>
-                <li>✓ WhatsApp Bulk Messages</li>
-                <li>✓ Contacts List</li>
-                <li>✓ Message Templates</li>
-                <li>✓ Send Single Message</li>
-                <li>✓ Campaign Reports</li>
-                <li>✓ Opt-Out Management</li>
-                <li>✓ Auto Reply</li>
-                <li>✓ Chatbot</li>
-                <li>✓ Group Grabber</li>
-                <li>✓ Trust Builder</li>
-                <li>✓ Priority Support</li>
-                <li>✓ Smart Protection</li>
-                <li>✓ Keep awake feature</li>
-            </ul>
-        </div>
+        <!-- Professional Plan -->
+        <div class="price-card" style="border-top: 8px solid #004085; transform: scale(1.02); position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+            <div style="position: absolute; top: -18px; right: 20px; background: #ffc107; color: #000; padding: 6px 15px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; border: 2px solid #fff; white-space: nowrap;">
+                ★ MOST POPULAR
+            </div>
+            <h3>Professional Plan</h3>
+            <p style="font-size: 0.85rem; color: #666; margin-top: -10px; margin-bottom: 15px;">Most Popular</p>
+            <div class="amount" style="color: #004085;">₹2,499<span style="font-size: 1rem; color: #000000;">/year</span></div>
+            <ul style="list-style: none; padding: 0;">
+                <li>✓ 10 WhatsApp Devices</li>
+                <li>✓ WhatsApp Bulk Messages</li>
+                <li>✓ Contacts List</li>
+                <li>✓ Message Templates</li>
+                <li>✓ Send Single Message</li>
+                <li>✓ Campaign Reports</li>
+                <li>✓ Opt-Out Management</li>
+                <li>✓ Auto Reply</li>
+                <li>✓ Chatbot</li>
+                <li>✓ Group Grabber</li>
+                <li>✓ Trust Builder</li>
+                <li>✓ Priority Support</li>
+                <li>✓ Smart Protection</li>
+                <li>✓ Keep awake feature</li>
+            </ul>
+        </div>
 
-        <!-- Enterprise Plan -->
-        <div class="price-card" style="border-top: 8px solid #f26522;">
-            <h3>Enterprise Plan</h3>
-            <p style="font-size: 0.85rem; color: #666; margin-top: -10px; margin-bottom: 15px;">For power users</p>
-            <div class="amount" style="color: #6f42c1;">₹3,499<span style="font-size: 1rem; color: #000000;">/year</span></div>
-            <ul style="list-style: none; padding: 0;">
-                <li>✓ 25 WhatsApp Devices</li>
-                <li>✓ Multi device support (iOS + Android)</li>
-                <li>✓ WhatsApp Bulk Messages</li>
-                <li>✓ Contacts List</li>
-                <li>✓ Message Templates</li>
-                <li>✓ Send Single Message</li>
-                <li>✓ Campaign Reports</li>
-                <li>✓ Opt-Out Management</li>
-                <li>✓ Auto Reply</li>
-                <li>✓ Chatbot</li>
-                <li>✓ Group Grabber</li>
-                <li>✓ Trust Builder</li>
-                <li>✓ Priority Support</li>
-                <li>✓ Advanced Campaign Analytics</li>
-                <li>✓ Smart Protection</li>
-                <li>✓ Keep awake feature</li>
-                <li>✓ Support Fix</li>
-            </ul>
-        </div>
-    </div>
-</section> 
+        <!-- Enterprise Plan -->
+        <div class="price-card" style="border-top: 8px solid #f26522;">
+            <h3>Enterprise Plan</h3>
+            <p style="font-size: 0.85rem; color: #666; margin-top: -10px; margin-bottom: 15px;">For power users</p>
+            <div class="amount" style="color: #6f42c1;">₹3,499<span style="font-size: 1rem; color: #000000;">/year</span></div>
+            <ul style="list-style: none; padding: 0;">
+                <li>✓ 25 WhatsApp Devices</li>
+                <li>✓ Multi device support (iOS + Android)</li>
+                <li>✓ WhatsApp Bulk Messages</li>
+                <li>✓ Contacts List</li>
+                <li>✓ Message Templates</li>
+                <li>✓ Send Single Message</li>
+                <li>✓ Campaign Reports</li>
+                <li>✓ Opt-Out Management</li>
+                <li>✓ Auto Reply</li>
+                <li>✓ Chatbot</li>
+                <li>✓ Group Grabber</li>
+                <li>✓ Trust Builder</li>
+                <li>✓ Priority Support</li>
+                <li>✓ Advanced Campaign Analytics</li>
+                <li>✓ Smart Protection</li>
+                <li>✓ Keep awake feature</li>
+                <li>✓ Support Fix</li>
+            </ul>
+        </div>
+    </div>
+</section>
     
    <section id="about" class="reveal" style="padding: 80px 20px; max-width: 1200px; margin: auto;">
     <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; background: white; padding: 50px 40px; border-radius: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); gap: 40px;">
