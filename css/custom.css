@@ -1,16 +1,17 @@
-/* TechArtMedia — Minimalist & Architectural Agency Design System */
+/* TechArtMedia — Pure Elegant White Studio Aesthetic */
 :root {
-  --bg-primary: #0a0a0c;
-  --bg-secondary: #111114;
-  --bg-tertiary: #18181c;
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-medium: rgba(255, 255, 255, 0.16);
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  --text-muted: #71717a;
-  --brand-orange: #f97316;
+  --bg-primary: #ffffff;
+  --bg-subtle: #fafaf9;
+  --bg-card: #ffffff;
+  --bg-elevated: #f4f4f5;
+  --border-subtle: #e4e4e7;
+  --border-medium: #d4d4d8;
+  --text-primary: #09090b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --brand-orange: #ea580c;
   --brand-blue: #0284c7;
-  --brand-emerald: #10b981;
+  --brand-green: #16a34a;
 }
 
 html {
@@ -18,141 +19,126 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #09090b;
 }
 
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: #ffffff;
+  color: #09090b;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  letter-spacing: -0.011em;
+  letter-spacing: -0.015em;
 }
 
-/* Minimalist Scrollbar */
+/* Minimalist Light Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #d4d4d8;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #a1a1aa;
 }
 
-/* Selection */
+/* Text Selection */
 ::selection {
-  background: rgba(249, 115, 22, 0.25);
+  background: #ea580c;
   color: #ffffff;
 }
 
-/* Swiss Hairline Grid & Dividers */
-.hairline-border {
-  border-color: var(--border-subtle);
-}
-
-.hairline-b {
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.hairline-t {
-  border-top: 1px solid var(--border-subtle);
-}
-
-/* Minimalist Studio Cards */
-.studio-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
+/* Editorial Minimalist Cards */
+.white-card {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
   border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 10px 30px -10px rgba(0, 0, 0, 0.04);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.studio-card:hover {
-  border-color: var(--border-medium);
-  background: #141418;
+.white-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 20px 40px -15px rgba(0, 0, 0, 0.07);
+  transform: translateY(-2px);
 }
 
-/* Minimalist Action Buttons */
-.btn-minimal-primary {
+/* Featured Retainer Card (Quiet Luxury Focus) */
+.white-card-featured {
   background: #ffffff;
-  color: #000000;
-  font-weight: 600;
-  border-radius: 12px;
-  transition: all 0.2s ease;
+  border: 2px solid #09090b;
+  border-radius: 18px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+  position: relative;
 }
 
-.btn-minimal-primary:hover {
-  background: #e4e4e7;
-  transform: translateY(-1px);
-}
-
-.btn-minimal-secondary {
-  background: transparent;
+/* Buttons */
+.btn-ink-primary {
+  background: #09090b;
   color: #ffffff;
-  border: 1px solid var(--border-medium);
-  font-weight: 500;
-  border-radius: 12px;
-  transition: all 0.2s ease;
-}
-
-.btn-minimal-secondary:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-1px);
-}
-
-.btn-minimal-whatsapp {
-  background: rgba(37, 211, 102, 0.12);
-  color: #25D366;
-  border: 1px solid rgba(37, 211, 102, 0.25);
   font-weight: 600;
   border-radius: 12px;
   transition: all 0.2s ease;
 }
 
-.btn-minimal-whatsapp:hover {
-  background: #25D366;
-  color: #000000;
-  border-color: #25D366;
+.btn-ink-primary:hover {
+  background: #27272a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   transform: translateY(-1px);
 }
 
-/* Typography Enhancements */
-.display-headline {
-  letter-spacing: -0.035em;
-  line-height: 1.08;
+.btn-ink-secondary {
+  background: #ffffff;
+  color: #09090b;
+  border: 1px solid #e4e4e7;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.2s ease;
 }
 
-.mono-tag {
+.btn-ink-secondary:hover {
+  background: #f4f4f5;
+  border-color: #d4d4d8;
+  transform: translateY(-1px);
+}
+
+.btn-whatsapp-elegant {
+  background: #25D366;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+  transition: all 0.2s ease;
+}
+
+.btn-whatsapp-elegant:hover {
+  background: #20ba5a;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Subtle Hairline Dividers */
+.hairline-border {
+  border-color: #f1f1f4;
+}
+
+/* Display Typography */
+.display-headline {
+  letter-spacing: -0.038em;
+  line-height: 1.05;
+}
+
+.mono-label {
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.06em;
 }
 
-/* Active Service Accordion Row */
-.service-row {
-  transition: all 0.2s ease;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.service-row:hover {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-/* Minimalist Package Card Recommended Indicator */
-.studio-card-featured {
-  background: #131317;
-  border: 1px solid rgba(249, 115, 22, 0.4);
-  position: relative;
-}
-
-.studio-card-featured::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 24px;
-  right: 24px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #f97316, transparent);
+/* Crisp Grid Background (Very subtle clean engineering pattern) */
+.white-grid-bg {
+  background-image: linear-gradient(to right, #f4f4f5 1px, transparent 1px),
+                    linear-gradient(to bottom, #f4f4f5 1px, transparent 1px);
+  background-size: 48px 48px;
 }
