@@ -1,0 +1,202 @@
+/* TechArtMedia Custom Styles & Animations */
+:root {
+  --brand-orange: #f97316;
+  --brand-orange-light: #fb923c;
+  --brand-blue: #0284c7;
+  --brand-blue-light: #38bdf8;
+  --brand-green: #10b981;
+  --brand-dark: #09090b;
+  --brand-card-bg: rgba(18, 24, 38, 0.7);
+  --brand-border: rgba(255, 255, 255, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 25px 50px -12px rgba(2, 132, 199, 0.2);
+  transform: translateY(-4px);
+}
+
+.glass-card-orange:hover {
+  border-color: rgba(249, 115, 22, 0.4);
+  box-shadow: 0 25px 50px -12px rgba(249, 115, 22, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Hero Glow Effects */
+.glow-cyan {
+  position: absolute;
+  filter: blur(120px);
+  border-radius: 9999px;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.35) 0%, rgba(2, 132, 199, 0) 70%);
+}
+
+.glow-orange {
+  position: absolute;
+  filter: blur(120px);
+  border-radius: 9999px;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.3) 0%, rgba(249, 115, 22, 0) 70%);
+}
+
+/* Text Gradients */
+.gradient-text-brand {
+  background: linear-gradient(135deg, #f97316 0%, #38bdf8 50%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-orange {
+  background: linear-gradient(135deg, #fb923c 0%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-green {
+  background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shimmer border animation */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-shimmer-border {
+  background: linear-gradient(60deg, #f97316, #0284c7, #10b981, #f97316);
+  background-size: 300% 300%;
+  animation: shimmer 6s ease infinite;
+}
+
+/* Pulsing Badge Dot */
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+}
+
+.pulse-dot {
+  animation: pulseDot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Button Interactive Ripple & Scale */
+.btn-primary {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 8px 24px -6px rgba(249, 115, 22, 0.4);
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
+  box-shadow: 0 12px 30px -4px rgba(249, 115, 22, 0.55);
+  transform: translateY(-2px);
+}
+
+.btn-cyan {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 8px 24px -6px rgba(2, 132, 199, 0.4);
+  transition: all 0.25s ease;
+}
+
+.btn-cyan:hover {
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  box-shadow: 0 12px 30px -4px rgba(2, 132, 199, 0.55);
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 8px 24px -6px rgba(37, 211, 102, 0.4);
+  transition: all 0.25s ease;
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5a;
+  box-shadow: 0 12px 30px -4px rgba(37, 211, 102, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Subtle Grid Background Pattern */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Active navigation link */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #f97316;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Plan Badge Popular */
+.popular-badge {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.5);
+}
+
+/* Floating speed dial */
+.floating-speed-dial {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+}
