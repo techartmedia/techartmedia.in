@@ -3,36 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechArtMedia | Digital Marketing Agency, Web Development & Creative Design • Nashik</title>
+  <title>TechArtMedia | Creative Design, Digital Growth & Software Studio • Nashik</title>
   
-  <meta name="description" content="TechArtMedia is a premier digital marketing agency founded by Durvesh Bhavsar in Nashik. We specialize in Graphic Design, Social Media Management, Meta/Google Ads, Video Editing, and High-Performance Web Development.">
-  <meta name="keywords" content="TechArtMedia, Digital Marketing Agency Nashik, Social Media Packages Nashik, Website Development Nashik, Graphic Design Agency India, Durvesh Bhavsar, SEO, Meta Ads">
-  <meta name="author" content="Durvesh Bhavsar, TechArtMedia">
+  <meta name="description" content="TechArtMedia is a minimalist, high-performance digital marketing, graphic design, and web development agency founded by Durvesh Bhavsar in Nashik, Maharashtra. Your Brand. Our Creativity. Powerful Results.">
+  <meta name="keywords" content="TechArtMedia, Digital Marketing Agency Nashik, Creative Agency, Durvesh Bhavsar, Social Media Packages, Web Development, Graphic Design India">
+  <meta name="author" content="TechArtMedia, Durvesh Bhavsar">
   <link rel="canonical" href="https://techartmedia.in/">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://techartmedia.in/">
   <meta property="og:title" content="TechArtMedia | Design • Digital • Development">
-  <meta property="og:description" content="Your Brand. Our Creativity. Powerful Results. Digital marketing, social media growth, high-converting websites, and creative branding.">
-  <meta property="og:image" content="assets/brand-logo-banner.jpg">
+  <meta property="og:description" content="Your Brand. Our Creativity. Powerful Results. Professional digital marketing, brand identity, and web engineering.">
+  <meta property="og:image" content="assets/logo.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="shortcut icon" href="assets/logo.png">
 
-  <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Lucide Icons -->
+  <!-- Lucide Vector Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Custom Stylesheet -->
+  <!-- Custom Architectural Minimalist Stylesheet -->
   <link rel="stylesheet" href="css/custom.css">
 
   <script>
@@ -43,18 +43,15 @@
           colors: {
             brand: {
               orange: '#f97316',
-              amber: '#ea580c',
               blue: '#0284c7',
-              cyan: '#38bdf8',
-              green: '#10b981',
-              dark: '#09090b',
-              surface: '#0f172a',
-              card: '#131b2e'
+              emerald: '#10b981',
+              dark: '#0a0a0c',
+              surface: '#111114',
+              surfaceElevated: '#18181c'
             }
           },
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            display: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace']
           }
         }
@@ -63,456 +60,335 @@
   </script>
 </head>
 
-<body class="bg-[#09090b] text-zinc-100 font-sans antialiased selection:bg-brand-orange selection:text-white relative overflow-x-hidden">
+<body class="bg-[#0a0a0c] text-white font-sans antialiased selection:bg-zinc-800 selection:text-white">
 
-  <!-- Ambient Background Mesh Glows -->
-  <div class="fixed top-0 left-1/4 w-96 h-96 glow-cyan -z-10 opacity-40"></div>
-  <div class="fixed top-1/3 right-10 w-[30rem] h-[30rem] glow-orange -z-10 opacity-30"></div>
-  <div class="fixed bottom-10 left-1/3 w-[26rem] h-[26rem] glow-cyan -z-10 opacity-25"></div>
-
-  <!-- Announcement Bar -->
-  <div class="bg-gradient-to-r from-orange-600 via-sky-600 to-emerald-600 text-white text-xs md:text-sm font-medium py-2 px-4 text-center tracking-wide flex items-center justify-center space-x-2 shadow-inner">
-    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-black/30 backdrop-blur-sm">NEW</span>
-    <span>🔥 Accepting New Client Engagements for Q4 • Exclusive Social Media Packages starting at ₹15,000/mo</span>
-    <a href="#packages" class="underline font-bold hover:text-orange-200 transition-colors ml-1 hidden sm:inline">Explore Plans &rarr;</a>
+  <!-- Minimalist Executive Top Bar -->
+  <div class="border-b border-white/[0.06] bg-[#0a0a0c]/90 text-[11px] font-mono tracking-wider text-zinc-400 py-2 px-4 sm:px-8 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+      <span class="text-zinc-300">TECHARTMEDIA STUDIO</span>
+      <span class="text-zinc-600 hidden sm:inline">•</span>
+      <span class="hidden sm:inline text-zinc-500">NASHIK, MAHARASHTRA</span>
+    </div>
+    <div class="flex items-center space-x-4">
+      <a href="https://wa.me/918087084597" target="_blank" class="text-zinc-400 hover:text-white transition-colors">
+        DIRECT: +91 8087084597
+      </a>
+      <span class="text-zinc-700 hidden sm:inline">|</span>
+      <span class="text-zinc-500 hidden sm:inline">techartmedia.in</span>
+    </div>
   </div>
 
-  <!-- Navigation Bar -->
-  <header id="mainNavbar" class="fixed top-8 left-0 right-0 z-50 transition-all duration-300 py-5">
+  <!-- Navigation -->
+  <header id="mainNavbar" class="sticky top-0 z-50 bg-[#0a0a0c]/80 backdrop-blur-xl border-b border-white/[0.06] transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between bg-zinc-900/80 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-3 shadow-2xl">
+      <div class="flex items-center justify-between h-20">
         
-        <!-- Brand Logo -->
-        <a href="#hero" class="flex items-center space-x-3 group">
-          <img src="assets/logo.png" alt="TechArtMedia Official Logo" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        <!-- Brand Identity Lockup -->
+        <a href="#hero" class="flex items-center space-x-3.5 group">
+          <img src="assets/logo.png" alt="TechArtMedia Official Mark" class="h-9 w-auto object-contain">
           <div class="flex flex-col">
-            <span class="font-display font-bold text-xl tracking-tight text-white flex items-center">
-              Tech<span class="text-emerald-400">Art</span><span class="text-brand-orange">Media</span>
+            <span class="font-bold text-lg tracking-tight text-white flex items-center">
+              TechArtMedia
             </span>
-            <span class="text-[10px] uppercase font-mono tracking-widest text-zinc-400 -mt-1 hidden sm:block">Design • Digital • Dev</span>
+            <span class="text-[9px] uppercase font-mono tracking-widest text-zinc-400">Design • Digital • Dev</span>
           </div>
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-zinc-300">
-          <a href="#services" class="nav-link hover:text-white">Services</a>
-          <a href="#packages" class="nav-link hover:text-white">Packages & Pricing</a>
-          <a href="#calculator" class="nav-link hover:text-white">ROI Estimator</a>
-          <a href="#why-us" class="nav-link hover:text-white">Why Us</a>
-          <a href="#work" class="nav-link hover:text-white">Portfolio</a>
-          <a href="#founder" class="nav-link hover:text-white">Founder</a>
-          <a href="#contact" class="nav-link hover:text-white">Contact</a>
+        <nav class="hidden md:flex items-center space-x-8 text-xs font-medium uppercase tracking-wider text-zinc-400">
+          <a href="#capabilities" class="hover:text-white transition-colors">Capabilities</a>
+          <a href="#retainers" class="hover:text-white transition-colors">Retainers & Pricing</a>
+          <a href="#standards" class="hover:text-white transition-colors">Standards</a>
+          <a href="#work" class="hover:text-white transition-colors">Selected Work</a>
+          <a href="#founder" class="hover:text-white transition-colors">Leadership</a>
+          <a href="#contact" class="hover:text-white transition-colors">Contact</a>
         </nav>
 
-        <!-- Right Quick CTAs -->
+        <!-- Action CTAs -->
         <div class="hidden sm:flex items-center space-x-3">
-          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20would%20like%20to%20discuss%20a%20digital%20marketing%20strategy%20for%20my%20business!" target="_blank" class="btn-whatsapp px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center space-x-2">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>WhatsApp Us</span>
+          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20would%20like%20to%20discuss%20a%20digital%20engagement%20for%20my%20business." target="_blank" class="btn-minimal-whatsapp px-4 py-2 text-xs flex items-center space-x-2">
+            <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+            <span>WhatsApp</span>
           </a>
-          <a href="#contact" class="btn-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center space-x-1">
-            <span>Free Audit</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          <a href="#contact" class="btn-minimal-primary px-4 py-2 text-xs flex items-center space-x-1.5">
+            <span>Inquire</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
           </a>
         </div>
 
-        <!-- Mobile Menu Hamburger Button -->
-        <button id="mobileMenuBtn" class="lg:hidden text-zinc-300 hover:text-white p-2 rounded-lg bg-zinc-800/80 focus:outline-none" aria-label="Open navigation menu">
-          <i data-lucide="menu" class="w-6 h-6"></i>
+        <!-- Mobile Menu Trigger -->
+        <button id="mobileMenuBtn" class="md:hidden text-zinc-400 hover:text-white p-2" aria-label="Toggle navigation">
+          <i data-lucide="menu" class="w-5 h-5"></i>
         </button>
 
       </div>
     </div>
   </header>
 
-  <!-- Mobile Navigation Drawer Overlay -->
+  <!-- Mobile Drawer Overlay -->
   <div id="mobileOverlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden transition-opacity"></div>
   
   <!-- Mobile Navigation Drawer -->
-  <aside id="mobileDrawer" class="fixed top-0 right-0 bottom-0 w-80 bg-zinc-950 border-l border-white/10 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
+  <aside id="mobileDrawer" class="fixed top-0 right-0 bottom-0 w-80 bg-[#111114] border-l border-white/[0.08] z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300">
     <div>
-      <div class="flex items-center justify-between pb-6 border-b border-zinc-800">
+      <div class="flex items-center justify-between pb-6 border-b border-white/[0.06]">
         <div class="flex items-center space-x-3">
-          <img src="assets/logo.png" alt="TechArtMedia Logo" class="h-8 w-auto">
-          <span class="font-display font-bold text-lg text-white">TechArtMedia</span>
+          <img src="assets/logo.png" alt="TechArtMedia" class="h-8 w-auto">
+          <span class="font-bold text-white text-base">TechArtMedia</span>
         </div>
-        <button id="mobileMenuCloseBtn" class="text-zinc-400 hover:text-white p-1 rounded-md" aria-label="Close menu">
-          <i data-lucide="x" class="w-6 h-6"></i>
+        <button id="mobileMenuCloseBtn" class="text-zinc-400 hover:text-white p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
 
-      <nav class="mt-8 flex flex-col space-y-4 text-base font-medium text-zinc-300">
-        <a href="#services" class="mobile-nav-link hover:text-brand-orange py-2 flex items-center justify-between border-b border-zinc-900">
-          <span>Services</span>
-          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+      <nav class="mt-8 flex flex-col space-y-4 text-sm font-medium text-zinc-300">
+        <a href="#capabilities" class="mobile-nav-link py-2 border-b border-white/[0.04] flex items-center justify-between">
+          <span>Capabilities</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
         </a>
-        <a href="#packages" class="mobile-nav-link hover:text-brand-orange py-2 flex items-center justify-between border-b border-zinc-900">
-          <span>Packages & Pricing</span>
-          <span class="text-xs bg-brand-orange/20 text-brand-orange px-2 py-0.5 rounded-full font-mono">POPULAR</span>
+        <a href="#retainers" class="mobile-nav-link py-2 border-b border-white/[0.04] flex items-center justify-between">
+          <span>Retainers & Pricing</span>
+          <span class="text-[10px] font-mono text-brand-orange bg-brand-orange/10 px-2 py-0.5 rounded">FROM ₹15K</span>
         </a>
-        <a href="#calculator" class="mobile-nav-link hover:text-brand-orange py-2 flex items-center justify-between border-b border-zinc-900">
-          <span>ROI Cost Estimator</span>
-          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+        <a href="#standards" class="mobile-nav-link py-2 border-b border-white/[0.04] flex items-center justify-between">
+          <span>Studio Standards</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
         </a>
-        <a href="#why-us" class="mobile-nav-link hover:text-brand-orange py-2 flex items-center justify-between border-b border-zinc-900">
-          <span>Why TechArtMedia</span>
-          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+        <a href="#work" class="mobile-nav-link py-2 border-b border-white/[0.04] flex items-center justify-between">
+          <span>Selected Work</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
         </a>
-        <a href="#work" class="mobile-nav-link hover:text-brand-orange py-2 flex items-center justify-between border-b border-zinc-900">
-          <span>Client Portfolio</span>
-          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
-        </a>
-        <a href="#founder" class="mobile-nav-link hover:text-brand-orange py-2 flex items-center justify-between border-b border-zinc-900">
+        <a href="#founder" class="mobile-nav-link py-2 border-b border-white/[0.04] flex items-center justify-between">
           <span>Founder's Desk</span>
-          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
         </a>
-        <a href="#contact" class="mobile-nav-link hover:text-brand-orange py-2 flex items-center justify-between border-b border-zinc-900">
-          <span>Get in Touch</span>
-          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+        <a href="#contact" class="mobile-nav-link py-2 border-b border-white/[0.04] flex items-center justify-between">
+          <span>Contact & Location</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-600"></i>
         </a>
       </nav>
     </div>
 
-    <!-- Mobile Drawer Footer Contact -->
-    <div class="pt-6 border-t border-zinc-800 space-y-3">
-      <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20would%20like%20to%20discuss%20a%20project!" target="_blank" class="w-full btn-whatsapp py-3 rounded-xl text-center text-sm font-semibold flex items-center justify-center space-x-2">
-        <i data-lucide="message-circle" class="w-4 h-4"></i>
+    <div class="pt-6 border-t border-white/[0.06] space-y-3">
+      <a href="https://wa.me/918087084597" target="_blank" class="w-full btn-minimal-whatsapp py-3 text-center text-xs flex items-center justify-center space-x-2">
+        <i data-lucide="message-square" class="w-4 h-4"></i>
         <span>Chat on WhatsApp (+91 8087084597)</span>
       </a>
-      <a href="tel:+918087084597" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white py-3 rounded-xl text-center text-sm font-semibold flex items-center justify-center space-x-2">
-        <i data-lucide="phone-call" class="w-4 h-4"></i>
-        <span>Call Durvesh Bhavsar</span>
-      </a>
-      <div class="text-center text-[11px] text-zinc-500 font-mono">
-        techartmedia.in • Nashik, Maharashtra
+      <div class="text-center text-[10px] text-zinc-500 font-mono">
+        techartmedia.in • Indiranagar Nashik
       </div>
     </div>
   </aside>
 
-  <!-- Hero Section -->
-  <section id="hero" class="relative pt-36 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-grid-pattern">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <!-- Hero Section (Executive, Minimalist & Architectural) -->
+  <section id="hero" class="relative pt-24 pb-20 md:pt-36 md:pb-28 border-b border-white/[0.06]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Top Pill -->
-      <div class="flex justify-center mb-6">
-        <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-xl">
-          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-dot"></span>
-          <span class="text-xs md:text-sm font-medium text-zinc-300">
-            Digital Marketing Agency • Nashik & Worldwide
-          </span>
-          <span class="text-zinc-600">•</span>
-          <span class="text-xs font-mono text-brand-orange font-semibold">techartmedia.in</span>
+      <!-- Studio Category Stamp -->
+      <div class="mb-8">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono uppercase tracking-widest text-zinc-400">
+          <span>Design</span>
+          <span class="text-zinc-600">/</span>
+          <span>Digital Marketing</span>
+          <span class="text-zinc-600">/</span>
+          <span>Software Engineering</span>
         </div>
       </div>
 
       <!-- Main Headline -->
-      <div class="text-center max-w-4xl mx-auto">
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight font-display text-white leading-tight">
-          Your Brand. <span class="gradient-text-brand">Our Creativity.</span> Powerful Results.
+      <div class="max-w-5xl">
+        <h1 class="display-headline text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight">
+          Your Brand.<br>
+          Our Creativity.<br>
+          <span class="text-zinc-400">Powerful Results.</span>
         </h1>
-        <p class="mt-6 text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed font-normal">
-          We combine cutting-edge <strong class="text-zinc-200">Graphic Design</strong>, high-ROI <strong class="text-zinc-200">Performance Marketing & Ads</strong>, and ultra-fast <strong class="text-zinc-200">Web & Software Development</strong> to propel your brand past the competition.
+        
+        <p class="mt-8 text-lg sm:text-xl text-zinc-400 max-w-2xl font-normal leading-relaxed">
+          TechArtMedia is an independent creative and digital marketing agency founded by <strong class="text-zinc-200">Durvesh Bhavsar</strong> in Nashik. We engineer distinct brand identities, produce high-retention commercial reels, and execute performance marketing campaigns that scale business revenue.
         </p>
 
-        <!-- CTA Action Buttons -->
-        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#packages" class="w-full sm:w-auto btn-primary px-8 py-4 rounded-xl text-base font-bold flex items-center justify-center space-x-2 shadow-2xl">
-            <i data-lucide="sparkles" class="w-5 h-5"></i>
-            <span>View Social Media Packages</span>
+        <!-- Executive CTAs -->
+        <div class="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a href="#retainers" class="btn-minimal-primary px-8 py-3.5 text-xs sm:text-sm text-center flex items-center justify-center space-x-2">
+            <span>Explore Growth Retainers</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
-          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20want%20to%20claim%20my%20Free%20Brand%20%26%20Social%20Media%20Audit!" target="_blank" class="w-full sm:w-auto btn-whatsapp px-8 py-4 rounded-xl text-base font-bold flex items-center justify-center space-x-2">
-            <i data-lucide="message-square" class="w-5 h-5"></i>
-            <span>WhatsApp Quick Consultation</span>
+          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I%20would%20like%20to%20discuss%20a%20campaign%20strategy%20for%20my%20company." target="_blank" class="btn-minimal-secondary px-8 py-3.5 text-xs sm:text-sm text-center flex items-center justify-center space-x-2">
+            <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+            <span>Direct WhatsApp Line</span>
           </a>
-          <a href="#calculator" class="w-full sm:w-auto bg-white/5 hover:bg-white/10 text-white border border-white/15 px-6 py-4 rounded-xl text-base font-semibold flex items-center justify-center space-x-2 transition-all">
-            <i data-lucide="calculator" class="w-5 h-5 text-sky-400"></i>
-            <span>Calculate Project ROI</span>
+          <a href="#contact" class="btn-minimal-secondary px-6 py-3.5 text-xs sm:text-sm text-center flex items-center justify-center space-x-2 text-zinc-400 hover:text-white">
+            <span>Request Agency Audit</span>
           </a>
-        </div>
-
-        <!-- Agency Trust Proof Metrics -->
-        <div class="mt-14 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
-          <div class="text-center">
-            <div class="text-2xl sm:text-3xl font-display font-extrabold text-white">50+</div>
-            <div class="text-xs text-zinc-400 mt-1 uppercase tracking-wider font-mono">Brands Scaled</div>
-          </div>
-          <div class="text-center">
-            <div class="text-2xl sm:text-3xl font-display font-extrabold gradient-text-orange">4.8x</div>
-            <div class="text-xs text-zinc-400 mt-1 uppercase tracking-wider font-mono">Average ROAS</div>
-          </div>
-          <div class="text-center">
-            <div class="text-2xl sm:text-3xl font-display font-extrabold gradient-text-blue">100%</div>
-            <div class="text-xs text-zinc-400 mt-1 uppercase tracking-wider font-mono">On-Time Execution</div>
-          </div>
-          <div class="text-center">
-            <div class="text-2xl sm:text-3xl font-display font-extrabold gradient-text-green">₹15k</div>
-            <div class="text-xs text-zinc-400 mt-1 uppercase tracking-wider font-mono">Plans Starting At</div>
-          </div>
         </div>
 
       </div>
 
-      <!-- Hero Visual Interactive Card Showcase -->
-      <div class="mt-14 max-w-5xl mx-auto">
-        <div class="relative p-1 rounded-3xl animate-shimmer-border shadow-2xl">
-          <div class="bg-zinc-950/90 rounded-[22px] p-6 sm:p-10 backdrop-blur-2xl">
-            
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-zinc-800">
-              <div class="flex items-center space-x-4">
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-orange to-brand-blue flex items-center justify-center shadow-lg">
-                  <i data-lucide="trending-up" class="w-6 h-6 text-white"></i>
-                </div>
-                <div>
-                  <h3 class="text-lg font-bold text-white font-display">Live Growth Engine</h3>
-                  <p class="text-xs text-zinc-400">Integrated Meta Ads, Instagram Reels, High-Speed Web Infrastructure</p>
-                </div>
-              </div>
-              <div class="flex items-center space-x-2">
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2 pulse-dot"></span>
-                  Active Campaign Monitoring
-                </span>
-              </div>
-            </div>
-
-            <!-- 3 Pillars Feature Preview -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-              
-              <!-- Pillar 1: DESIGN -->
-              <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-brand-orange/40 transition-all">
-                <div class="w-10 h-10 rounded-xl bg-orange-500/10 text-brand-orange flex items-center justify-center mb-4">
-                  <i data-lucide="palette" class="w-5 h-5"></i>
-                </div>
-                <h4 class="text-base font-bold text-white font-display mb-1">1. Creative Design</h4>
-                <p class="text-xs text-zinc-400 leading-relaxed">
-                  Magnetic brand identities, viral Instagram carousels, ad creatives, brochures, visiting cards & billboard print design.
-                </p>
-              </div>
-
-              <!-- Pillar 2: DIGITAL -->
-              <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-brand-blue/40 transition-all">
-                <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-4">
-                  <i data-lucide="megaphone" class="w-5 h-5"></i>
-                </div>
-                <h4 class="text-base font-bold text-white font-display mb-1">2. Digital Marketing</h4>
-                <p class="text-xs text-zinc-400 leading-relaxed">
-                  Precision audience targeting on Meta & Google Ads, organic social engagement, high-converting reels with models, and SEO.
-                </p>
-              </div>
-
-              <!-- Pillar 3: DEVELOPMENT -->
-              <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-emerald-500/40 transition-all">
-                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
-                  <i data-lucide="code-2" class="w-5 h-5"></i>
-                </div>
-                <h4 class="text-base font-bold text-white font-display mb-1">3. Web & App Dev</h4>
-                <p class="text-xs text-zinc-400 leading-relaxed">
-                  Sub-second loading modern websites, custom e-commerce web applications, CRM/ERP integration, and mobile solutions.
-                </p>
-              </div>
-
-            </div>
-
-          </div>
+      <!-- Agency Operating Metrics Strip -->
+      <div class="mt-20 pt-10 border-t border-white/[0.06] grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <div class="text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-1">01 / Scope</div>
+          <div class="text-xl sm:text-2xl font-bold text-white">Full-Spectrum</div>
+          <div class="text-xs text-zinc-400 mt-1">Design, Media & Engineering</div>
+        </div>
+        <div>
+          <div class="text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-1">02 / Performance</div>
+          <div class="text-xl sm:text-2xl font-bold text-white">4.8x Avg. ROAS</div>
+          <div class="text-xs text-zinc-400 mt-1">Targeted Meta & Google Ads</div>
+        </div>
+        <div>
+          <div class="text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-1">03 / Production</div>
+          <div class="text-xl sm:text-2xl font-bold text-white">Featured Models</div>
+          <div class="text-xs text-zinc-400 mt-1">Studio Short-Form Reels</div>
+        </div>
+        <div>
+          <div class="text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-1">04 / Origin</div>
+          <div class="text-xl sm:text-2xl font-bold text-white">Nashik, India</div>
+          <div class="text-xs text-zinc-400 mt-1">Indiranagar Headquarters</div>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Official Services Section -->
-  <section id="services" class="py-24 relative bg-zinc-950 border-t border-zinc-900">
+  <!-- Capabilities & Services Section (Swiss Structured Grid) -->
+  <section id="capabilities" class="py-24 border-b border-white/[0.06]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue-light text-xs font-mono uppercase tracking-wider mb-3">
-          Our Full Capabilities
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-8 border-b border-white/[0.06]">
+        <div>
+          <div class="text-[11px] font-mono uppercase tracking-widest text-zinc-400 mb-2">Capabilities Directory</div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            Disciplines & Core Services
+          </h2>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-display">
-          Full-Stack Marketing & Creative Services
-        </h2>
-        <p class="mt-4 text-zinc-400 text-base sm:text-lg">
-          From viral social campaigns to high-converting software systems, we handle your end-to-end digital growth.
+        <p class="mt-4 md:mt-0 text-sm text-zinc-400 max-w-md">
+          Every client engagement is directed in-house with rigorous attention to brand consistency and commercial conversion.
         </p>
       </div>
 
-      <!-- 8 Services Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- Service 1: Graphic Design -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between group">
+      <!-- 8 Services Minimalist Swiss Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.06] border border-white/[0.06] rounded-2xl overflow-hidden">
+        
+        <!-- 01 Graphic Design -->
+        <div class="bg-[#0a0a0c] p-8 flex flex-col justify-between hover:bg-[#111114] transition-colors group">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-brand-orange flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <i data-lucide="layout" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white font-display mb-2">Graphic Design</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed mb-4">
-              Stop scrollers in their tracks with breathtaking visual design crafted for maximum brand recall.
+            <div class="text-xs font-mono text-zinc-400 mb-6 group-hover:text-white transition-colors">01 // VISUAL</div>
+            <h3 class="text-xl font-bold text-white mb-2">Graphic Design</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+              Precision visual assets created for brand recall: social creatives, brochures, banners, and advertising collateral.
             </p>
-            <ul class="text-xs text-zinc-300 space-y-2 mb-6 border-t border-zinc-800 pt-4">
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-orange"></i><span>Logos & Brand Identity</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-orange"></i><span>Social Media Creatives</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-orange"></i><span>Brochures & Banners</span></li>
-            </ul>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20am%20interested%20in%20Graphic%20Design%20services!" target="_blank" class="text-xs font-semibold text-brand-orange hover:text-orange-300 flex items-center space-x-1">
-            <span>Enquire on WhatsApp</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </a>
+          <div class="text-[11px] font-mono text-zinc-400 pt-4 border-t border-white/[0.06] flex items-center justify-between">
+            <span>Social • Print • Brand</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </div>
         </div>
 
-        <!-- Service 2: Web Design & Development -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between group">
+        <!-- 02 Web Design & Dev -->
+        <div class="bg-[#0a0a0c] p-8 flex flex-col justify-between hover:bg-[#111114] transition-colors group">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <i data-lucide="globe" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white font-display mb-2">Web Design & Dev</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed mb-4">
-              Modern, responsive, user-friendly websites built to convert visitors into paying clients.
+            <div class="text-xs font-mono text-zinc-400 mb-6 group-hover:text-white transition-colors">02 // CODE</div>
+            <h3 class="text-xl font-bold text-white mb-2">Web Design & Dev</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+              Modern, responsive, user-friendly websites built on clean code with sub-second loading speeds and SEO optimization.
             </p>
-            <ul class="text-xs text-zinc-300 space-y-2 mb-6 border-t border-zinc-800 pt-4">
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i><span>High-Speed Landing Pages</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i><span>Mobile-First Responsive</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i><span>SEO & Analytics Ready</span></li>
-            </ul>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20am%20interested%20in%20Web%20Design%20%26%20Development!" target="_blank" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 flex items-center space-x-1">
-            <span>Enquire on WhatsApp</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </a>
+          <div class="text-[11px] font-mono text-zinc-400 pt-4 border-t border-white/[0.06] flex items-center justify-between">
+            <span>Fast • Mobile-First • SEO</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </div>
         </div>
 
-        <!-- Service 3: Social Media Management -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between group">
+        <!-- 03 Social Media Management -->
+        <div class="bg-[#0a0a0c] p-8 flex flex-col justify-between hover:bg-[#111114] transition-colors group">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <i data-lucide="smartphone" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white font-display mb-2">Social Media Mgmt</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed mb-4">
-              Full-service profile growth, consistent posting schedule, engagement, and viral algorithm mastery.
+            <div class="text-xs font-mono text-zinc-400 mb-6 group-hover:text-white transition-colors">03 // GROWTH</div>
+            <h3 class="text-xl font-bold text-white mb-2">Social Media Mgmt</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+              Strategic content creation, scheduled publishing, proactive community engagement, and algorithmic organic reach.
             </p>
-            <ul class="text-xs text-zinc-300 space-y-2 mb-6 border-t border-zinc-800 pt-4">
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i><span>Content Calendar & Captions</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i><span>Growth & Active Engagement</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i><span>Instagram & Facebook Growth</span></li>
-            </ul>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20want%20Social%20Media%20Management%20for%20my%20brand!" target="_blank" class="text-xs font-semibold text-sky-400 hover:text-sky-300 flex items-center space-x-1">
-            <span>Enquire on WhatsApp</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </a>
+          <div class="text-[11px] font-mono text-zinc-400 pt-4 border-t border-white/[0.06] flex items-center justify-between">
+            <span>Calendar • Captions • Growth</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </div>
         </div>
 
-        <!-- Service 4: Digital Marketing & Ads -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between group">
+        <!-- 04 Digital Marketing & Ads -->
+        <div class="bg-[#0a0a0c] p-8 flex flex-col justify-between hover:bg-[#111114] transition-colors group">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <i data-lucide="megaphone" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white font-display mb-2">Digital Marketing</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed mb-4">
-              Hyper-targeted Meta Ads & Google Ads driving verified leads and immediate sales revenue.
+            <div class="text-xs font-mono text-zinc-400 mb-6 group-hover:text-white transition-colors">04 // ADS</div>
+            <h3 class="text-xl font-bold text-white mb-2">Digital Marketing</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+              Data-backed Meta Ads and Google Ads campaigns engineered for high return on ad spend and inbound lead generation.
             </p>
-            <ul class="text-xs text-zinc-300 space-y-2 mb-6 border-t border-zinc-800 pt-4">
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i><span>Targeted Meta Ad Campaigns</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i><span>Lead Generation Funnels</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i><span>Monthly ROI Analytics</span></li>
-            </ul>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20want%20Performance%20Digital%20Marketing%20and%20Ads!" target="_blank" class="text-xs font-semibold text-amber-400 hover:text-amber-300 flex items-center space-x-1">
-            <span>Enquire on WhatsApp</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </a>
+          <div class="text-[11px] font-mono text-zinc-400 pt-4 border-t border-white/[0.06] flex items-center justify-between">
+            <span>Targeting • Funnels • ROAS</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </div>
         </div>
 
-        <!-- Service 5: Video Editing & Reels -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between group">
+        <!-- 05 Video Editing & Reels -->
+        <div class="bg-[#0a0a0c] p-8 flex flex-col justify-between hover:bg-[#111114] transition-colors group">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-rose-500/10 text-rose-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <i data-lucide="clapperboard" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white font-display mb-2">Video Editing</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed mb-4">
-              High-retention short-form Reels, motion graphics, and commercial brand promo videos.
+            <div class="text-xs font-mono text-zinc-400 mb-6 group-hover:text-white transition-colors">05 // MOTION</div>
+            <h3 class="text-xl font-bold text-white mb-2">Video Editing & Reels</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+              Short-form reels, motion graphics, sound design, and professional promotional videos featuring on-camera talent.
             </p>
-            <ul class="text-xs text-zinc-300 space-y-2 mb-6 border-t border-zinc-800 pt-4">
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-rose-400"></i><span>Short-Form Reels & Shorts</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-rose-400"></i><span>Reels with Featured Models</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-rose-400"></i><span>Sound Design & Motion SFX</span></li>
-            </ul>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20need%20Reel%20Production%20%26%20Video%20Editing!" target="_blank" class="text-xs font-semibold text-rose-400 hover:text-rose-300 flex items-center space-x-1">
-            <span>Enquire on WhatsApp</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </a>
+          <div class="text-[11px] font-mono text-zinc-400 pt-4 border-t border-white/[0.06] flex items-center justify-between">
+            <span>Reels • Models • Motion SFX</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </div>
         </div>
 
-        <!-- Service 6: Software Development -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between group">
+        <!-- 06 Software Development -->
+        <div class="bg-[#0a0a0c] p-8 flex flex-col justify-between hover:bg-[#111114] transition-colors group">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <i data-lucide="code" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white font-display mb-2">Software Development</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed mb-4">
-              Custom web applications, business dashboards, automation tools, and scalable web platforms.
+            <div class="text-xs font-mono text-zinc-400 mb-6 group-hover:text-white transition-colors">06 // SYSTEM</div>
+            <h3 class="text-xl font-bold text-white mb-2">Software Dev</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+              Custom web apps, internal agency ERPs, cloud databases, and bespoke operational software tailored for businesses.
             </p>
-            <ul class="text-xs text-zinc-300 space-y-2 mb-6 border-t border-zinc-800 pt-4">
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i><span>Custom Web Applications</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i><span>Database & Cloud Sync</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i><span>Business Automation Systems</span></li>
-            </ul>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20need%20Custom%20Software%20Development!" target="_blank" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center space-x-1">
-            <span>Enquire on WhatsApp</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </a>
+          <div class="text-[11px] font-mono text-zinc-400 pt-4 border-t border-white/[0.06] flex items-center justify-between">
+            <span>Web Apps • Cloud • APIs</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </div>
         </div>
 
-        <!-- Service 7: Print Design -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between group">
+        <!-- 07 Print Design -->
+        <div class="bg-[#0a0a0c] p-8 flex flex-col justify-between hover:bg-[#111114] transition-colors group">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-teal-500/10 text-teal-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <i data-lucide="printer" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white font-display mb-2">Print Design</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed mb-4">
-              Print-ready collateral engineered with precision color profiles and corporate sophistication.
+            <div class="text-xs font-mono text-zinc-400 mb-6 group-hover:text-white transition-colors">07 // TACTILE</div>
+            <h3 class="text-xl font-bold text-white mb-2">Print & Collateral</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+              Visiting cards, corporate flyers, outdoor hoardings, and premium packaging engineered for flawless print production.
             </p>
-            <ul class="text-xs text-zinc-300 space-y-2 mb-6 border-t border-zinc-800 pt-4">
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i><span>Luxury Visiting Cards</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i><span>Flyers & Promotional Hoardings</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i><span>Product Packaging & Labels</span></li>
-            </ul>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20am%20interested%20in%20Print%20Design%20collateral!" target="_blank" class="text-xs font-semibold text-teal-400 hover:text-teal-300 flex items-center space-x-1">
-            <span>Enquire on WhatsApp</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </a>
+          <div class="text-[11px] font-mono text-zinc-400 pt-4 border-t border-white/[0.06] flex items-center justify-between">
+            <span>Visiting Cards • Packaging</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </div>
         </div>
 
-        <!-- Service 8: Branding & Identity -->
-        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between group">
+        <!-- 08 Branding & Identity -->
+        <div class="bg-[#0a0a0c] p-8 flex flex-col justify-between hover:bg-[#111114] transition-colors group">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-brand-orange flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <i data-lucide="lightbulb" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white font-display mb-2">Branding & Identity</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed mb-4">
-              Establish a memorable, premium market identity that commands trust, respect, and market authority.
+            <div class="text-xs font-mono text-zinc-400 mb-6 group-hover:text-white transition-colors">08 // IDENTITY</div>
+            <h3 class="text-xl font-bold text-white mb-2">Branding & Strategy</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+              Comprehensive logo design systems, typography standards, brand strategy, and complete corporate identity programs.
             </p>
-            <ul class="text-xs text-zinc-300 space-y-2 mb-6 border-t border-zinc-800 pt-4">
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-orange"></i><span>Logo Design & System</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-orange"></i><span>Brand Strategy & Positioning</span></li>
-              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-orange"></i><span>Complete Visual Identity Kit</span></li>
-            </ul>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20need%20Branding%20%26%20Identity%20Strategy!" target="_blank" class="text-xs font-semibold text-brand-orange hover:text-orange-300 flex items-center space-x-1">
-            <span>Enquire on WhatsApp</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </a>
+          <div class="text-[11px] font-mono text-zinc-400 pt-4 border-t border-white/[0.06] flex items-center justify-between">
+            <span>Logos • Visual Kits • Strategy</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </div>
         </div>
 
       </div>
@@ -520,415 +396,272 @@
     </div>
   </section>
 
-  <!-- Official Social Media Packages Section (From Price Flyer) -->
-  <section id="packages" class="py-24 relative overflow-hidden bg-grid-pattern">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <!-- Growth Retainers & Transparent Pricing Section -->
+  <section id="retainers" class="py-24 border-b border-white/[0.06]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-mono uppercase tracking-wider mb-3">
-          Transparent Pricing Plans
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-8 border-b border-white/[0.06]">
+        <div>
+          <div class="text-[11px] font-mono uppercase tracking-widest text-zinc-400 mb-2">Transparent Retainer Engagements</div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            Monthly Social Media Retainers
+          </h2>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-display">
-          Social Media Growth Packages
-        </h2>
-        <p class="mt-4 text-zinc-400 text-base sm:text-lg">
-          Choose the plan that fits your business goals. Clear deliverables, zero hidden fees, and dedicated execution.
-        </p>
 
-        <!-- Monthly / Quarterly Discount Toggle -->
-        <div class="mt-8 inline-flex items-center space-x-3 bg-zinc-900/90 border border-zinc-800 p-1.5 rounded-2xl shadow-xl">
-          <span class="text-xs sm:text-sm font-medium text-zinc-300 px-3">Monthly</span>
+        <!-- Billing Toggle -->
+        <div class="mt-6 md:mt-0 flex items-center space-x-3 bg-zinc-900 border border-white/[0.08] p-1.5 rounded-xl text-xs font-mono">
+          <span class="text-zinc-400 px-2">MONTHLY</span>
           <label class="relative inline-flex items-center cursor-pointer">
             <input type="checkbox" id="billingToggle" class="sr-only peer">
-            <div class="w-11 h-6 bg-zinc-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand-orange"></div>
+            <div class="w-9 h-5 bg-zinc-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-white"></div>
           </label>
-          <div class="flex items-center space-x-1.5 px-3">
-            <span class="text-xs sm:text-sm font-medium text-zinc-300">Quarterly</span>
-            <span class="text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full">SAVE 10%</span>
+          <div class="flex items-center space-x-1.5 px-2">
+            <span class="text-zinc-400">QUARTERLY</span>
+            <span class="text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-1.5 py-0.5 rounded">-10%</span>
           </div>
         </div>
-
       </div>
 
-      <!-- 3 Tier Pricing Cards Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-
-        <!-- PLAN 1: STARTER PRESENCE -->
-        <div class="glass-card p-8 rounded-3xl flex flex-col justify-between border-t-4 border-t-sky-500 relative">
+      <!-- 3 Tier Retainer Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Tier 1: STARTER PRESENCE -->
+        <div class="studio-card p-8 flex flex-col justify-between">
           <div>
-            <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-bold bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-4">
-              STARTER
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-mono uppercase tracking-widest text-zinc-400">Tier 01</span>
+              <span class="text-xs font-mono text-zinc-400">Foundation</span>
             </div>
-            <h3 class="text-2xl font-bold text-white font-display">PRESENCE</h3>
-            <p class="text-xs text-zinc-400 mt-1 mb-6">Build Your Brand's Foundation</p>
+            
+            <h3 class="text-2xl font-bold text-white">Starter Presence</h3>
+            <p class="text-xs text-zinc-400 mt-1 mb-8">Build your brand's digital foundation with consistent output.</p>
 
-            <div class="mb-6 pb-6 border-b border-zinc-800">
+            <div class="pb-6 mb-6 border-b border-white/[0.06]">
               <div class="flex items-baseline space-x-1">
-                <span id="starterPrice" class="text-4xl font-extrabold text-white font-display">₹15,000</span>
-                <span class="text-zinc-400 text-xs billing-period-label">/month</span>
+                <span id="starterPrice" class="text-4xl font-extrabold text-white">₹15,000</span>
+                <span class="text-xs text-zinc-400 billing-period-label">/month</span>
               </div>
-              <p class="text-[11px] text-zinc-500 mt-1">Ideal for local shops, emerging startups & initial social presence</p>
             </div>
 
-            <!-- Features list -->
-            <ul class="space-y-3.5 text-xs text-zinc-300 mb-8">
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
-                <span><strong class="text-white">9 Social Media Posts</strong> and Creatives</span>
+            <!-- Deliverables -->
+            <ul class="space-y-3.5 text-xs text-zinc-300 mb-8 font-normal">
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+                <span><strong class="text-white">9 Social Media Posts</strong> & Creatives</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
                 <span><strong class="text-white">3 Short-form Reels</strong></span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
                 <span><strong class="text-white">Model Featured</strong> in 1 Reel</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
                 <span>Social Media Account Management</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
                 <span>Content Calendar, Captions & Hashtags</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
-                <span>Profile Optimization & Bio Revamp</span>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+                <span>Profile Optimization & Bio Architecture</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
                 <span>Monthly Content Planning</span>
               </li>
             </ul>
           </div>
 
-          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20am%20interested%20in%20the%20STARTER%20PRESENCE%20package%20(%E2%82%B915,000/month)%20for%20my%20business!" target="_blank" class="w-full bg-zinc-800 hover:bg-sky-600 text-white py-3.5 rounded-xl font-bold text-center text-sm transition-all flex items-center justify-center space-x-2">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>Choose Starter Plan</span>
+          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20would%20like%20to%20engage%20the%20STARTER%20PRESENCE%20retainer%20(%E2%82%B915,000/mo)." target="_blank" class="w-full btn-minimal-secondary py-3 text-xs text-center flex items-center justify-center space-x-2">
+            <span>Select Starter Scope</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </a>
         </div>
 
-        <!-- PLAN 2: GROWTH & ENQUIRIES (RECOMMENDED) -->
-        <div class="glass-card-orange glass-card p-8 rounded-3xl flex flex-col justify-between border-2 border-brand-orange relative bg-zinc-900/90 shadow-2xl scale-100 lg:-translate-y-3">
-          
-          <!-- Popular Floating Badge -->
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 popular-badge text-white text-[11px] font-bold font-mono tracking-wider py-1 px-4 rounded-full uppercase shadow-lg flex items-center space-x-1">
-            <i data-lucide="star" class="w-3 h-3 fill-white"></i>
-            <span>MOST POPULAR • HIGH ROI</span>
-          </div>
-
+        <!-- Tier 2: GROWTH & ENQUIRIES (FEATURED) -->
+        <div class="studio-card studio-card-featured p-8 flex flex-col justify-between">
           <div>
-            <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-4 mt-2">
-              GROWTH & SCALE
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-mono uppercase tracking-widest text-brand-orange">Tier 02 • Recommended</span>
+              <span class="text-xs font-mono text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded">HIGH CONVERSION</span>
             </div>
-            <h3 class="text-2xl font-bold text-white font-display">ENQUIRIES</h3>
-            <p class="text-xs text-zinc-300 mt-1 mb-6 font-medium">More Reach. More Opportunities.</p>
+            
+            <h3 class="text-2xl font-bold text-white">Growth & Enquiries</h3>
+            <p class="text-xs text-zinc-400 mt-1 mb-8">More reach, more opportunities, and active paid lead acquisition.</p>
 
-            <div class="mb-6 pb-6 border-b border-zinc-800">
+            <div class="pb-6 mb-6 border-b border-white/[0.06]">
               <div class="flex items-baseline space-x-1">
-                <span id="growthPrice" class="text-4xl font-extrabold text-brand-orange font-display">₹25,000</span>
-                <span class="text-zinc-400 text-xs billing-period-label">/month</span>
+                <span id="growthPrice" class="text-4xl font-extrabold text-white">₹25,000</span>
+                <span class="text-xs text-zinc-400 billing-period-label">/month</span>
               </div>
-              <p class="text-[11px] text-zinc-400 mt-1">Best for businesses wanting steady client inquiries & active ads</p>
             </div>
 
-            <!-- Features list -->
-            <ul class="space-y-3.5 text-xs text-zinc-200 mb-8">
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0 mt-0.5"></i>
-                <span><strong class="text-white">16 Social Media Posts</strong> and Creatives</span>
+            <!-- Deliverables -->
+            <ul class="space-y-3.5 text-xs text-zinc-200 mb-8 font-normal">
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-orange shrink-0"></i>
+                <span><strong class="text-white">16 Social Media Posts</strong> & Creatives</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-orange shrink-0"></i>
                 <span><strong class="text-white">5 Short-form Reels</strong></span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-orange shrink-0"></i>
                 <span><strong class="text-white">Model Featured</strong> in 3 Reels</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-orange shrink-0"></i>
                 <span>Social Media Account Management</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-orange shrink-0"></i>
                 <span>Content Strategy & Campaign Planning</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0 mt-0.5"></i>
-                <span><strong class="text-brand-orange">Meta Ads Campaign Setup & Mgmt</strong></span>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-orange shrink-0"></i>
+                <span><strong class="text-white">Meta Ads Campaign Setup & Mgmt</strong></span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-orange shrink-0"></i>
                 <span>Facebook & Instagram Audience Targeting</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-orange shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-brand-orange shrink-0"></i>
                 <span>Monthly Performance & Leads Reporting</span>
               </li>
             </ul>
           </div>
 
-          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20want%20to%20get%20started%20with%20the%20GROWTH%20%26%20ENQUIRIES%20package%20(%E2%82%B925,000/month)!" target="_blank" class="w-full btn-primary py-4 rounded-xl font-bold text-center text-sm shadow-xl flex items-center justify-center space-x-2">
-            <i data-lucide="zap" class="w-4 h-4 fill-white"></i>
-            <span>Start Growth Plan Today</span>
+          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20want%20to%20engage%20the%20GROWTH%20%26%20ENQUIRIES%20retainer%20(%E2%82%B925,000/mo)." target="_blank" class="w-full btn-minimal-primary py-3 text-xs text-center flex items-center justify-center space-x-2 font-bold">
+            <span>Initiate Growth Retainer</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </a>
         </div>
 
-        <!-- PLAN 3: PREMIUM GROWTH -->
-        <div class="glass-card p-8 rounded-3xl flex flex-col justify-between border-t-4 border-t-purple-500 relative">
+        <!-- Tier 3: PREMIUM GROWTH -->
+        <div class="studio-card p-8 flex flex-col justify-between">
           <div>
-            <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-bold bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-4">
-              ENTERPRISE
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-mono uppercase tracking-widest text-zinc-400">Tier 03</span>
+              <span class="text-xs font-mono text-zinc-400">Scale</span>
             </div>
-            <h3 class="text-2xl font-bold text-white font-display">PREMIUM GROWTH</h3>
-            <p class="text-xs text-zinc-400 mt-1 mb-6">Bigger Reach. Stronger Results.</p>
+            
+            <h3 class="text-2xl font-bold text-white">Premium Growth</h3>
+            <p class="text-xs text-zinc-400 mt-1 mb-8">Bigger reach, stronger results, and aggressive lead volume.</p>
 
-            <div class="mb-6 pb-6 border-b border-zinc-800">
+            <div class="pb-6 mb-6 border-b border-white/[0.06]">
               <div class="flex items-baseline space-x-1">
-                <span id="premiumPrice" class="text-4xl font-extrabold text-white font-display">₹35,000</span>
-                <span class="text-zinc-400 text-xs billing-period-label">/month</span>
+                <span id="premiumPrice" class="text-4xl font-extrabold text-white">₹35,000</span>
+                <span class="text-xs text-zinc-400 billing-period-label">/month</span>
               </div>
-              <p class="text-[11px] text-zinc-500 mt-1">For brands demanding aggressive domination & high reel volume</p>
             </div>
 
-            <!-- Features list -->
-            <ul class="space-y-3.5 text-xs text-zinc-300 mb-8">
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
-                <span><strong class="text-white">22 Social Media Posts</strong> and Creatives</span>
+            <!-- Deliverables -->
+            <ul class="space-y-3.5 text-xs text-zinc-300 mb-8 font-normal">
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+                <span><strong class="text-white">22 Social Media Posts</strong> & Creatives</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
                 <span><strong class="text-white">8 Short-form Reels</strong></span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
                 <span><strong class="text-white">Model Featured</strong> in 5 Reels</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
-                <span>Full Social Media Account Management</span>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+                <span>Social Media Account Management</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
-                <span>Advanced Content & Viral Campaign Strategy</span>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+                <span>Advanced Content & Campaign Strategy</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
-                <span>Meta Ads Management & Weekly Optimization</span>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+                <span>Meta Ads Management & Optimization</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
                 <span>Lead Generation Campaign Management</span>
               </li>
-              <li class="flex items-start space-x-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
-                <span>Monthly Campaign & Lead-Quality Audit</span>
+              <li class="flex items-center space-x-3">
+                <i data-lucide="check" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+                <span>Monthly Campaign & Lead-Quality Reporting</span>
               </li>
             </ul>
           </div>
 
-          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20am%20interested%20in%20the%20PREMIUM%20GROWTH%20package%20(%E2%82%B935,000/month)%20for%20my%20company!" target="_blank" class="w-full bg-zinc-800 hover:bg-purple-600 text-white py-3.5 rounded-xl font-bold text-center text-sm transition-all flex items-center justify-center space-x-2">
-            <i data-lucide="crown" class="w-4 h-4"></i>
-            <span>Select Premium Growth</span>
+          <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20am%20interested%20in%20the%20PREMIUM%20GROWTH%20retainer%20(%E2%82%B935,000/mo)." target="_blank" class="w-full btn-minimal-secondary py-3 text-xs text-center flex items-center justify-center space-x-2">
+            <span>Select Premium Scope</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </a>
         </div>
 
       </div>
 
-      <!-- Price Packages Flyer Preview Pill -->
-      <div class="mt-12 text-center">
-        <p class="text-xs text-zinc-500 font-mono">
-          Need custom requirements or multi-location handling? 
-          <a href="#calculator" class="text-brand-orange hover:underline font-semibold ml-1">Use our interactive budget estimator below &rarr;</a>
-        </p>
-      </div>
-
     </div>
   </section>
 
-  <!-- Interactive Project Cost & ROI Estimator -->
-  <section id="calculator" class="py-20 relative bg-zinc-950 border-t border-zinc-900">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 text-xs font-mono uppercase tracking-wider mb-3">
-          Interactive Cost Calculator
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display">
-          Customize Your Digital Scope
-        </h2>
-        <p class="mt-3 text-zinc-400 text-sm">
-          Select your required monthly deliverables to see immediate investment estimates and send a customized brief directly to our founder.
-        </p>
-      </div>
-
-      <div class="glass-card p-6 sm:p-10 rounded-3xl border border-white/10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          
-          <!-- Controls Column -->
-          <div class="space-y-6">
-            
-            <!-- Base Plan Selection -->
-            <div>
-              <label for="estService" class="block text-xs font-mono uppercase text-zinc-300 font-semibold mb-2">
-                1. Select Core Service Tier
-              </label>
-              <select id="estService" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange">
-                <option value="growth" selected>Growth & Enquiries (16 Posts + 5 Reels + Ads) — ₹25,000</option>
-                <option value="starter">Starter Presence (9 Posts + 3 Reels) — ₹15,000</option>
-                <option value="premium">Premium Growth (22 Posts + 8 Reels + Lead Gen) — ₹35,000</option>
-                <option value="custom">Bespoke Custom Digital Scope — ₹10,000 base</option>
-              </select>
-            </div>
-
-            <!-- Additional Reels Slider -->
-            <div>
-              <div class="flex justify-between items-center mb-2">
-                <label for="estReels" class="text-xs font-mono uppercase text-zinc-300 font-semibold">
-                  2. Monthly Short-Form Reels
-                </label>
-                <span class="text-sm font-bold text-brand-orange font-mono"><span id="estReelsCount">5</span> Reels</span>
-              </div>
-              <input type="range" id="estReels" min="3" max="15" value="5" step="1" class="w-full accent-brand-orange cursor-pointer bg-zinc-800 rounded-lg">
-              <div class="flex justify-between text-[11px] text-zinc-500 font-mono mt-1">
-                <span>3 Reels (Included)</span>
-                <span>15 Reels (High Volume)</span>
-              </div>
-            </div>
-
-            <!-- Checkboxes Addons -->
-            <div class="space-y-3 pt-2">
-              <label class="flex items-center space-x-3 cursor-pointer p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700">
-                <input type="checkbox" id="estAds" checked class="w-4 h-4 accent-brand-orange rounded">
-                <div class="text-xs">
-                  <div class="text-white font-semibold">Meta & Google Ads Management</div>
-                  <div class="text-zinc-400">Audience research, ad copy, split-testing & daily budget tracking (+₹8,000)</div>
-                </div>
-              </label>
-
-              <label class="flex items-center space-x-3 cursor-pointer p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-zinc-700">
-                <input type="checkbox" id="estWeb" class="w-4 h-4 accent-brand-orange rounded">
-                <div class="text-xs">
-                  <div class="text-white font-semibold">Include High-Converting Landing Page / Website Revamp</div>
-                  <div class="text-zinc-400">Custom responsive one-page website designed to capture leads (+₹12,000)</div>
-                </div>
-              </label>
-            </div>
-
-          </div>
-
-          <!-- Total Calculation Card -->
-          <div class="bg-gradient-to-br from-zinc-900 to-zinc-950 p-8 rounded-2xl border border-zinc-800 text-center flex flex-col justify-between h-full shadow-2xl">
-            <div>
-              <span class="text-xs font-mono uppercase text-zinc-400 tracking-wider">Estimated Monthly Investment</span>
-              <div id="estTotalDisplay" class="text-4xl sm:text-5xl font-extrabold text-white font-display my-4 gradient-text-brand">
-                ₹33,000
-              </div>
-              <p class="text-xs text-zinc-400 leading-relaxed mb-6">
-                Covers creative design, production, dedicated account handling, and technical setup. Ad spend is paid directly to Meta/Google.
-              </p>
-              
-              <div class="bg-white/[0.02] border border-white/5 rounded-xl p-3 text-left space-y-1.5 text-xs text-zinc-400 mb-6">
-                <div class="flex items-center space-x-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
-                  <span>Transparent itemized billing</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
-                  <span>Direct communication with Founder</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
-                  <span>No lock-in contracts; cancel anytime</span>
-                </div>
-              </div>
-            </div>
-
-            <a id="estWhatsAppBtn" href="#" target="_blank" class="w-full btn-whatsapp py-3.5 rounded-xl text-sm font-bold flex items-center justify-center space-x-2 shadow-lg">
-              <i data-lucide="send" class="w-4 h-4"></i>
-              <span>Send This Estimate to WhatsApp</span>
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Why Choose TechArtMedia (The 5 Value Pillars from Flyer) -->
-  <section id="why-us" class="py-24 relative overflow-hidden bg-zinc-950">
+  <!-- Studio Standards & Value Delivery -->
+  <section id="standards" class="py-24 border-b border-white/[0.06] bg-[#0c0c0f]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono uppercase tracking-wider mb-3">
-          Agency Philosophy
-        </div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-display">
-          Why Businesses Trust TechArtMedia
+      <div class="max-w-3xl mb-16">
+        <div class="text-[11px] font-mono uppercase tracking-widest text-zinc-400 mb-2">Agency Operating Standards</div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          How TechArtMedia Delivers Value
         </h2>
-        <p class="mt-4 text-zinc-400 text-base sm:text-lg">
-          We don't just post content — we build enduring brand equity, attract high-intent buyers, and engineering measurable ROI.
+        <p class="mt-4 text-sm text-zinc-400 leading-relaxed">
+          We eliminate the friction common in legacy agency relationships by maintaining direct founder oversight, strict deadlines, and clear commercial accountability.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-
-        <!-- Pillar 1 -->
-        <div class="glass-card p-6 rounded-2xl text-center flex flex-col items-center">
-          <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
-            <i data-lucide="sparkles" class="w-7 h-7"></i>
-          </div>
-          <h3 class="text-base font-bold text-white font-display mb-2">Creative Content</h3>
+        
+        <div class="p-6 rounded-xl border border-white/[0.06] bg-[#111114]">
+          <div class="text-xs font-mono text-zinc-400 mb-4">01 // CREATIVE</div>
+          <h3 class="text-base font-bold text-white mb-2">Distinctive Content</h3>
           <p class="text-xs text-zinc-400 leading-relaxed">
-            Content that stands out from the noise and captures user attention immediately.
+            Content engineered to command visual attention and elevate brand perception.
           </p>
         </div>
 
-        <!-- Pillar 2 -->
-        <div class="glass-card p-6 rounded-2xl text-center flex flex-col items-center">
-          <div class="w-14 h-14 rounded-2xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-4">
-            <i data-lucide="users" class="w-7 h-7"></i>
-          </div>
-          <h3 class="text-base font-bold text-white font-display mb-2">Engaging Audience</h3>
+        <div class="p-6 rounded-xl border border-white/[0.06] bg-[#111114]">
+          <div class="text-xs font-mono text-zinc-400 mb-4">02 // AUDIENCE</div>
+          <h3 class="text-base font-bold text-white mb-2">Engaged Community</h3>
           <p class="text-xs text-zinc-400 leading-relaxed">
-            Community-first engagement that connects emotionally with prospective customers.
+            Targeted messaging that converts casual viewers into committed brand advocates.
           </p>
         </div>
 
-        <!-- Pillar 3 -->
-        <div class="glass-card p-6 rounded-2xl text-center flex flex-col items-center">
-          <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-brand-orange flex items-center justify-center mb-4">
-            <i data-lucide="target" class="w-7 h-7"></i>
-          </div>
-          <h3 class="text-base font-bold text-white font-display mb-2">Targeted Ads</h3>
+        <div class="p-6 rounded-xl border border-white/[0.06] bg-[#111114]">
+          <div class="text-xs font-mono text-zinc-400 mb-4">03 // PRECISION</div>
+          <h3 class="text-base font-bold text-white mb-2">Targeted Advertising</h3>
           <p class="text-xs text-zinc-400 leading-relaxed">
-            Laser-focused audience targeting that delivers high conversions and low CPA.
+            Granular demographic targeting to optimize cost-per-lead and media spend.
           </p>
         </div>
 
-        <!-- Pillar 4 -->
-        <div class="glass-card p-6 rounded-2xl text-center flex flex-col items-center">
-          <div class="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
-            <i data-lucide="handshake" class="w-7 h-7"></i>
-          </div>
-          <h3 class="text-base font-bold text-white font-display mb-2">Dedicated Support</h3>
+        <div class="p-6 rounded-xl border border-white/[0.06] bg-[#111114]">
+          <div class="text-xs font-mono text-zinc-400 mb-4">04 // ACCESS</div>
+          <h3 class="text-base font-bold text-white mb-2">Dedicated Oversight</h3>
           <p class="text-xs text-zinc-400 leading-relaxed">
-            Direct access to decision-makers and campaign managers always by your side.
+            Direct communication with studio leads; no junior account managers or delays.
           </p>
         </div>
 
-        <!-- Pillar 5 -->
-        <div class="glass-card p-6 rounded-2xl text-center flex flex-col items-center">
-          <div class="w-14 h-14 rounded-2xl bg-rose-500/10 text-rose-400 flex items-center justify-center mb-4">
-            <i data-lucide="bar-chart-2" class="w-7 h-7"></i>
-          </div>
-          <h3 class="text-base font-bold text-white font-display mb-2">Real Results</h3>
+        <div class="p-6 rounded-xl border border-white/[0.06] bg-[#111114]">
+          <div class="text-xs font-mono text-zinc-400 mb-4">05 // OUTCOME</div>
+          <h3 class="text-base font-bold text-white mb-2">Measured Return</h3>
           <p class="text-xs text-zinc-400 leading-relaxed">
-            Transparent reporting on reach, impressions, leads, and revenue you can measure.
+            Transparent reporting focused on revenue, qualified leads, and brand equity.
           </p>
         </div>
 
@@ -937,369 +670,259 @@
     </div>
   </section>
 
-  <!-- Portfolio & Work Showcase -->
-  <section id="work" class="py-24 relative bg-[#09090b] border-t border-zinc-900">
+  <!-- Selected Work / Case Studies -->
+  <section id="work" class="py-24 border-b border-white/[0.06]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-8 border-b border-white/[0.06]">
         <div>
-          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-orange/10 text-brand-orange text-xs font-mono uppercase tracking-wider mb-3">
-            Selected Case Studies
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-display">
-            Our Work in Action
+          <div class="text-[11px] font-mono uppercase tracking-widest text-zinc-400 mb-2">Selected Case Studies</div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            Work & Commercial Impact
           </h2>
-          <p class="mt-2 text-zinc-400 text-sm sm:text-base">
-            Recent campaigns, digital products, and brand transformations delivered by TechArtMedia.
-          </p>
         </div>
-
-        <!-- Filter Buttons -->
-        <div class="mt-6 md:mt-0 flex flex-wrap gap-2">
-          <button class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-brand-orange text-white transition-all" data-filter="all">All</button>
-          <button class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-zinc-800/80 text-zinc-400 hover:text-white transition-all" data-filter="social">Social Media</button>
-          <button class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-zinc-800/80 text-zinc-400 hover:text-white transition-all" data-filter="web">Web & Software</button>
-          <button class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-zinc-800/80 text-zinc-400 hover:text-white transition-all" data-filter="branding">Branding & Print</button>
-        </div>
-      </div>
-
-      <!-- Portfolio Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- Project 1: Luxury Jewellery Social & Ads -->
-        <div class="portfolio-item glass-card rounded-2xl overflow-hidden group" data-category="social">
-          <div class="h-56 bg-zinc-900 relative overflow-hidden flex items-center justify-center p-6 bg-gradient-to-tr from-amber-950/40 via-zinc-900 to-zinc-900">
-            <div class="text-center">
-              <span class="text-xs font-mono text-amber-400 tracking-widest uppercase">Ganesh Jewellers Campaign</span>
-              <h4 class="text-xl font-bold text-white mt-1">Festival Gold & Diamond Launch</h4>
-              <span class="inline-block mt-3 px-3 py-1 bg-amber-500/20 text-amber-300 text-xs rounded-full font-mono font-bold">+520k Video Views • 4.8x ROAS</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between text-xs text-zinc-400 mb-2">
-              <span>Social Media & Meta Ads</span>
-              <span class="text-brand-orange font-semibold">Festive Season</span>
-            </div>
-            <h4 class="text-lg font-bold text-white font-display mb-2">High-Engagement Reels with Model Showcase</h4>
-            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
-              Produced 12 cinematic short-form reels featuring jewelry models, targeted Nashik & Maharashtra luxury buyers, generating over 140 direct WhatsApp showroom appointments.
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 2: High Performance Web & ERP -->
-        <div class="portfolio-item glass-card rounded-2xl overflow-hidden group" data-category="web">
-          <div class="h-56 bg-zinc-900 relative overflow-hidden flex items-center justify-center p-6 bg-gradient-to-tr from-sky-950/40 via-zinc-900 to-zinc-900">
-            <div class="text-center">
-              <span class="text-xs font-mono text-sky-400 tracking-widest uppercase">Cloud Enterprise Software</span>
-              <h4 class="text-xl font-bold text-white mt-1">TechArtMedia ERP & Billing Suite</h4>
-              <span class="inline-block mt-3 px-3 py-1 bg-sky-500/20 text-sky-300 text-xs rounded-full font-mono font-bold">100% Paperless • Realtime PostgreSQL</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between text-xs text-zinc-400 mb-2">
-              <span>Web & Cloud Software</span>
-              <span class="text-sky-400 font-semibold">Production Ready</span>
-            </div>
-            <h4 class="text-lg font-bold text-white font-display mb-2">Agency Operations & Invoicing System</h4>
-            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
-              Single-page responsive financial dashboard with automated GST quotation generation, dynamic amount UPI QR codes, executive PDF reporting, and Supabase cloud sync.
-            </p>
-          </div>
-        </div>
-
-        <!-- Project 3: Fashion Boutique Brand Revamp -->
-        <div class="portfolio-item glass-card rounded-2xl overflow-hidden group" data-category="branding">
-          <div class="h-56 bg-zinc-900 relative overflow-hidden flex items-center justify-center p-6 bg-gradient-to-tr from-rose-950/40 via-zinc-900 to-zinc-900">
-            <div class="text-center">
-              <span class="text-xs font-mono text-rose-400 tracking-widest uppercase">Boutique Identity & Packaging</span>
-              <h4 class="text-xl font-bold text-white mt-1">Ladies Boutique Retail Branding</h4>
-              <span class="inline-block mt-3 px-3 py-1 bg-rose-500/20 text-rose-300 text-xs rounded-full font-mono font-bold">Visiting Cards • Hoardings • Bags</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between text-xs text-zinc-400 mb-2">
-              <span>Corporate Identity & Print</span>
-              <span class="text-rose-400 font-semibold">Retail Growth</span>
-            </div>
-            <h4 class="text-lg font-bold text-white font-display mb-2">Complete Brand Identity & Showroom Collateral</h4>
-            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
-              Designed full visual identity kit: luxury embossed visiting cards, storefront hoardings, customer garment packaging, and social media kickoff banners.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Founder & Leadership Section -->
-  <section id="founder" class="py-24 relative bg-zinc-950 border-t border-zinc-900">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="glass-card rounded-3xl p-8 sm:p-14 border border-white/10 relative overflow-hidden">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
-          <!-- Founder Info & Photo Placeholder / Emblem -->
-          <div class="lg:col-span-5 text-center lg:text-left flex flex-col items-center lg:items-start">
-            <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-3xl p-1 bg-gradient-to-tr from-brand-orange via-sky-500 to-emerald-400 shadow-2xl mb-6">
-              <div class="w-full h-full bg-zinc-900 rounded-[22px] flex items-center justify-center overflow-hidden p-4">
-                <img src="assets/logo.png" alt="Durvesh Bhavsar - Founder & CEO" class="w-full h-full object-contain">
-              </div>
-            </div>
-
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-white font-display">
-              Durvesh Bhavsar
-            </h3>
-            <p class="text-sm font-semibold text-brand-orange font-mono mt-1">
-              Founder & CEO • TechArtMedia
-            </p>
-            <p class="text-xs text-zinc-400 mt-1">
-              Lead Creative Director & Operations Head
-            </p>
-
-            <div class="mt-6 flex flex-wrap gap-2 justify-center lg:justify-start">
-              <span class="px-3 py-1 rounded-full text-xs font-mono bg-zinc-800 text-zinc-300">Brand Strategist</span>
-              <span class="px-3 py-1 rounded-full text-xs font-mono bg-zinc-800 text-zinc-300">Media Director</span>
-              <span class="px-3 py-1 rounded-full text-xs font-mono bg-zinc-800 text-zinc-300">Software Architect</span>
-            </div>
-
-            <!-- Direct Contact Buttons -->
-            <div class="mt-8 flex items-center space-x-3">
-              <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I%20would%20like%20to%20connect%20with%20you%20regarding%20TechArtMedia!" target="_blank" class="btn-whatsapp px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center space-x-1.5 shadow-md">
-                <i data-lucide="message-circle" class="w-4 h-4"></i>
-                <span>Direct WhatsApp</span>
-              </a>
-              <a href="mailto:techartmedia.info@gmail.com" class="bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center space-x-1.5 transition-colors">
-                <i data-lucide="mail" class="w-4 h-4"></i>
-                <span>Email Founder</span>
-              </a>
-            </div>
-
-          </div>
-
-          <!-- Founder's Letter & Vision -->
-          <div class="lg:col-span-7">
-            <div class="inline-flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-emerald-400 mb-4">
-              <i data-lucide="quote" class="w-4 h-4"></i>
-              <span>Founder's Message</span>
-            </div>
-            
-            <h4 class="text-2xl sm:text-3xl font-bold text-white font-display mb-4 leading-snug">
-              "We believe great marketing is an exact science executed with authentic art."
-            </h4>
-            
-            <div class="space-y-4 text-sm text-zinc-300 leading-relaxed font-normal">
-              <p>
-                When we started <strong>TechArtMedia</strong>, we saw businesses struggling with disconnected vendors: graphic designers who didn't understand conversion rates, media buyers who couldn't craft compelling visual stories, and web developers who built slow, uninspired pages.
-              </p>
-              <p>
-                We united all three pillars under one unified banner: <strong>DESIGN</strong>, <strong>DIGITAL</strong>, and <strong>DEVELOPMENT</strong>.
-              </p>
-              <p>
-                Every brand we partner with receives rigorous attention to detail. Whether we are producing high-retention Instagram reels with professional models, configuring precision Meta lead-generation funnels, or developing modern web applications, we focus on one single metric: <strong>measurable commercial growth for your business.</strong>
-              </p>
-            </div>
-
-            <div class="mt-8 pt-6 border-t border-zinc-800 flex items-center justify-between">
-              <div class="text-xs text-zinc-400">
-                <div class="font-semibold text-white">Office Headquarters:</div>
-                <div>Avdhoot Park, Vikas Colony Opp Parkside Residency, Indiranagar Nashik, Maharashtra</div>
-              </div>
-              <div class="text-right">
-                <span class="text-xs font-mono text-brand-orange font-bold">techartmedia.in</span>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Interactive Contact & Lead Capture Section -->
-  <section id="contact" class="py-24 relative overflow-hidden bg-grid-pattern">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-mono uppercase tracking-wider mb-3">
-          Let's Grow Together
-        </div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white font-display">
-          Ready to Scale Your Brand?
-        </h2>
-        <p class="mt-4 text-zinc-400 text-base sm:text-lg">
-          Fill out the brief below or ping us directly on WhatsApp. We respond within 15 minutes during business hours.
+        <p class="mt-4 md:mt-0 text-sm text-zinc-400 max-w-sm">
+          Representative client engagements across retail, e-commerce, and software systems.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- Left: Agency Contact Info Cards -->
-        <div class="lg:col-span-5 space-y-6">
+        <!-- Case 1 -->
+        <div class="studio-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-[11px] font-mono text-zinc-400 mb-4">
+              <span>RETAIL JEWELLERY</span>
+              <span>4.8X ROAS</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Ganesh Jewellers Campaign</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+              Full-scale festive campaign: produced 12 high-retention reels featuring professional jewelry models and managed targeted Meta Ads across Maharashtra.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-zinc-400">
+            <span>520K+ Views</span>
+            <span>140+ Showroom Inquiries</span>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="studio-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-[11px] font-mono text-zinc-400 mb-4">
+              <span>CLOUD SOFTWARE</span>
+              <span>ENTERPRISE</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">TechArtMedia ERP & Billing</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+              Engineered agency operations platform with automated single-page A4 GST invoices, dynamic amount UPI QR payment collection, and realtime PostgreSQL synchronization.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-zinc-400">
+            <span>100% Paperless</span>
+            <span>Sub-second Speed</span>
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="studio-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-[11px] font-mono text-zinc-400 mb-4">
+              <span>FASHION BRANDING</span>
+              <span>OMNICHANNEL</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Ladies Boutique Brand Identity</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+              Complete brand identity design including luxury foil visiting cards, storefront hoardings, branded garment packaging, and organic social media kickoff.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-zinc-400">
+            <span>Full Identity Kit</span>
+            <span>Print & Digital</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Founder & Executive Direction Section -->
+  <section id="founder" class="py-24 border-b border-white/[0.06] bg-[#0c0c0f]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="border border-white/[0.08] rounded-2xl p-8 sm:p-14 bg-[#111114]">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
           
-          <!-- Card 1: WhatsApp Direct -->
-          <div class="glass-card p-6 rounded-2xl border-l-4 border-l-[#25D366]">
-            <div class="flex items-start space-x-4">
-              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-[#25D366] flex items-center justify-center shrink-0">
-                <i data-lucide="message-circle" class="w-6 h-6"></i>
-              </div>
-              <div class="flex-1">
-                <span class="text-xs font-mono uppercase text-zinc-400">Direct WhatsApp & Mobile</span>
-                <div class="text-lg font-bold text-white font-mono mt-0.5">+91 8087084597</div>
-                <p class="text-xs text-zinc-400 mt-1">Available 9:00 AM – 8:00 PM IST for quick consultations.</p>
-                <div class="mt-3 flex items-center space-x-2">
-                  <a href="https://wa.me/918087084597" target="_blank" class="text-xs font-bold text-[#25D366] hover:underline flex items-center space-x-1">
-                    <span>Chat on WhatsApp</span>
-                    <i data-lucide="external-link" class="w-3 h-3"></i>
-                  </a>
-                  <span class="text-zinc-600">•</span>
-                  <button onclick="copyToClipboard('+918087084597', 'Phone Number')" class="text-xs text-zinc-400 hover:text-white">Copy</button>
-                </div>
-              </div>
+          <div class="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
+            <div class="w-24 h-24 rounded-2xl bg-zinc-900 border border-white/[0.1] p-3 flex items-center justify-center mb-6">
+              <img src="assets/logo.png" alt="TechArtMedia Mark" class="w-full h-full object-contain">
+            </div>
+            <h3 class="text-2xl font-bold text-white">Durvesh Bhavsar</h3>
+            <p class="text-xs font-mono text-brand-orange mt-1">Founder & CEO</p>
+            <p class="text-xs text-zinc-400 mt-1">TechArtMedia Studio</p>
+
+            <div class="mt-6 flex flex-col space-y-2 w-full text-xs font-mono">
+              <a href="https://wa.me/918087084597" target="_blank" class="text-zinc-400 hover:text-white flex items-center space-x-2">
+                <i data-lucide="message-square" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <span>+91 8087084597</span>
+              </a>
+              <a href="mailto:techartmedia.info@gmail.com" class="text-zinc-400 hover:text-white flex items-center space-x-2">
+                <i data-lucide="mail" class="w-3.5 h-3.5 text-sky-400"></i>
+                <span>techartmedia.info@gmail.com</span>
+              </a>
             </div>
           </div>
 
-          <!-- Card 2: Official Email -->
-          <div class="glass-card p-6 rounded-2xl border-l-4 border-l-sky-500">
-            <div class="flex items-start space-x-4">
-              <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center shrink-0">
-                <i data-lucide="mail" class="w-6 h-6"></i>
-              </div>
-              <div class="flex-1">
-                <span class="text-xs font-mono uppercase text-zinc-400">Official Inquiries & Proposals</span>
-                <div class="text-base sm:text-lg font-bold text-white font-mono mt-0.5 break-all">techartmedia.info@gmail.com</div>
-                <p class="text-xs text-zinc-400 mt-1">Send your RFP, RFQ, or brief documents anytime.</p>
-                <div class="mt-3 flex items-center space-x-2">
-                  <a href="mailto:techartmedia.info@gmail.com" class="text-xs font-bold text-sky-400 hover:underline flex items-center space-x-1">
-                    <span>Send Email</span>
-                    <i data-lucide="external-link" class="w-3 h-3"></i>
-                  </a>
-                  <span class="text-zinc-600">•</span>
-                  <button onclick="copyToClipboard('techartmedia.info@gmail.com', 'Email')" class="text-xs text-zinc-400 hover:text-white">Copy</button>
-                </div>
-              </div>
+          <div class="md:col-span-8 md:border-l md:border-white/[0.06] md:pl-10">
+            <div class="text-[11px] font-mono uppercase tracking-widest text-zinc-400 mb-3">Founder's Statement</div>
+            <h4 class="text-xl sm:text-2xl font-bold text-white mb-4 leading-snug">
+              "We approach design with artistic intention, and marketing with mathematical rigor."
+            </h4>
+            <div class="space-y-4 text-xs sm:text-sm text-zinc-400 leading-relaxed font-normal">
+              <p>
+                At <strong>TechArtMedia</strong>, we reject superficial marketing metrics and fragmented vendors. A successful commercial presence requires that visual identity, short-form creative production, and digital ad architecture work in absolute synchronization.
+              </p>
+              <p>
+                Every engagement we take on is backed by direct personal accountability, transparent pricing, and relentless execution.
+              </p>
             </div>
-          </div>
 
-          <!-- Card 3: Physical Office Address -->
-          <div class="glass-card p-6 rounded-2xl border-l-4 border-l-brand-orange">
-            <div class="flex items-start space-x-4">
-              <div class="w-12 h-12 rounded-xl bg-orange-500/10 text-brand-orange flex items-center justify-center shrink-0">
-                <i data-lucide="map-pin" class="w-6 h-6"></i>
-              </div>
-              <div class="flex-1">
-                <span class="text-xs font-mono uppercase text-zinc-400">Studio & Registered Office</span>
-                <div class="text-sm font-bold text-white mt-1 leading-snug">
-                  Avdhoot Park, Vikas Colony Opp Parkside Residency, Indiranagar Nashik, Maharashtra 422009
-                </div>
-                <p class="text-xs text-zinc-400 mt-1">In-person consultations available by prior appointment.</p>
-                <a href="https://maps.google.com/?q=Indiranagar+Nashik+Maharashtra" target="_blank" class="mt-3 inline-flex items-center space-x-1 text-xs font-bold text-brand-orange hover:underline">
-                  <span>Open on Google Maps</span>
-                  <i data-lucide="external-link" class="w-3 h-3"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4: Official Domain & Handle -->
-          <div class="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800 text-xs text-zinc-400 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-              <i data-lucide="instagram" class="w-4 h-4 text-rose-400"></i>
-              <span>Instagram: <strong class="text-white">@techartmedia</strong></span>
-            </div>
-            <div class="flex items-center space-x-2">
-              <i data-lucide="globe" class="w-4 h-4 text-emerald-400"></i>
-              <span>Web: <strong class="text-white">techartmedia.in</strong></span>
+            <div class="mt-8 pt-6 border-t border-white/[0.06] flex items-center justify-between text-xs text-zinc-400 font-mono">
+              <span>REGISTERED OFFICE: INDIRANAGAR NASHIK</span>
+              <span>techartmedia.in</span>
             </div>
           </div>
 
         </div>
 
-        <!-- Right: Interactive Contact Form -->
-        <div class="lg:col-span-7">
-          <div class="glass-card p-8 sm:p-10 rounded-3xl border border-white/10 shadow-2xl">
-            <h3 class="text-xl sm:text-2xl font-bold text-white font-display mb-1">
-              Request Free Strategy Audit & Proposal
-            </h3>
-            <p class="text-xs text-zinc-400 mb-8">
-              We'll review your social profiles, current ads, and website to share high-impact growth recommendations.
-            </p>
+      </div>
 
-            <form id="contactForm" class="space-y-5">
+    </div>
+  </section>
+
+  <!-- Contact & Studio Consultation -->
+  <section id="contact" class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Column: Contact Directory -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <div class="text-[11px] font-mono uppercase tracking-widest text-zinc-400 mb-2">Initiate Contact</div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+              Start Your Project
+            </h2>
+            <p class="mt-3 text-sm text-zinc-400 leading-relaxed">
+              Reach out to discuss a monthly retainer, web development scope, or custom digital marketing strategy.
+            </p>
+          </div>
+
+          <!-- Studio Details -->
+          <div class="space-y-4 text-xs border-t border-white/[0.06] pt-6">
+            
+            <div class="p-4 rounded-xl border border-white/[0.06] bg-[#111114]">
+              <div class="text-[10px] font-mono uppercase tracking-wider text-zinc-400 mb-1">Direct Line & WhatsApp</div>
+              <div class="text-sm font-bold text-white font-mono">+91 8087084597</div>
+              <div class="text-zinc-400 mt-1">Available 9:00 AM – 8:00 PM IST</div>
+            </div>
+
+            <div class="p-4 rounded-xl border border-white/[0.06] bg-[#111114]">
+              <div class="text-[10px] font-mono uppercase tracking-wider text-zinc-400 mb-1">Official Studio Email</div>
+              <div class="text-sm font-bold text-white font-mono">techartmedia.info@gmail.com</div>
+              <div class="text-zinc-400 mt-1">For formal proposals and RFQs</div>
+            </div>
+
+            <div class="p-4 rounded-xl border border-white/[0.06] bg-[#111114]">
+              <div class="text-[10px] font-mono uppercase tracking-wider text-zinc-400 mb-1">Office Location</div>
+              <div class="text-sm font-bold text-white">Avdhoot Park, Vikas Colony Opp Parkside Residency, Indiranagar Nashik, Maharashtra 422009</div>
+            </div>
+
+            <div class="p-4 rounded-xl border border-white/[0.06] bg-[#111114] flex items-center justify-between font-mono text-[11px]">
+              <span class="text-zinc-400">Instagram: <strong class="text-white">@techartmedia</strong></span>
+              <span class="text-zinc-400">Domain: <strong class="text-white">techartmedia.in</strong></span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Minimalist Contact Form -->
+        <div class="lg:col-span-7">
+          <div class="p-8 sm:p-10 rounded-2xl border border-white/[0.08] bg-[#111114]">
+            
+            <h3 class="text-xl font-bold text-white mb-2">Request Agency Strategy Proposal</h3>
+            <p class="text-xs text-zinc-400 mb-8">Direct inquiry submitted to Durvesh Bhavsar.</p>
+
+            <form id="contactForm" class="space-y-6">
               
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label for="contactName" class="block text-xs font-mono uppercase text-zinc-300 font-semibold mb-1.5">
-                    Your Name *
+                  <label for="contactName" class="block text-[11px] font-mono uppercase text-zinc-400 mb-2">
+                    Client Name *
                   </label>
-                  <input type="text" id="contactName" required placeholder="e.g. Rahul Sharma" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-brand-orange transition-colors">
+                  <input type="text" id="contactName" required placeholder="Your full name" class="w-full bg-[#18181c] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors">
                 </div>
 
                 <div>
-                  <label for="contactPhone" class="block text-xs font-mono uppercase text-zinc-300 font-semibold mb-1.5">
-                    WhatsApp / Phone Number *
+                  <label for="contactPhone" class="block text-[11px] font-mono uppercase text-zinc-400 mb-2">
+                    WhatsApp / Phone *
                   </label>
-                  <input type="tel" id="contactPhone" required placeholder="+91 98765 43210" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-brand-orange transition-colors">
+                  <input type="tel" id="contactPhone" required placeholder="+91 80870 00000" class="w-full bg-[#18181c] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors">
                 </div>
               </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label for="contactEmail" class="block text-xs font-mono uppercase text-zinc-300 font-semibold mb-1.5">
+                  <label for="contactEmail" class="block text-[11px] font-mono uppercase text-zinc-400 mb-2">
                     Email Address
                   </label>
-                  <input type="email" id="contactEmail" placeholder="you@business.com" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-brand-orange transition-colors">
+                  <input type="email" id="contactEmail" placeholder="you@company.com" class="w-full bg-[#18181c] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors">
                 </div>
 
                 <div>
-                  <label for="contactService" class="block text-xs font-mono uppercase text-zinc-300 font-semibold mb-1.5">
-                    Primary Service Needed
+                  <label for="contactService" class="block text-[11px] font-mono uppercase text-zinc-400 mb-2">
+                    Primary Service
                   </label>
-                  <select id="contactService" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange transition-colors">
-                    <option value="Social Media Packages">Social Media Package (Starter / Growth / Premium)</option>
+                  <select id="contactService" class="w-full bg-[#18181c] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-white transition-colors">
+                    <option value="Social Media Retainer (₹15k - ₹35k/mo)">Social Media Retainer (Starter / Growth / Premium)</option>
                     <option value="Performance Meta & Google Ads">Performance Meta & Google Ads</option>
-                    <option value="Website Design & Development">Website Design & Development</option>
-                    <option value="Graphic Design & Branding">Graphic Design & Branding</option>
-                    <option value="Reels & Video Production">Reels & Video Production with Models</option>
-                    <option value="Custom Software / ERP Suite">Custom Software / ERP Suite</option>
-                    <option value="Full Digital Retainer">Full 360° Digital Marketing Retainer</option>
+                    <option value="Web & Software Development">Web & Software Development</option>
+                    <option value="Brand Identity & Graphic Design">Brand Identity & Graphic Design</option>
+                    <option value="Commercial Reel Production with Models">Commercial Reel Production with Models</option>
+                    <option value="Full 360° Studio Engagement">Full 360° Studio Engagement</option>
                   </select>
                 </div>
               </div>
 
               <div>
-                <label for="contactBudget" class="block text-xs font-mono uppercase text-zinc-300 font-semibold mb-1.5">
-                  Monthly Budget Range
+                <label for="contactBudget" class="block text-[11px] font-mono uppercase text-zinc-400 mb-2">
+                  Budget Allocation
                 </label>
-                <select id="contactBudget" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-orange transition-colors">
+                <select id="contactBudget" class="w-full bg-[#18181c] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-white transition-colors">
                   <option value="₹15,000 - ₹25,000 / month">₹15,000 - ₹25,000 / month</option>
-                  <option value="₹25,000 - ₹50,000 / month">₹25,000 - ₹50,000 / month (Most Popular)</option>
-                  <option value="₹50,000 - ₹1,00,000+ / month">₹50,000 - ₹1,00,000+ / month (High Growth)</option>
-                  <option value="One-Time Project / Custom Quote">One-Time Project / Custom Quote</option>
+                  <option value="₹25,000 - ₹50,000 / month">₹25,000 - ₹50,000 / month (Recommended)</option>
+                  <option value="₹50,000 - ₹1,00,000+ / month">₹50,000 - ₹1,00,000+ / month (Enterprise)</option>
+                  <option value="One-Time Fixed Project">One-Time Fixed Project</option>
                 </select>
               </div>
 
               <div>
-                <label for="contactMessage" class="block text-xs font-mono uppercase text-zinc-300 font-semibold mb-1.5">
-                  About Your Business & Goals
+                <label for="contactMessage" class="block text-[11px] font-mono uppercase text-zinc-400 mb-2">
+                  Brief Overview of Requirements
                 </label>
-                <textarea id="contactMessage" rows="4" placeholder="Tell us about your brand, current website/Instagram handle, and what results you are looking to achieve..." class="w-full bg-zinc-900 border border-zinc-700 rounded-xl p-4 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-brand-orange transition-colors"></textarea>
+                <textarea id="contactMessage" rows="4" placeholder="Briefly describe your company, target audience, and primary objectives..." class="w-full bg-[#18181c] border border-white/[0.08] rounded-xl p-4 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white transition-colors"></textarea>
               </div>
 
-              <button type="submit" class="w-full btn-primary py-4 rounded-xl text-base font-bold shadow-xl flex items-center justify-center space-x-2">
-                <i data-lucide="send" class="w-5 h-5"></i>
-                <span>Submit & Connect on WhatsApp</span>
+              <button type="submit" class="w-full btn-minimal-primary py-4 text-xs uppercase font-mono tracking-wider font-bold flex items-center justify-center space-x-2">
+                <span>Submit Inquiry & Open WhatsApp</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </button>
 
-              <p class="text-[11px] text-center text-zinc-500">
-                🔒 Privacy Protected. We never sell your contact info. Information is shared strictly with the founder.
-              </p>
+              <div class="text-center text-[10px] text-zinc-500 font-mono">
+                Direct transmission to TechArtMedia Studio. Client confidentiality strictly maintained.
+              </div>
 
             </form>
           </div>
@@ -1310,190 +933,57 @@
     </div>
   </section>
 
-  <!-- Frequently Asked Questions (FAQ) Section -->
-  <section class="py-20 relative bg-zinc-950 border-t border-zinc-900">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center mb-14">
-        <span class="text-xs font-mono uppercase tracking-wider text-brand-blue">Got Questions?</span>
-        <h2 class="text-3xl font-extrabold text-white font-display mt-2">Frequently Asked Questions</h2>
-      </div>
-
-      <div class="space-y-4">
-        
-        <!-- FAQ 1 -->
-        <div class="faq-item glass-card rounded-2xl overflow-hidden">
-          <button class="faq-trigger w-full px-6 py-4 text-left flex items-center justify-between text-white font-semibold text-sm sm:text-base">
-            <span>How fast can we launch our social media or ads campaign?</span>
-            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-zinc-400 transition-transform"></i>
-          </button>
-          <div class="faq-content px-6 pb-5 text-xs sm:text-sm text-zinc-400 hidden border-t border-zinc-800/60 pt-4 leading-relaxed">
-            Our typical onboarding takes 48 to 72 hours. Once we finalize your package, we conduct a brand discovery session, prepare the month's content calendar and ad hooks, and begin posting and ad setup immediately.
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="faq-item glass-card rounded-2xl overflow-hidden">
-          <button class="faq-trigger w-full px-6 py-4 text-left flex items-center justify-between text-white font-semibold text-sm sm:text-base">
-            <span>Does the package cost include the ad budget for Meta/Google?</span>
-            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-zinc-400 transition-transform"></i>
-          </button>
-          <div class="faq-content px-6 pb-5 text-xs sm:text-sm text-zinc-400 hidden border-t border-zinc-800/60 pt-4 leading-relaxed">
-            Our package price covers full creative design, copy, video editing, campaign architecture, and daily optimization. The actual media ad spend is paid directly to Meta (Facebook/Instagram) or Google via your ad account. We advise on optimal daily budgets based on your target lead cost.
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="faq-item glass-card rounded-2xl overflow-hidden">
-          <button class="faq-trigger w-full px-6 py-4 text-left flex items-center justify-between text-white font-semibold text-sm sm:text-base">
-            <span>Do you feature professional models in short-form reels?</span>
-            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-zinc-400 transition-transform"></i>
-          </button>
-          <div class="faq-content px-6 pb-5 text-xs sm:text-sm text-zinc-400 hidden border-t border-zinc-800/60 pt-4 leading-relaxed">
-            Yes! As highlighted in our official packages flyer, our Starter plan includes 1 model reel, the Growth plan includes 3 model-featured reels, and the Premium plan includes 5 model-featured reels. We arrange presentation, scriptwriting, and high-retention video production.
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="faq-item glass-card rounded-2xl overflow-hidden">
-          <button class="faq-trigger w-full px-6 py-4 text-left flex items-center justify-between text-white font-semibold text-sm sm:text-base">
-            <span>How does website hosting and the techartmedia.in domain connect?</span>
-            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-zinc-400 transition-transform"></i>
-          </button>
-          <div class="faq-content px-6 pb-5 text-xs sm:text-sm text-zinc-400 hidden border-t border-zinc-800/60 pt-4 leading-relaxed">
-            The website is engineered for static hosting on Vercel, GitHub Pages, or Cloudflare Pages with SSL certificates. The domain techartmedia.in is pointed via standard A / CNAME DNS records, providing zero-latency loading speeds.
-          </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="faq-item glass-card rounded-2xl overflow-hidden">
-          <button class="faq-trigger w-full px-6 py-4 text-left flex items-center justify-between text-white font-semibold text-sm sm:text-base">
-            <span>Are there any lock-in contracts?</span>
-            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-zinc-400 transition-transform"></i>
-          </button>
-          <div class="faq-content px-6 pb-5 text-xs sm:text-sm text-zinc-400 hidden border-t border-zinc-800/60 pt-4 leading-relaxed">
-            No long-term lock-in contracts. Our packages operate on a monthly renewal basis. You can pause or adjust your tier with 7 days' notice before the next monthly cycle. We earn your business every month through tangible results.
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Lead Submission Confirmation Modal -->
+  <!-- Confirmation Modal -->
   <div id="formSuccessModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8 max-w-md w-full text-center shadow-2xl relative">
-      <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto mb-4">
-        <i data-lucide="check-circle" class="w-8 h-8"></i>
+    <div class="bg-[#141418] border border-white/[0.1] rounded-2xl p-8 max-w-md w-full text-center shadow-2xl">
+      <div class="w-12 h-12 rounded-xl bg-white/[0.06] text-white flex items-center justify-center mx-auto mb-4">
+        <i data-lucide="check" class="w-6 h-6"></i>
       </div>
-      <h3 class="text-2xl font-bold text-white font-display">Inquiry Received!</h3>
-      <p class="text-sm text-zinc-300 mt-2 leading-relaxed">
-        Thank you for contacting TechArtMedia. We've initiated a direct WhatsApp chat window with Durvesh Bhavsar to discuss your requirements.
+      <h3 class="text-xl font-bold text-white">Inquiry Dispatched</h3>
+      <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+        Your brief has been formatted and redirected to Durvesh Bhavsar via direct studio communication.
       </p>
-      <div class="mt-6 flex flex-col space-y-3">
-        <a href="https://wa.me/918087084597" target="_blank" class="btn-whatsapp py-3 rounded-xl font-bold text-sm flex items-center justify-center space-x-2">
-          <i data-lucide="message-circle" class="w-4 h-4"></i>
-          <span>Open WhatsApp Chat Now</span>
+      <div class="mt-6 flex flex-col space-y-2">
+        <a href="https://wa.me/918087084597" target="_blank" class="btn-minimal-primary py-3 text-xs font-bold flex items-center justify-center space-x-2">
+          <span>Open WhatsApp Thread</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
-        <button id="closeSuccessModalBtn" class="bg-zinc-800 hover:bg-zinc-700 text-white py-2.5 rounded-xl text-xs font-semibold">
-          Close Window
+        <button id="closeSuccessModalBtn" class="btn-minimal-secondary py-2.5 text-xs text-zinc-400">
+          Dismiss
         </button>
       </div>
     </div>
   </div>
 
-  <!-- Mobile Floating Speed Dial (Fixed Bottom Quick Action) -->
-  <div class="sm:hidden fixed bottom-4 left-4 right-4 z-40 flex items-center space-x-2">
-    <a href="https://wa.me/918087084597?text=Hi%20TechArtMedia,%20I%20would%20like%20to%20discuss%20a%20digital%20marketing%20package!" target="_blank" class="flex-1 btn-whatsapp py-3 rounded-2xl font-bold text-xs flex items-center justify-center space-x-2 shadow-2xl">
-      <i data-lucide="message-circle" class="w-4 h-4"></i>
-      <span>WhatsApp (+91 8087084597)</span>
-    </a>
-    <a href="tel:+918087084597" class="bg-zinc-800 text-white p-3 rounded-2xl border border-zinc-700 shadow-2xl flex items-center justify-center" aria-label="Call Founder">
-      <i data-lucide="phone" class="w-4 h-4 text-brand-orange"></i>
-    </a>
-  </div>
-
-  <!-- Footer -->
-  <footer class="bg-black text-zinc-400 py-16 border-t border-zinc-900 text-xs">
+  <!-- Minimalist Executive Footer -->
+  <footer class="border-t border-white/[0.06] bg-[#08080a] py-14 text-xs text-zinc-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-zinc-900">
-        
-        <!-- Col 1: Brand Info -->
-        <div class="md:col-span-1 space-y-4">
-          <div class="flex items-center space-x-3">
-            <img src="assets/logo.png" alt="TechArtMedia Logo" class="h-9 w-auto">
-            <span class="font-display font-bold text-lg text-white">TechArtMedia</span>
-          </div>
-          <p class="text-zinc-400 text-xs leading-relaxed">
-            Your Brand. Our Creativity. Powerful Results. The premier digital agency in Nashik specializing in DESIGN, DIGITAL & DEVELOPMENT.
-          </p>
-          <div class="text-[11px] font-mono text-zinc-500">
-            Founder & CEO: Durvesh Bhavsar
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between pb-10 border-b border-white/[0.06] gap-6">
+        <div class="flex items-center space-x-3.5">
+          <img src="assets/logo.png" alt="TechArtMedia" class="h-8 w-auto">
+          <div>
+            <div class="text-sm font-bold text-white tracking-tight">TechArtMedia</div>
+            <div class="text-[10px] font-mono text-zinc-500">DESIGN • DIGITAL • DEVELOPMENT</div>
           </div>
         </div>
 
-        <!-- Col 2: Services Links -->
-        <div class="space-y-2">
-          <div class="text-white font-bold font-mono uppercase text-[11px] tracking-wider mb-3">Our Core Services</div>
-          <ul class="space-y-1.5">
-            <li><a href="#services" class="hover:text-white transition-colors">Graphic Design & Social Creatives</a></li>
-            <li><a href="#services" class="hover:text-white transition-colors">Web Design & Modern Development</a></li>
-            <li><a href="#services" class="hover:text-white transition-colors">Social Media Account Management</a></li>
-            <li><a href="#services" class="hover:text-white transition-colors">Meta & Google Performance Ads</a></li>
-            <li><a href="#services" class="hover:text-white transition-colors">Reels & Video Editing with Models</a></li>
-            <li><a href="#services" class="hover:text-white transition-colors">Corporate Branding & Print Collateral</a></li>
-          </ul>
+        <div class="flex flex-wrap gap-6 text-[11px] font-mono text-zinc-400">
+          <a href="#capabilities" class="hover:text-white transition-colors">CAPABILITIES</a>
+          <a href="#retainers" class="hover:text-white transition-colors">RETAINERS</a>
+          <a href="#standards" class="hover:text-white transition-colors">STANDARDS</a>
+          <a href="#work" class="hover:text-white transition-colors">WORK</a>
+          <a href="#founder" class="hover:text-white transition-colors">LEADERSHIP</a>
+          <a href="#contact" class="hover:text-white transition-colors">CONTACT</a>
         </div>
-
-        <!-- Col 3: Packages & Links -->
-        <div class="space-y-2">
-          <div class="text-white font-bold font-mono uppercase text-[11px] tracking-wider mb-3">Monthly Packages</div>
-          <ul class="space-y-1.5">
-            <li><a href="#packages" class="hover:text-white transition-colors">Starter PRESENCE — ₹15,000/mo</a></li>
-            <li><a href="#packages" class="hover:text-white transition-colors">Growth & ENQUIRIES — ₹25,000/mo</a></li>
-            <li><a href="#packages" class="hover:text-white transition-colors">Premium GROWTH — ₹35,000/mo</a></li>
-            <li><a href="#calculator" class="hover:text-white transition-colors">Custom Project Cost Estimator</a></li>
-            <li><a href="#founder" class="hover:text-white transition-colors">Founder's Vision & Desk</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Official Contact -->
-        <div class="space-y-2">
-          <div class="text-white font-bold font-mono uppercase text-[11px] tracking-wider mb-3">Nashik Headquarters</div>
-          <p class="text-zinc-400 leading-snug">
-            Avdhoot Park, Vikas Colony Opp Parkside Residency, Indiranagar Nashik, Maharashtra
-          </p>
-          <div class="pt-2 space-y-1 font-mono text-zinc-300">
-            <div>📞 +91 8087084597</div>
-            <div>✉️ techartmedia.info@gmail.com</div>
-            <div>🌐 techartmedia.in</div>
-          </div>
-          <div class="pt-3 flex space-x-3">
-            <a href="https://instagram.com/techartmedia" target="_blank" class="w-8 h-8 rounded-lg bg-zinc-900 hover:bg-rose-500/20 text-zinc-300 hover:text-rose-400 flex items-center justify-center transition-colors" aria-label="Instagram">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
-            </a>
-            <a href="https://wa.me/918087084597" target="_blank" class="w-8 h-8 rounded-lg bg-zinc-900 hover:bg-emerald-500/20 text-zinc-300 hover:text-emerald-400 flex items-center justify-center transition-colors" aria-label="WhatsApp">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
-            </a>
-            <a href="https://github.com/techartmedia" target="_blank" class="w-8 h-8 rounded-lg bg-zinc-900 hover:bg-white/20 text-zinc-300 hover:text-white flex items-center justify-center transition-colors" aria-label="GitHub">
-              <i data-lucide="github" class="w-4 h-4"></i>
-            </a>
-          </div>
-        </div>
-
       </div>
 
-      <!-- Copyright & Domain Signature -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-zinc-500">
+      <div class="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] font-mono">
         <div>
-          © 2026 TechArtMedia. All rights reserved. • Built for <span class="text-zinc-300 font-mono">techartmedia.in</span>
+          © 2026 TechArtMedia Studio. All rights reserved. • Registered domain: <span class="text-zinc-300">techartmedia.in</span>
         </div>
-        <div class="mt-2 sm:mt-0 flex space-x-4">
-          <a href="#hero" class="hover:text-zinc-300">Back to Top ↑</a>
-          <span>•</span>
-          <a href="mailto:techartmedia.info@gmail.com" class="hover:text-zinc-300">Support</a>
+        <div class="text-zinc-500">
+          Indiranagar Nashik, Maharashtra • Founder & CEO: Durvesh Bhavsar
         </div>
       </div>
 
