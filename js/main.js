@@ -1,16 +1,85 @@
 /**
- * TechArtMedia Studio — Minimalist & Architectural Agency Website
- * Precision client-side logic: Billing recalculations, mobile navigation,
- * form submission formatting with WhatsApp redirection, and subtle scroll dynamics.
+ * TechArtMedia Studio — Interactive Concept & Animations Engine
+ * Handles: Scroll progress bar, IntersectionObserver animations, high-res Lightbox modal,
+ * pricing toggles, interactive service explorer, WhatsApp pre-fill formatting, and mobile drawer.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize Lucide vector icons
+  // Initialize Lucide Icons
   if (window.lucide) {
     window.lucide.createIcons();
   }
 
-  // Mobile Navigation Drawer Toggle
+  // 1. Scroll Progress Bar
+  const scrollProgressBar = document.getElementById('scrollProgressBar');
+  window.addEventListener('scroll', () => {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (window.scrollY / totalHeight) * 100;
+    if (scrollProgressBar) {
+      scrollProgressBar.style.width = `${progress}%`;
+    }
+  });
+
+  // 2. IntersectionObserver for Fluid Scroll Reveal Animations
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // 3. High-Resolution Image Lightbox System
+  const lightboxModal = document.getElementById('lightboxModal');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+  const lightboxTriggers = document.querySelectorAll('[data-lightbox-src]');
+
+  function openLightbox(src, caption) {
+    if (!lightboxModal || !lightboxImage) return;
+    lightboxImage.src = src;
+    if (lightboxCaption) lightboxCaption.textContent = caption || 'TechArtMedia Official Document';
+    lightboxModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightboxModal) return;
+    lightboxModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  lightboxTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const src = trigger.getAttribute('data-lightbox-src');
+      const caption = trigger.getAttribute('data-lightbox-caption');
+      openLightbox(src, caption);
+    });
+  });
+
+  if (lightboxCloseBtn) lightboxCloseBtn.addEventListener('click', closeLightbox);
+  if (lightboxModal) {
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+
+  // 4. Mobile Menu Navigation Drawer
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileMenuCloseBtn = document.getElementById('mobileMenuCloseBtn');
   const mobileDrawer = document.getElementById('mobileDrawer');
@@ -33,22 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileMenuCloseBtn) mobileMenuCloseBtn.addEventListener('click', closeMobileMenu);
   if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileMenu);
 
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', closeMobileMenu);
-  });
+  mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
 
-  // Sticky Navbar Blur Dynamics
-  const navbar = document.getElementById('mainNavbar');
-  window.addEventListener('scroll', () => {
-    if (!navbar) return;
-    if (window.scrollY > 40) {
-      navbar.classList.add('border-white/[0.12]', 'shadow-2xl');
-    } else {
-      navbar.classList.remove('border-white/[0.12]', 'shadow-2xl');
-    }
-  });
-
-  // Billing Toggle (Monthly vs Quarterly - 10% Retainer Savings)
+  // 5. Billing Toggle for Packages (Monthly vs Quarterly - 10% Savings)
   const billingToggle = document.getElementById('billingToggle');
   const starterPrice = document.getElementById('starterPrice');
   const growthPrice = document.getElementById('growthPrice');
@@ -73,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (growthPrice) growthPrice.textContent = '₹' + growthDiscounted.toLocaleString('en-IN');
       if (premiumPrice) premiumPrice.textContent = '₹' + premiumDiscounted.toLocaleString('en-IN');
       
-      billingPeriodLabels.forEach(el => el.textContent = '/month (quarterly contract)');
+      billingPeriodLabels.forEach(el => el.textContent = '/month (billed quarterly)');
     } else {
       if (starterPrice) starterPrice.textContent = '₹' + basePrices.starter.toLocaleString('en-IN');
       if (growthPrice) growthPrice.textContent = '₹' + basePrices.growth.toLocaleString('en-IN');
@@ -87,7 +143,40 @@ document.addEventListener('DOMContentLoaded', () => {
     billingToggle.addEventListener('change', updatePricing);
   }
 
-  // Contact Form Submission Handler with WhatsApp integration
+  // 6. Interactive FAQ Accordion
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const trigger = item.querySelector('.faq-trigger');
+    const answer = item.querySelector('.faq-content');
+    const icon = item.querySelector('.faq-icon');
+
+    if (trigger && answer) {
+      trigger.addEventListener('click', () => {
+        const isOpen = !answer.classList.contains('hidden');
+
+        // Close other FAQs
+        faqItems.forEach(other => {
+          const otherAnswer = other.querySelector('.faq-content');
+          const otherIcon = other.querySelector('.faq-icon');
+          if (otherAnswer && otherAnswer !== answer) {
+            otherAnswer.classList.add('hidden');
+            if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+          }
+        });
+
+        // Toggle clicked FAQ
+        if (isOpen) {
+          answer.classList.add('hidden');
+          if (icon) icon.style.transform = 'rotate(0deg)';
+        } else {
+          answer.classList.remove('hidden');
+          if (icon) icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    }
+  });
+
+  // 7. Interactive WhatsApp Consultation Form Handler
   const contactForm = document.getElementById('contactForm');
   const formSuccessModal = document.getElementById('formSuccessModal');
   const closeSuccessModalBtn = document.getElementById('closeSuccessModalBtn');
@@ -99,8 +188,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const name = document.getElementById('contactName')?.value.trim() || '';
       const phone = document.getElementById('contactPhone')?.value.trim() || '';
       const email = document.getElementById('contactEmail')?.value.trim() || '';
-      const service = document.getElementById('contactService')?.value || 'Social Media Retainer';
-      const budget = document.getElementById('contactBudget')?.value || 'Flexible';
+      const service = document.getElementById('contactService')?.value || 'Growth & Enquiries Retainer';
+      const budget = document.getElementById('contactBudget')?.value || '₹25,000 / month';
       const message = document.getElementById('contactMessage')?.value.trim() || '';
 
       if (!name || !phone) {
@@ -108,44 +197,34 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Format Executive WhatsApp Message
+      // Format WhatsApp Message directly to Founder Durvesh Bhavsar
       const waText = encodeURIComponent(
-        `*TechArtMedia Studio — Engagement Inquiry*\n\n` +
-        `• Client: ${name}\n` +
-        `• WhatsApp: ${phone}\n` +
-        `• Email: ${email || 'Not provided'}\n` +
-        `• Service: ${service}\n` +
-        `• Budget Range: ${budget}\n\n` +
-        `• Project Brief:\n${message || 'Standard agency audit requested.'}\n\n` +
-        `Sent via techartmedia.in`
+        `*New Inquiry via techartmedia.in Website*\n\n` +
+        `👤 *Client Name:* ${name}\n` +
+        `📞 *WhatsApp / Phone:* ${phone}\n` +
+        `✉️ *Email:* ${email || 'Not provided'}\n` +
+        `🎯 *Selected Scope:* ${service}\n` +
+        `💰 *Budget Range:* ${budget}\n\n` +
+        `📝 *Project Overview / Notes:*\n${message || 'Ready to discuss requirements.'}\n\n` +
+        `_Directed to Durvesh Bhavsar, Founder & CEO, TechArtMedia_`
       );
 
       const waUrl = `https://wa.me/918087084597?text=${waText}`;
 
-      // Open Modal
+      // Show Confirmation Modal
       if (formSuccessModal) {
         formSuccessModal.classList.remove('hidden');
         formSuccessModal.classList.add('flex');
       }
 
-      // Backup lead to localStorage
+      // Store lead backup
       try {
-        const existingLeads = JSON.parse(localStorage.getItem('tam_leads') || '[]');
-        existingLeads.unshift({
-          name,
-          phone,
-          email,
-          service,
-          budget,
-          message,
-          timestamp: new Date().toISOString()
-        });
-        localStorage.setItem('tam_leads', JSON.stringify(existingLeads));
-      } catch (err) {
-        // silent fail
-      }
+        const stored = JSON.parse(localStorage.getItem('tam_leads') || '[]');
+        stored.unshift({ name, phone, email, service, budget, message, date: new Date().toISOString() });
+        localStorage.setItem('tam_leads', JSON.stringify(stored));
+      } catch (err) {}
 
-      // Open WhatsApp chat in background
+      // Trigger WhatsApp window
       setTimeout(() => {
         window.open(waUrl, '_blank');
       }, 500);
