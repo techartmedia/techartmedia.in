@@ -1,42 +1,87 @@
 /**
- * TechArtMedia Studio — Interactive Concept & Animations Engine
- * Handles: Scroll progress bar, IntersectionObserver animations, high-res Lightbox modal,
- * pricing toggles, interactive service explorer, WhatsApp pre-fill formatting, and mobile drawer.
+ * TechArtMedia Studio — Official Interactive Engine
+ * Handles: Multi-page active navigation, scroll progress, scroll reveal animations,
+ * high-res lightbox, pricing toggle, interactive WhatsApp proposal calculator,
+ * contact funnel dispatch, floating actions, and mobile drawer.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize Lucide Icons
+  // 1. Initialize Lucide Icons
   if (window.lucide) {
     window.lucide.createIcons();
   }
 
-  // 1. Scroll Progress Bar
-  const scrollProgressBar = document.getElementById('scrollProgressBar');
-  window.addEventListener('scroll', () => {
-    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = (window.scrollY / totalHeight) * 100;
-    if (scrollProgressBar) {
-      scrollProgressBar.style.width = `${progress}%`;
+  // 2. Highlight Active Page in Navbar
+  const currentPath = window.location.pathname.toLowerCase();
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+  
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    
+    const hrefClean = href.split('#')[0].toLowerCase();
+    const isCurrent = 
+      (currentPath.endsWith(hrefClean) && hrefClean !== '') ||
+      (currentPath.endsWith('/') && (hrefClean === 'index.html' || hrefClean === './' || hrefClean === 'index.html#hero')) ||
+      (currentPath.includes('about') && hrefClean.includes('about')) ||
+      (currentPath.includes('services') && hrefClean.includes('services')) ||
+      (currentPath.includes('pricing') && hrefClean.includes('pricing')) ||
+      (currentPath.includes('contact') && hrefClean.includes('contact'));
+
+    if (isCurrent && !href.startsWith('#')) {
+      link.classList.add('active');
     }
   });
 
-  // 2. IntersectionObserver for Fluid Scroll Reveal Animations
-  const revealElements = document.querySelectorAll('.reveal-on-scroll');
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
+  // 3. Scroll Progress Bar
+  const scrollProgressBar = document.getElementById('scrollProgressBar');
+  window.addEventListener('scroll', () => {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+    if (scrollProgressBar) {
+      scrollProgressBar.style.width = `${progress}%`;
+    }
+
+    // Toggle Back-to-Top Button
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    if (backToTopBtn) {
+      if (window.scrollY > 320) {
+        backToTopBtn.classList.add('is-visible');
+      } else {
+        backToTopBtn.classList.remove('is-visible');
       }
-    });
-  }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
+    }
   });
 
-  revealElements.forEach(el => revealObserver.observe(el));
+  // Back-to-top click handler
+  const backToTopBtn = document.getElementById('backToTopBtn');
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
-  // 3. High-Resolution Image Lightbox System
+  // 4. IntersectionObserver for Fluid Scroll Reveal Animations
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    revealElements.forEach(el => el.classList.add('is-visible'));
+  }
+
+  // 5. High-Resolution Image Lightbox System
   const lightboxModal = document.getElementById('lightboxModal');
   const lightboxImage = document.getElementById('lightboxImage');
   const lightboxCaption = document.getElementById('lightboxCaption');
@@ -79,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. Mobile Menu Navigation Drawer
+  // 6. Mobile Menu Navigation Drawer
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileMenuCloseBtn = document.getElementById('mobileMenuCloseBtn');
   const mobileDrawer = document.getElementById('mobileDrawer');
@@ -101,10 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
   if (mobileMenuCloseBtn) mobileMenuCloseBtn.addEventListener('click', closeMobileMenu);
   if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileMenu);
-
   mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
 
-  // 5. Billing Toggle for Packages (Monthly vs Quarterly - 10% Savings)
+  // 7. Billing Toggle for Packages (Monthly vs Quarterly - 10% Savings)
   const billingToggle = document.getElementById('billingToggle');
   const starterPrice = document.getElementById('starterPrice');
   const growthPrice = document.getElementById('growthPrice');
@@ -143,7 +187,57 @@ document.addEventListener('DOMContentLoaded', () => {
     billingToggle.addEventListener('change', updatePricing);
   }
 
-  // 6. Interactive FAQ Accordion
+  // 8. Interactive Custom Quote / Package Calculator
+  const calcReels = document.getElementById('calcReels');
+  const calcPosts = document.getElementById('calcPosts');
+  const calcWeb = document.getElementById('calcWeb');
+  const calcAds = document.getElementById('calcAds');
+  const calcEstimatedTotal = document.getElementById('calcEstimatedTotal');
+  const calcWhatsAppBtn = document.getElementById('calcWhatsAppBtn');
+
+  function calculateCustomQuote() {
+    if (!calcEstimatedTotal) return;
+
+    let total = 0;
+    const reelsVal = parseInt(calcReels?.value || '0', 10);
+    const postsVal = parseInt(calcPosts?.value || '0', 10);
+    const webVal = parseInt(calcWeb?.value || '0', 10);
+    const adsVal = parseInt(calcAds?.value || '0', 10);
+
+    total += reelsVal * 2500; // ~₹2,500 per produced reel with model
+    total += postsVal * 750;  // ~₹750 per graphic design post
+    total += webVal;          // web dev tier
+    total += adsVal;          // ads management
+
+    calcEstimatedTotal.textContent = '₹' + total.toLocaleString('en-IN');
+
+    // Update WhatsApp link
+    if (calcWhatsAppBtn) {
+      const reelsText = calcReels?.options[calcReels.selectedIndex]?.text || '0';
+      const postsText = calcPosts?.options[calcPosts.selectedIndex]?.text || '0';
+      const webText = calcWeb?.options[calcWeb.selectedIndex]?.text || 'None';
+      const adsText = calcAds?.options[calcAds.selectedIndex]?.text || 'No';
+
+      const customMsg = encodeURIComponent(
+        `*Custom Scope Estimate from techartmedia.in*\n\n` +
+        `🎬 *Reels Production:* ${reelsText}\n` +
+        `🎨 *Graphic Design Posts:* ${postsText}\n` +
+        `💻 *Web / Tech Development:* ${webText}\n` +
+        `📈 *Meta Ads Management:* ${adsText}\n` +
+        `💵 *Estimated Investment:* ₹${total.toLocaleString('en-IN')}\n\n` +
+        `Hi Durvesh, I customized this plan on your website and would like to finalize terms with TechArtMedia.`
+      );
+      calcWhatsAppBtn.href = `https://wa.me/918087084597?text=${customMsg}`;
+    }
+  }
+
+  if (calcReels) calcReels.addEventListener('change', calculateCustomQuote);
+  if (calcPosts) calcPosts.addEventListener('change', calculateCustomQuote);
+  if (calcWeb) calcWeb.addEventListener('change', calculateCustomQuote);
+  if (calcAds) calcAds.addEventListener('change', calculateCustomQuote);
+  calculateCustomQuote();
+
+  // 9. Interactive FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
     const trigger = item.querySelector('.faq-trigger');
@@ -176,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 7. Interactive WhatsApp Consultation Form Handler
+  // 10. Interactive WhatsApp Consultation Form Handler
   const contactForm = document.getElementById('contactForm');
   const formSuccessModal = document.getElementById('formSuccessModal');
   const closeSuccessModalBtn = document.getElementById('closeSuccessModalBtn');
@@ -211,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const waUrl = `https://wa.me/918087084597?text=${waText}`;
 
-      // Show Confirmation Modal
+      // Show Confirmation Modal if present
       if (formSuccessModal) {
         formSuccessModal.classList.remove('hidden');
         formSuccessModal.classList.add('flex');
