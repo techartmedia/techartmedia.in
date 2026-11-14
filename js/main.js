@@ -1,8 +1,7 @@
 /**
  * TechArtMedia Studio — Official Interactive Engine
  * Handles: Multi-page active navigation, scroll progress, scroll reveal animations,
- * high-res lightbox, pricing toggle, interactive WhatsApp proposal calculator,
- * contact funnel dispatch, floating actions, and mobile drawer.
+ * contact funnel WhatsApp dispatch, floating actions, and mobile drawer.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
       (currentPath.endsWith('/') && (hrefClean === 'index.html' || hrefClean === './' || hrefClean === 'index.html#hero')) ||
       (currentPath.includes('about') && hrefClean.includes('about')) ||
       (currentPath.includes('services') && hrefClean.includes('services')) ||
-      (currentPath.includes('pricing') && hrefClean.includes('pricing')) ||
+      (currentPath.includes('packages') && hrefClean.includes('packages')) ||
+      (currentPath.includes('pricing') && hrefClean.includes('packages')) ||
       (currentPath.includes('contact') && hrefClean.includes('contact'));
 
     if (isCurrent && !href.startsWith('#')) {
@@ -33,8 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. Scroll Progress Bar
+  // 3. Scroll Progress Bar & Floating Back to Top
   const scrollProgressBar = document.getElementById('scrollProgressBar');
+  const backToTopBtn = document.getElementById('backToTopBtn');
+
   window.addEventListener('scroll', () => {
     const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
     const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
@@ -43,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Toggle Back-to-Top Button
-    const backToTopBtn = document.getElementById('backToTopBtn');
     if (backToTopBtn) {
       if (window.scrollY > 320) {
         backToTopBtn.classList.add('is-visible');
@@ -53,8 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Back-to-top click handler
-  const backToTopBtn = document.getElementById('backToTopBtn');
   if (backToTopBtn) {
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -81,50 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => el.classList.add('is-visible'));
   }
 
-  // 5. High-Resolution Image Lightbox System
-  const lightboxModal = document.getElementById('lightboxModal');
-  const lightboxImage = document.getElementById('lightboxImage');
-  const lightboxCaption = document.getElementById('lightboxCaption');
-  const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
-  const lightboxTriggers = document.querySelectorAll('[data-lightbox-src]');
-
-  function openLightbox(src, caption) {
-    if (!lightboxModal || !lightboxImage) return;
-    lightboxImage.src = src;
-    if (lightboxCaption) lightboxCaption.textContent = caption || 'TechArtMedia Official Document';
-    lightboxModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    if (!lightboxModal) return;
-    lightboxModal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  lightboxTriggers.forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      const src = trigger.getAttribute('data-lightbox-src');
-      const caption = trigger.getAttribute('data-lightbox-caption');
-      openLightbox(src, caption);
-    });
-  });
-
-  if (lightboxCloseBtn) lightboxCloseBtn.addEventListener('click', closeLightbox);
-  if (lightboxModal) {
-    lightboxModal.addEventListener('click', (e) => {
-      if (e.target === lightboxModal) closeLightbox();
-    });
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
-      closeLightbox();
-    }
-  });
-
-  // 6. Mobile Menu Navigation Drawer
+  // 5. Mobile Menu Navigation Drawer
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileMenuCloseBtn = document.getElementById('mobileMenuCloseBtn');
   const mobileDrawer = document.getElementById('mobileDrawer');
@@ -148,96 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileMenu);
   mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
 
-  // 7. Billing Toggle for Packages (Monthly vs Quarterly - 10% Savings)
-  const billingToggle = document.getElementById('billingToggle');
-  const starterPrice = document.getElementById('starterPrice');
-  const growthPrice = document.getElementById('growthPrice');
-  const premiumPrice = document.getElementById('premiumPrice');
-  const billingPeriodLabels = document.querySelectorAll('.billing-period-label');
-
-  const basePrices = {
-    starter: 15000,
-    growth: 25000,
-    premium: 35000
-  };
-
-  function updatePricing() {
-    const isQuarterly = billingToggle && billingToggle.checked;
-    
-    if (isQuarterly) {
-      const starterDiscounted = Math.round(basePrices.starter * 0.9);
-      const growthDiscounted = Math.round(basePrices.growth * 0.9);
-      const premiumDiscounted = Math.round(basePrices.premium * 0.9);
-
-      if (starterPrice) starterPrice.textContent = '₹' + starterDiscounted.toLocaleString('en-IN');
-      if (growthPrice) growthPrice.textContent = '₹' + growthDiscounted.toLocaleString('en-IN');
-      if (premiumPrice) premiumPrice.textContent = '₹' + premiumDiscounted.toLocaleString('en-IN');
-      
-      billingPeriodLabels.forEach(el => el.textContent = '/month (billed quarterly)');
-    } else {
-      if (starterPrice) starterPrice.textContent = '₹' + basePrices.starter.toLocaleString('en-IN');
-      if (growthPrice) growthPrice.textContent = '₹' + basePrices.growth.toLocaleString('en-IN');
-      if (premiumPrice) premiumPrice.textContent = '₹' + basePrices.premium.toLocaleString('en-IN');
-      
-      billingPeriodLabels.forEach(el => el.textContent = '/month');
-    }
-  }
-
-  if (billingToggle) {
-    billingToggle.addEventListener('change', updatePricing);
-  }
-
-  // 8. Interactive Custom Quote / Package Calculator
-  const calcReels = document.getElementById('calcReels');
-  const calcPosts = document.getElementById('calcPosts');
-  const calcWeb = document.getElementById('calcWeb');
-  const calcAds = document.getElementById('calcAds');
-  const calcEstimatedTotal = document.getElementById('calcEstimatedTotal');
-  const calcWhatsAppBtn = document.getElementById('calcWhatsAppBtn');
-
-  function calculateCustomQuote() {
-    if (!calcEstimatedTotal) return;
-
-    let total = 0;
-    const reelsVal = parseInt(calcReels?.value || '0', 10);
-    const postsVal = parseInt(calcPosts?.value || '0', 10);
-    const webVal = parseInt(calcWeb?.value || '0', 10);
-    const adsVal = parseInt(calcAds?.value || '0', 10);
-
-    total += reelsVal * 2500; // ~₹2,500 per produced reel with model
-    total += postsVal * 750;  // ~₹750 per graphic design post
-    total += webVal;          // web dev tier
-    total += adsVal;          // ads management
-
-    calcEstimatedTotal.textContent = '₹' + total.toLocaleString('en-IN');
-
-    // Update WhatsApp link
-    if (calcWhatsAppBtn) {
-      const reelsText = calcReels?.options[calcReels.selectedIndex]?.text || '0';
-      const postsText = calcPosts?.options[calcPosts.selectedIndex]?.text || '0';
-      const webText = calcWeb?.options[calcWeb.selectedIndex]?.text || 'None';
-      const adsText = calcAds?.options[calcAds.selectedIndex]?.text || 'No';
-
-      const customMsg = encodeURIComponent(
-        `*Custom Scope Estimate from techartmedia.in*\n\n` +
-        `🎬 *Reels Production:* ${reelsText}\n` +
-        `🎨 *Graphic Design Posts:* ${postsText}\n` +
-        `💻 *Web / Tech Development:* ${webText}\n` +
-        `📈 *Meta Ads Management:* ${adsText}\n` +
-        `💵 *Estimated Investment:* ₹${total.toLocaleString('en-IN')}\n\n` +
-        `Hi Durvesh, I customized this plan on your website and would like to finalize terms with TechArtMedia.`
-      );
-      calcWhatsAppBtn.href = `https://wa.me/918087084597?text=${customMsg}`;
-    }
-  }
-
-  if (calcReels) calcReels.addEventListener('change', calculateCustomQuote);
-  if (calcPosts) calcPosts.addEventListener('change', calculateCustomQuote);
-  if (calcWeb) calcWeb.addEventListener('change', calculateCustomQuote);
-  if (calcAds) calcAds.addEventListener('change', calculateCustomQuote);
-  calculateCustomQuote();
-
-  // 9. Interactive FAQ Accordion
+  // 6. Interactive FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
     const trigger = item.querySelector('.faq-trigger');
@@ -270,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 10. Interactive WhatsApp Consultation Form Handler
+  // 7. Interactive WhatsApp Consultation Form Handler
   const contactForm = document.getElementById('contactForm');
   const formSuccessModal = document.getElementById('formSuccessModal');
   const closeSuccessModalBtn = document.getElementById('closeSuccessModalBtn');
@@ -282,8 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const name = document.getElementById('contactName')?.value.trim() || '';
       const phone = document.getElementById('contactPhone')?.value.trim() || '';
       const email = document.getElementById('contactEmail')?.value.trim() || '';
-      const service = document.getElementById('contactService')?.value || 'Growth & Enquiries Retainer';
-      const budget = document.getElementById('contactBudget')?.value || '₹25,000 / month';
+      const service = document.getElementById('contactService')?.value || 'Growth & Enquiries SMM Package';
+      const budget = document.getElementById('contactBudget')?.value || 'Ready to Start Immediately';
       const message = document.getElementById('contactMessage')?.value.trim() || '';
 
       if (!name || !phone) {
@@ -297,8 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
         `👤 *Client Name:* ${name}\n` +
         `📞 *WhatsApp / Phone:* ${phone}\n` +
         `✉️ *Email:* ${email || 'Not provided'}\n` +
-        `🎯 *Selected Scope:* ${service}\n` +
-        `💰 *Budget Range:* ${budget}\n\n` +
+        `🎯 *Selected Package / Service:* ${service}\n` +
+        `⏱️ *Target Timeline:* ${budget}\n\n` +
         `📝 *Project Overview / Notes:*\n${message || 'Ready to discuss requirements.'}\n\n` +
         `_Directed to Durvesh Bhavsar, Founder & CEO, TechArtMedia_`
       );
@@ -321,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Trigger WhatsApp window
       setTimeout(() => {
         window.open(waUrl, '_blank');
-      }, 500);
+      }, 400);
 
       contactForm.reset();
     });
