@@ -13,19 +13,19 @@
 1. **Home (`index.html`)**:
    - Agency hero with authentic TechArtMedia logo banner
    - 3 Strategic Pillars (Design, Digital Media & Ads, Modern Development)
-   - 8 Services high-level overview
-   - Official Packages spotlight (Starter ₹15k, Growth ₹25k, Premium ₹35k)
-   - Proof & Verification Lightbox gallery (rate flyer, infographic, visiting card)
-   - Founder spotlight preview
-   - Nashik Studio Headquarters & Google Maps preview
+   - 8 Core Agency Services overview
+   - Official SMM Packages spotlight (Starter, Growth, Premium — customized per business)
+   - Founder spotlight featuring Durvesh Bhavsar (`assets/founder.jpg`)
+   - TechArtMedia Nashik Studio Headquarters with interactive Google Maps embed
    - Floating WhatsApp button & Back-to-Top controls
-   - "Powered by TechArtMedia" executive badge
+   - Multi-column footer with official social media channels and "Powered by TechArtMedia" badge
 
 2. **About Us (`about.html`)**:
    - Agency founding story in Nashik, Maharashtra
    - **Durvesh Bhavsar** Executive Spotlight with high-resolution portrait (`assets/founder.jpg`)
    - Guiding principles & zero-bureaucracy philosophy
    - Agency creative and software toolchain (Adobe CC, Figma, Meta Ads, Tailwind, JS)
+   - Multi-column footer with social links
 
 3. **Services (`services.html`)**:
    - Complete breakdown of all 8 Core Agency Disciplines:
@@ -41,16 +41,16 @@
    - 4-Stage Agency Execution Framework (Discovery -> Concept -> Production -> Launch)
    - WhatsApp direct service inquiry triggers
 
-4. **Pricing & Plans (`pricing.html`)**:
-   - The 3 Official Social Media Packages (Starter ₹15,000, Growth ₹25,000, Premium ₹35,000)
-   - Monthly vs Quarterly toggle with dynamic 10% discount calculation
-   - Web & Tech Development packages (Landing page ₹8,000, 5-page site ₹18,000, custom ERP)
-   - **Interactive Custom Scope Calculator**: Mix and match reels, posts, web, and ads with instant formatted WhatsApp proposal dispatch
-   - Transparent pricing FAQs
+4. **SMM Packages (`packages.html`)**:
+   - The 3 Official Social Media Packages directly from the agency scope (Starter PRESENCE, Growth & ENQUIRIES, Premium GROWTH)
+   - Clear feature breakdown with NO rates mentioned (bespoke pricing based on business scale)
+   - 5 Foundational Agency Pillars
+   - Custom scope and tailored quote request with instant WhatsApp transmission
+   - Social media packages FAQs
 
 5. **Contact & Maps (`contact.html`)**:
    - Direct founder contact channels (WhatsApp, phone, email)
-   - **Interactive Google Maps Embed** centered on Indiranagar, Nashik office
+   - **Exact TechArtMedia Google Maps Embed** (Avdhoot Park, Vikas Colony, Indira Nagar Annex, Opposite Parkside Residency, Nashik, Maharashtra 422009)
    - Validated Consultation Form with direct WhatsApp transmission and offline lead backup
    - Office hours and visiting instructions
 

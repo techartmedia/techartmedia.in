@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
       (currentPath.includes('about') && hrefClean.includes('about')) ||
       (currentPath.includes('services') && hrefClean.includes('services')) ||
       (currentPath.includes('packages') && hrefClean.includes('packages')) ||
-      (currentPath.includes('pricing') && hrefClean.includes('packages')) ||
       (currentPath.includes('contact') && hrefClean.includes('contact'));
 
     if (isCurrent && !href.startsWith('#')) {
