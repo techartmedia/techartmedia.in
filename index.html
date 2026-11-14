@@ -268,9 +268,13 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <div class="luxury-card p-8 bg-white reveal-on-scroll flex flex-col justify-between">
+        <div class="luxury-card p-6 sm:p-8 bg-white reveal-on-scroll flex flex-col justify-between group">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 mb-6">
+            <div class="mb-6 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-video relative">
+              <img src="assets/services/branding.jpg" alt="Creative Design & Brand Identity" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            <div class="w-12 h-12 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 mb-5">
               <i data-lucide="palette" class="w-6 h-6"></i>
             </div>
             <h3 class="text-2xl font-extrabold text-zinc-950 mb-3">1. Creative Design</h3>
@@ -278,15 +282,19 @@
               Brand identity suites, corporate collateral, packaging, luxury print, and conversion-optimized social graphics that make an instant, unforgettable first impression.
             </p>
           </div>
-          <a href="services.html" class="text-xs font-bold font-mono text-orange-600 hover:text-orange-700 flex items-center space-x-1.5">
+          <a href="services.html" class="text-xs font-bold font-mono text-orange-600 hover:text-orange-700 flex items-center space-x-1.5 pt-4 border-t border-zinc-100">
             <span>Learn More About Design</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </a>
         </div>
 
-        <div class="luxury-card p-8 bg-white reveal-on-scroll flex flex-col justify-between border-blue-200">
+        <div class="luxury-card p-6 sm:p-8 bg-white reveal-on-scroll flex flex-col justify-between border-blue-200 group">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 mb-6">
+            <div class="mb-6 overflow-hidden rounded-xl border border-blue-200 bg-zinc-100 aspect-video relative">
+              <img src="assets/services/commercial-reels.jpg" alt="Digital Media & Model Commercial Reels" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 mb-5">
               <i data-lucide="clapperboard" class="w-6 h-6"></i>
             </div>
             <h3 class="text-2xl font-extrabold text-zinc-950 mb-3">2. Digital Media & Ads</h3>
@@ -294,15 +302,19 @@
               Commercial short-form reels featuring professional models, full-funnel Meta advertising, targeted lead generation, and aggressive organic social management.
             </p>
           </div>
-          <a href="services.html" class="text-xs font-bold font-mono text-blue-600 hover:text-blue-700 flex items-center space-x-1.5">
+          <a href="services.html" class="text-xs font-bold font-mono text-blue-600 hover:text-blue-700 flex items-center space-x-1.5 pt-4 border-t border-zinc-100">
             <span>Explore Reels & Ad Funnels</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </a>
         </div>
 
-        <div class="luxury-card p-8 bg-white reveal-on-scroll flex flex-col justify-between">
+        <div class="luxury-card p-6 sm:p-8 bg-white reveal-on-scroll flex flex-col justify-between group">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 mb-6">
+            <div class="mb-6 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-video relative">
+              <img src="assets/services/web-development.jpg" alt="Modern Web & Custom Software Development" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 mb-5">
               <i data-lucide="code" class="w-6 h-6"></i>
             </div>
             <h3 class="text-2xl font-extrabold text-zinc-950 mb-3">3. Modern Development</h3>
@@ -310,7 +322,7 @@
               Ultra-fast responsive business websites, custom domain configurations, WhatsApp intake funnels, and bespoke business software ERP systems.
             </p>
           </div>
-          <a href="services.html" class="text-xs font-bold font-mono text-emerald-600 hover:text-emerald-700 flex items-center space-x-1.5">
+          <a href="services.html" class="text-xs font-bold font-mono text-emerald-600 hover:text-emerald-700 flex items-center space-x-1.5 pt-4 border-t border-zinc-100">
             <span>Discover Tech Capabilities</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </a>
@@ -547,7 +559,7 @@
             Independent creative agency & digital marketing studio in Nashik. We build high-impact brand identities, produce commercial reels with featured models, and drive measurable client acquisition.
           </p>
           
-          <!-- Social Media Accounts -->
+          <!-- Social Media Accounts (Instagram & Facebook Only) -->
           <div class="pt-2">
             <div class="text-[11px] font-mono uppercase tracking-wider text-zinc-400 font-bold mb-3">Connect With Us</div>
             <div class="flex items-center space-x-3">
@@ -555,21 +567,9 @@
               <a href="https://www.instagram.com/techartmedia/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-gradient-to-tr hover:from-orange-600 hover:to-pink-600 hover:border-transparent transition-all shadow-sm" aria-label="TechArtMedia on Instagram">
                 <i data-lucide="instagram" class="w-4 h-4"></i>
               </a>
-              <!-- WhatsApp -->
-              <a href="https://wa.me/918087084597" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-[#25D366] hover:border-transparent transition-all shadow-sm" aria-label="TechArtMedia on WhatsApp">
-                <i data-lucide="message-circle" class="w-4 h-4"></i>
-              </a>
               <!-- Facebook -->
               <a href="https://www.facebook.com/techartmedia" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-blue-600 hover:border-transparent transition-all shadow-sm" aria-label="TechArtMedia on Facebook">
                 <i data-lucide="facebook" class="w-4 h-4"></i>
-              </a>
-              <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/company/techartmedia" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-[#0077b5] hover:border-transparent transition-all shadow-sm" aria-label="TechArtMedia on LinkedIn">
-                <i data-lucide="linkedin" class="w-4 h-4"></i>
-              </a>
-              <!-- Email -->
-              <a href="mailto:techartmedia.info@gmail.com" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-orange-600 hover:border-transparent transition-all shadow-sm" aria-label="Email TechArtMedia">
-                <i data-lucide="mail" class="w-4 h-4"></i>
               </a>
             </div>
           </div>
