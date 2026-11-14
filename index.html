@@ -527,30 +527,99 @@
     </a>
   </div>
 
-  <!-- Minimalist Executive Footer with Powered By -->
-  <footer class="bg-zinc-950 text-zinc-400 py-16 text-xs">
+  <!-- Proper Executive Multi-Column Agency Footer with Social Media Accounts -->
+  <footer class="bg-zinc-950 text-zinc-400 pt-16 pb-12 text-xs border-t border-zinc-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between pb-10 border-b border-zinc-800 gap-6">
-        <div class="flex items-center space-x-3.5">
-          <img src="assets/techartmedia_logo.jpeg" alt="TechArtMedia" class="h-9 w-auto rounded">
-          <div>
-            <div class="text-base font-extrabold text-white tracking-tight">TechArtMedia</div>
-            <div class="text-[10px] font-mono text-zinc-400">DESIGN • DIGITAL • DEVELOPMENT</div>
+      <!-- Top Grid: 4 Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-zinc-800">
+        
+        <!-- Col 1: Brand & Socials (5 cols) -->
+        <div class="lg:col-span-5 space-y-4">
+          <a href="index.html" class="inline-flex items-center space-x-3 group">
+            <img src="assets/techartmedia_logo.jpeg" alt="TechArtMedia" class="h-10 w-auto rounded object-contain transition-transform group-hover:scale-105">
+            <div>
+              <div class="text-lg font-extrabold text-white tracking-tight">TechArtMedia</div>
+              <div class="text-[9px] font-mono text-zinc-400 uppercase tracking-widest font-semibold">Design • Digital • Development</div>
+            </div>
+          </a>
+          <p class="text-zinc-400 text-xs leading-relaxed max-w-sm">
+            Independent creative agency & digital marketing studio in Nashik. We build high-impact brand identities, produce commercial reels with featured models, and drive measurable client acquisition.
+          </p>
+          
+          <!-- Social Media Accounts -->
+          <div class="pt-2">
+            <div class="text-[11px] font-mono uppercase tracking-wider text-zinc-400 font-bold mb-3">Connect With Us</div>
+            <div class="flex items-center space-x-3">
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/techartmedia/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-gradient-to-tr hover:from-orange-600 hover:to-pink-600 hover:border-transparent transition-all shadow-sm" aria-label="TechArtMedia on Instagram">
+                <i data-lucide="instagram" class="w-4 h-4"></i>
+              </a>
+              <!-- WhatsApp -->
+              <a href="https://wa.me/918087084597" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-[#25D366] hover:border-transparent transition-all shadow-sm" aria-label="TechArtMedia on WhatsApp">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </a>
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/techartmedia" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-blue-600 hover:border-transparent transition-all shadow-sm" aria-label="TechArtMedia on Facebook">
+                <i data-lucide="facebook" class="w-4 h-4"></i>
+              </a>
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/company/techartmedia" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-[#0077b5] hover:border-transparent transition-all shadow-sm" aria-label="TechArtMedia on LinkedIn">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+              </a>
+              <!-- Email -->
+              <a href="mailto:techartmedia.info@gmail.com" class="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-orange-600 hover:border-transparent transition-all shadow-sm" aria-label="Email TechArtMedia">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="flex flex-wrap gap-6 text-[11px] font-mono text-zinc-400 font-semibold">
-          <a href="index.html" class="text-white hover:text-white transition-colors">HOME</a>
-          <a href="about.html" class="hover:text-white transition-colors">ABOUT</a>
-          <a href="services.html" class="hover:text-white transition-colors">SERVICES</a>
-          <a href="packages.html" class="hover:text-white transition-colors">PACKAGES</a>
-          <a href="contact.html" class="hover:text-white transition-colors">CONTACT</a>
+        <!-- Col 2: Navigation Links (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <div class="text-[11px] font-mono uppercase tracking-wider text-zinc-400 font-bold">Navigation</div>
+          <ul class="space-y-2 text-xs font-semibold">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Our Services</a></li>
+            <li><a href="packages.html" class="hover:text-white transition-colors">Social Packages</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact & Maps</a></li>
+          </ul>
         </div>
+
+        <!-- Col 3: Core Disciplines (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <div class="text-[11px] font-mono uppercase tracking-wider text-zinc-400 font-bold">Disciplines</div>
+          <ul class="space-y-2 text-xs text-zinc-400">
+            <li><a href="services.html" class="hover:text-white transition-colors">Model Reels</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Meta Ads</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Brand Design</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Web Development</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Software & ERP</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Print Packaging</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Studio Office & Direct Contact (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <div class="text-[11px] font-mono uppercase tracking-wider text-zinc-400 font-bold">Studio Headquarters</div>
+          <div class="text-xs text-zinc-400 space-y-2 leading-relaxed">
+            <p class="text-zinc-300 font-medium">
+              Flat No. 7, 4th Floor, Avdhoot Park, Vikas Colony, Indira Nagar Annex, Opp Parkside Residency, Nashik, Maharashtra 422009
+            </p>
+            <div class="pt-1 font-mono text-[11px]">
+              <div>Direct: <a href="https://wa.me/918087084597" class="text-emerald-400 font-bold hover:underline">+91 8087084597</a></div>
+              <div>Email: <a href="mailto:techartmedia.info@gmail.com" class="text-orange-400 font-bold hover:underline">techartmedia.info@gmail.com</a></div>
+              <div>Hours: <span class="text-zinc-300">Mon–Sat: 10:00 AM – 6:00 PM</span></div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] font-mono">
-        <div>
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono">
+        <div class="text-center sm:text-left">
           © 2026 TechArtMedia. All rights reserved. • Registered domain: <span class="text-white font-bold">techartmedia.in</span>
         </div>
         <div class="flex items-center space-x-3">
