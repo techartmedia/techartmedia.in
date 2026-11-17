@@ -199,4 +199,78 @@ document.addEventListener('DOMContentLoaded', () => {
       formSuccessModal.classList.remove('flex');
     });
   }
+
+  // 8. 3 Main Pillars Filter Tabs (Design, Digital, Development)
+  const pillarTabs = document.querySelectorAll('.pillar-tab');
+  const serviceCards = document.querySelectorAll('.service-card');
+
+  function filterServicesByPillar(pillar) {
+    if (!pillarTabs.length || !serviceCards.length) return;
+
+    // Update active tab styles
+    pillarTabs.forEach(tab => {
+      const filter = tab.getAttribute('data-filter');
+      if (filter === pillar) {
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+      } else {
+        tab.classList.remove('active');
+        tab.setAttribute('aria-selected', 'false');
+      }
+    });
+
+    // Animate & filter cards
+    serviceCards.forEach(card => {
+      const cardPillar = card.getAttribute('data-pillar');
+      const matches = (pillar === 'all' || cardPillar === pillar);
+
+      if (matches) {
+        card.classList.remove('is-hidden');
+        card.classList.add('is-visible');
+        requestAnimationFrame(() => {
+          card.classList.remove('is-animating-out');
+          card.classList.add('is-animating-in');
+        });
+      } else {
+        card.classList.add('is-animating-out');
+        card.classList.remove('is-animating-in');
+        setTimeout(() => {
+          if (card.classList.contains('is-animating-out')) {
+            card.classList.add('is-hidden');
+          }
+        }, 220);
+      }
+    });
+
+    // Re-render Lucide icons
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  }
+
+  pillarTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const filter = tab.getAttribute('data-filter') || 'all';
+      filterServicesByPillar(filter);
+
+      if (history.replaceState) {
+        const hash = filter === 'all' ? '#services' : `#${filter}`;
+        history.replaceState(null, '', hash);
+      }
+    });
+  });
+
+  // Handle URL hash or query parameters on load (e.g., services.html#design, services.html?pillar=digital)
+  if (pillarTabs.length) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramPillar = urlParams.get('pillar') || urlParams.get('filter');
+    const hashPillar = window.location.hash ? window.location.hash.replace('#', '').toLowerCase() : '';
+    
+    const validPillars = ['design', 'digital', 'development'];
+    const initialFilter = paramPillar || (validPillars.includes(hashPillar) ? hashPillar : 'all');
+    
+    if (initialFilter && initialFilter !== 'all') {
+      filterServicesByPillar(initialFilter);
+    }
+  }
 });

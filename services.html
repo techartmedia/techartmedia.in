@@ -200,364 +200,449 @@
     </div>
   </section>
 
-  <!-- Services Grid (8 Services Breakdown) -->
-  <section class="py-20 border-b border-zinc-200">
+  <!-- Services Grid Section with 3 Main Pillars Filter Tabs & 4x2 Horizontal Grid -->
+  <section class="py-14 sm:py-16 border-b border-zinc-200" id="services">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Interactive 3 Main Pillars Filter Bar -->
+      <div class="mb-10 flex flex-col md:flex-row md:items-center md:justify-between gap-5 border-b border-zinc-200 pb-6 reveal-on-scroll">
+        <div>
+          <div class="inline-flex items-center space-x-2 px-2.5 py-0.5 rounded-full bg-orange-50 border border-orange-200 text-orange-700 text-[11px] font-mono font-bold uppercase tracking-wider mb-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-orange-600 animate-pulse"></span>
+            <span>3 Strategic Pillars</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-950 tracking-tight">
+            Explore Services by Pillar
+          </h2>
+          <p class="text-xs sm:text-sm text-zinc-500 mt-1">
+            Click any pillar to open its sub-services, or view all 8 agency disciplines below.
+          </p>
+        </div>
+
+        <!-- Pillar Tabs -->
+        <div class="inline-flex p-1.5 rounded-2xl bg-zinc-100 border border-zinc-200 flex-wrap gap-1 self-start md:self-auto shadow-inner" id="pillarTabs" role="tablist">
+          <button type="button" data-filter="all" class="pillar-tab active px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all flex items-center space-x-1.5" role="tab" aria-selected="true">
+            <span>All Services</span>
+            <span class="tab-count text-[10px] px-1.5 py-0.5 rounded-full font-bold">8</span>
+          </button>
+          <button type="button" data-filter="design" class="pillar-tab px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all flex items-center space-x-1.5" role="tab" aria-selected="false">
+            <i data-lucide="palette" class="w-3.5 h-3.5"></i>
+            <span>Design</span>
+            <span class="tab-count text-[10px] px-1.5 py-0.5 rounded-full font-bold">2</span>
+          </button>
+          <button type="button" data-filter="digital" class="pillar-tab px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all flex items-center space-x-1.5" role="tab" aria-selected="false">
+            <i data-lucide="clapperboard" class="w-3.5 h-3.5"></i>
+            <span>Digital</span>
+            <span class="tab-count text-[10px] px-1.5 py-0.5 rounded-full font-bold">4</span>
+          </button>
+          <button type="button" data-filter="development" class="pillar-tab px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all flex items-center space-x-1.5" role="tab" aria-selected="false">
+            <i data-lucide="code" class="w-3.5 h-3.5"></i>
+            <span>Development</span>
+            <span class="tab-count text-[10px] px-1.5 py-0.5 rounded-full font-bold">2</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Compact 4x2 Services Grid (4 Cards per Row on Desktop = Exactly 2 Rows) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="servicesGrid">
         
-        <!-- Service 1: Graphic Design & Branding -->
-        <div class="luxury-card p-6 sm:p-8 bg-white reveal-on-scroll flex flex-col justify-between group">
+        <!-- Service 1: Graphic Design & Branding (Design Pillar) -->
+        <div class="service-card luxury-card p-4 sm:p-5 bg-white reveal-on-scroll flex flex-col justify-between group transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-pillar="design">
           <div>
-            <!-- Service Visual -->
-            <div class="mb-6 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-video relative">
-              <img src="assets/services/branding.jpg" alt="Graphic Design & Brand Identity Suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"></div>
+            <!-- Visual -->
+            <div class="mb-4 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-[16/10] relative">
+              <img src="assets/services/branding.jpg" alt="Graphic Design & Brand Identity" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none"></div>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-zinc-950/80 backdrop-blur-sm text-[10px] font-mono text-zinc-300 font-bold uppercase tracking-wider">
+                01 / BRAND
+              </span>
             </div>
 
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600">
-                <i data-lucide="palette" class="w-6 h-6"></i>
+            <!-- Pillar Badge -->
+            <div class="flex items-center space-x-2 mb-2">
+              <div class="w-6 h-6 rounded-md bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600">
+                <i data-lucide="palette" class="w-3.5 h-3.5"></i>
               </div>
-              <span class="text-xs font-mono text-zinc-400 uppercase font-bold tracking-wider">01 / BRAND</span>
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-orange-600">Design Pillar</span>
             </div>
-            <h2 class="text-2xl font-extrabold text-zinc-950 mb-3">Graphic Design & Brand Identity</h2>
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-6">
-              Complete brand identity systems that establish immediate credibility and authority in your industry. We create visual languages that customers instantly recognize.
+
+            <h3 class="text-base sm:text-lg font-extrabold text-zinc-950 leading-snug mb-1.5 group-hover:text-orange-600 transition-colors">
+              Graphic Design & Brand Identity
+            </h3>
+            <p class="text-xs text-zinc-600 leading-relaxed mb-3">
+              Complete brand identity systems, vector logos, typography systems, and high-converting marketing creative.
             </p>
-            <div class="space-y-2 mb-8 text-xs font-mono text-zinc-700">
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Primary & Secondary Vector Logo Suites</span>
+
+            <!-- Highlights -->
+            <div class="space-y-1.5 mb-4 text-[11px] font-mono text-zinc-700 border-t border-zinc-100 pt-3">
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Vector Logo Suites (Primary/Secondary)</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Typography, Color Palettes & Brand Guidelines</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Typography, Color & Brand Guides</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>High-Converting Promotional Creative Banners</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Marketing Decks & Corporate Pitch Materials</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Promo Social Creative Banners</span>
               </div>
             </div>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Graphic%20Design%20%26%20Brand%20Identity%20services." target="_blank" class="w-full btn-outline-clean py-3 text-center text-xs flex items-center justify-center space-x-2 hover:bg-orange-50 hover:text-orange-700 hover:border-orange-200">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>Inquire About Branding on WhatsApp</span>
+
+          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Graphic%20Design%20%26%20Brand%20Identity%20services." target="_blank" class="w-full btn-outline-clean py-2 text-center text-xs flex items-center justify-center space-x-1.5 font-bold hover:bg-orange-50 hover:text-orange-700 hover:border-orange-200">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+            <span>Inquire on WhatsApp</span>
           </a>
         </div>
 
-        <!-- Service 2: Social Media Management -->
-        <div class="luxury-card p-6 sm:p-8 bg-white reveal-on-scroll flex flex-col justify-between group">
+        <!-- Service 2: Social Media Management (Digital Pillar) -->
+        <div class="service-card luxury-card p-4 sm:p-5 bg-white reveal-on-scroll flex flex-col justify-between group transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-pillar="digital">
           <div>
-            <!-- Service Visual -->
-            <div class="mb-6 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-video relative">
-              <img src="assets/services/social-media.jpg" alt="Social Media Management & Strategy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"></div>
+            <!-- Visual -->
+            <div class="mb-4 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-[16/10] relative">
+              <img src="assets/services/social-media.jpg" alt="Social Media Management" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none"></div>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-zinc-950/80 backdrop-blur-sm text-[10px] font-mono text-zinc-300 font-bold uppercase tracking-wider">
+                02 / SOCIAL
+              </span>
             </div>
 
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
-                <i data-lucide="share-2" class="w-6 h-6"></i>
+            <!-- Pillar Badge -->
+            <div class="flex items-center space-x-2 mb-2">
+              <div class="w-6 h-6 rounded-md bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
+                <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
               </div>
-              <span class="text-xs font-mono text-zinc-400 uppercase font-bold tracking-wider">02 / SOCIAL</span>
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-blue-600">Digital Pillar</span>
             </div>
-            <h2 class="text-2xl font-extrabold text-zinc-950 mb-3">Social Media Management</h2>
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-6">
-              Full-service Instagram & Facebook management. We develop strategic monthly content calendars, write hook-driven copy, and optimize posting schedules to capture active buyer attention.
+
+            <h3 class="text-base sm:text-lg font-extrabold text-zinc-950 leading-snug mb-1.5 group-hover:text-blue-600 transition-colors">
+              Social Media Management
+            </h3>
+            <p class="text-xs text-zinc-600 leading-relaxed mb-3">
+              Strategic monthly content calendars, hook-driven captions, active community management, and profile revamps.
             </p>
-            <div class="space-y-2 mb-8 text-xs font-mono text-zinc-700">
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Pre-Planned 30-Day Content Calendars</span>
+
+            <!-- Highlights -->
+            <div class="space-y-1.5 mb-4 text-[11px] font-mono text-zinc-700 border-t border-zinc-100 pt-3">
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Pre-Planned 30-Day Content Grid</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Profile & Bio Revamp with Lead-Capture Links</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Profile Optimization & Bio Lead Funnels</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Keyword-Optimized Captions & Hashtag Systems</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Monthly Engagement & Growth Performance Audits</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Audience Growth & Monthly Audits</span>
               </div>
             </div>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Social%20Media%20Management%20retainers." target="_blank" class="w-full btn-outline-clean py-3 text-center text-xs flex items-center justify-center space-x-2 hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>Inquire About Social Management</span>
+
+          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Social%20Media%20Management%20retainers." target="_blank" class="w-full btn-outline-clean py-2 text-center text-xs flex items-center justify-center space-x-1.5 font-bold hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+            <span>Inquire on WhatsApp</span>
           </a>
         </div>
 
-        <!-- Service 3: Commercial Short-Form Reels with Models -->
-        <div class="luxury-card p-6 sm:p-8 bg-white reveal-on-scroll flex flex-col justify-between border-orange-200 group shadow-md">
+        <!-- Service 3: Commercial Short-Form Reels with Models (Digital Pillar) -->
+        <div class="service-card luxury-card p-4 sm:p-5 bg-white reveal-on-scroll flex flex-col justify-between group transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-orange-200" data-pillar="digital">
           <div>
-            <!-- Service Visual -->
-            <div class="mb-6 overflow-hidden rounded-xl border border-orange-200 bg-zinc-100 aspect-video relative">
-              <img src="assets/services/commercial-reels.jpg" alt="Commercial Short-Form Reels with Featured Models" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"></div>
-              <div class="absolute top-3 right-3 bg-orange-600 text-white font-mono text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider shadow">
-                Signature Discipline
-              </div>
+            <!-- Visual -->
+            <div class="mb-4 overflow-hidden rounded-xl border border-orange-200 bg-zinc-100 aspect-[16/10] relative">
+              <img src="assets/services/commercial-reels.jpg" alt="Commercial Reels with Featured Models" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none"></div>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-orange-600 text-white font-mono text-[9px] font-bold uppercase tracking-wider shadow">
+                Signature
+              </span>
             </div>
 
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 rounded-xl bg-orange-100 border border-orange-300 flex items-center justify-center text-orange-700">
-                <i data-lucide="clapperboard" class="w-6 h-6"></i>
+            <!-- Pillar Badge -->
+            <div class="flex items-center space-x-2 mb-2">
+              <div class="w-6 h-6 rounded-md bg-orange-100 border border-orange-300 flex items-center justify-center text-orange-700">
+                <i data-lucide="clapperboard" class="w-3.5 h-3.5"></i>
               </div>
-              <span class="text-xs font-mono text-orange-600 uppercase font-bold tracking-wider">03 / SIGNATURE</span>
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-orange-600">Digital Pillar</span>
             </div>
-            <h2 class="text-2xl font-extrabold text-zinc-950 mb-3">Commercial Reels with Featured Models</h2>
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-6">
-              Our hallmark differentiator. We produce commercial-grade short-form reels featuring professional on-camera models, scripted narrative hooks, dynamic pacing, and commercial sound design.
+
+            <h3 class="text-base sm:text-lg font-extrabold text-zinc-950 leading-snug mb-1.5 group-hover:text-orange-600 transition-colors">
+              Commercial Reels with Models
+            </h3>
+            <p class="text-xs text-zinc-600 leading-relaxed mb-3">
+              Commercial-grade short-form reels with on-camera models, scripted narrative hooks, and commercial audio.
             </p>
-            <div class="space-y-2 mb-8 text-xs font-mono text-zinc-700">
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Professional On-Camera Model Talent Included</span>
+
+            <!-- Highlights -->
+            <div class="space-y-1.5 mb-4 text-[11px] font-mono text-zinc-700 border-t border-zinc-100 pt-3">
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">On-Camera Featured Models Included</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Custom Scriptwriting & Viral Hook Construction</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Scriptwriting & Viral Hook Formulation</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>4K Resolution Shoots with Studio Lighting & Microphones</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>High-Retention Fast-Paced Editing & Dynamic Subtitles</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">4K Cinema Gear, Lighting & Sound</span>
               </div>
             </div>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Commercial%20Reels%20Production%20with%20Models." target="_blank" class="w-full btn-whatsapp-luxury py-3 text-center text-xs flex items-center justify-center space-x-2">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>Book Model Reel Shoot on WhatsApp</span>
+
+          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Commercial%20Reels%20Production%20with%20Models." target="_blank" class="w-full btn-whatsapp-luxury py-2 text-center text-xs flex items-center justify-center space-x-1.5 font-bold">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+            <span>Book Shoot on WhatsApp</span>
           </a>
         </div>
 
-        <!-- Service 4: Performance Meta Advertising -->
-        <div class="luxury-card p-6 sm:p-8 bg-white reveal-on-scroll flex flex-col justify-between group">
+        <!-- Service 4: Performance Meta Advertising (Digital Pillar) -->
+        <div class="service-card luxury-card p-4 sm:p-5 bg-white reveal-on-scroll flex flex-col justify-between group transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-pillar="digital">
           <div>
-            <!-- Service Visual -->
-            <div class="mb-6 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-video relative">
-              <img src="assets/services/meta-ads.jpg" alt="Performance Meta Advertising & ROI Tracking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"></div>
+            <!-- Visual -->
+            <div class="mb-4 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-[16/10] relative">
+              <img src="assets/services/meta-ads.jpg" alt="Performance Meta Advertising" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none"></div>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-zinc-950/80 backdrop-blur-sm text-[10px] font-mono text-zinc-300 font-bold uppercase tracking-wider">
+                04 / ADS
+              </span>
             </div>
 
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 rounded-xl bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-600">
-                <i data-lucide="trending-up" class="w-6 h-6"></i>
+            <!-- Pillar Badge -->
+            <div class="flex items-center space-x-2 mb-2">
+              <div class="w-6 h-6 rounded-md bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-600">
+                <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
               </div>
-              <span class="text-xs font-mono text-zinc-400 uppercase font-bold tracking-wider">04 / ADS</span>
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-purple-600">Digital Pillar</span>
             </div>
-            <h2 class="text-2xl font-extrabold text-zinc-950 mb-3">Performance Meta Advertising</h2>
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-6">
-              Targeted Instagram and Facebook advertising engineered for business ROI. We construct full-funnel campaigns targeting precise geographic radiuses, buyer demographics, and custom audiences.
+
+            <h3 class="text-base sm:text-lg font-extrabold text-zinc-950 leading-snug mb-1.5 group-hover:text-purple-600 transition-colors">
+              Performance Meta Advertising
+            </h3>
+            <p class="text-xs text-zinc-600 leading-relaxed mb-3">
+              Targeted Instagram and Facebook ad campaigns built for verifiable ROI, audience reach, and lead capture.
             </p>
-            <div class="space-y-2 mb-8 text-xs font-mono text-zinc-700">
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Direct Lead Generation & WhatsApp Click Funnels</span>
+
+            <!-- Highlights -->
+            <div class="space-y-1.5 mb-4 text-[11px] font-mono text-zinc-700 border-t border-zinc-100 pt-3">
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Direct Lead Gen & WhatsApp Click Funnels</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Custom Audience Segmentation & Retargeting</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Custom Audiences & Retargeting</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Continuous A/B Creative & Headline Testing</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Cost-Per-Lead Auditing & Budget Optimization</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">A/B Testing & ROAS Auditing</span>
               </div>
             </div>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Meta%20Ads%20Management%20for%20my%20business." target="_blank" class="w-full btn-outline-clean py-3 text-center text-xs flex items-center justify-center space-x-2 hover:bg-purple-50 hover:text-purple-700 hover:border-purple-200">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>Consult on Meta Ads Strategy</span>
+
+          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Meta%20Ads%20Management%20for%20my%20business." target="_blank" class="w-full btn-outline-clean py-2 text-center text-xs flex items-center justify-center space-x-1.5 font-bold hover:bg-purple-50 hover:text-purple-700 hover:border-purple-200">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+            <span>Consult on WhatsApp</span>
           </a>
         </div>
 
-        <!-- Service 5: Web Design & Development -->
-        <div class="luxury-card p-6 sm:p-8 bg-white reveal-on-scroll flex flex-col justify-between group">
+        <!-- Service 5: Web Design & Development (Development Pillar) -->
+        <div class="service-card luxury-card p-4 sm:p-5 bg-white reveal-on-scroll flex flex-col justify-between group transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-pillar="development">
           <div>
-            <!-- Service Visual -->
-            <div class="mb-6 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-video relative">
-              <img src="assets/services/web-development.jpg" alt="Web Design & Modern Front-End Development" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"></div>
+            <!-- Visual -->
+            <div class="mb-4 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-[16/10] relative">
+              <img src="assets/services/web-development.jpg" alt="Web Design & Modern Development" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none"></div>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-zinc-950/80 backdrop-blur-sm text-[10px] font-mono text-zinc-300 font-bold uppercase tracking-wider">
+                05 / WEB
+              </span>
             </div>
 
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 rounded-xl bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-600">
-                <i data-lucide="globe" class="w-6 h-6"></i>
+            <!-- Pillar Badge -->
+            <div class="flex items-center space-x-2 mb-2">
+              <div class="w-6 h-6 rounded-md bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-600">
+                <i data-lucide="globe" class="w-3.5 h-3.5"></i>
               </div>
-              <span class="text-xs font-mono text-zinc-400 uppercase font-bold tracking-wider">05 / WEB</span>
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-cyan-600">Development Pillar</span>
             </div>
-            <h2 class="text-2xl font-extrabold text-zinc-950 mb-3">Web Design & Modern Development</h2>
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-6">
-              Ultra-fast, mobile-first responsive websites built for maximum conversion. From high-impact single-page sales funnels to complete corporate sites like techartmedia.in with custom domain and DNS integration.
+
+            <h3 class="text-base sm:text-lg font-extrabold text-zinc-950 leading-snug mb-1.5 group-hover:text-cyan-600 transition-colors">
+              Web Design & Development
+            </h3>
+            <p class="text-xs text-zinc-600 leading-relaxed mb-3">
+              Ultra-fast responsive business websites, custom domains, SSL certificates, and conversion funnels.
             </p>
-            <div class="space-y-2 mb-8 text-xs font-mono text-zinc-700">
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Clean, Accessible, Lightning-Fast HTML5 & Tailwind</span>
+
+            <!-- Highlights -->
+            <div class="space-y-1.5 mb-4 text-[11px] font-mono text-zinc-700 border-t border-zinc-100 pt-3">
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Clean, Fast HTML5 & Tailwind Code</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Custom Domain Connection & SSL Security Certification</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Custom Domain DNS & SSL Setup</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Interactive WhatsApp & Form Ingestion Funnels</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Fully Responsive on Mobile, Tablet & Desktop</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">WhatsApp Lead-Capture Ingestion</span>
               </div>
             </div>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Web%20Design%20and%20Development." target="_blank" class="w-full btn-outline-clean py-3 text-center text-xs flex items-center justify-center space-x-2 hover:bg-cyan-50 hover:text-cyan-700 hover:border-cyan-200">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>Inquire About Web Development</span>
+
+          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Web%20Design%20and%20Development." target="_blank" class="w-full btn-outline-clean py-2 text-center text-xs flex items-center justify-center space-x-1.5 font-bold hover:bg-cyan-50 hover:text-cyan-700 hover:border-cyan-200">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+            <span>Inquire on WhatsApp</span>
           </a>
         </div>
 
-        <!-- Service 6: Custom Software Development & ERP -->
-        <div class="luxury-card p-6 sm:p-8 bg-white reveal-on-scroll flex flex-col justify-between group">
+        <!-- Service 6: Custom Software Development & ERP (Development Pillar) -->
+        <div class="service-card luxury-card p-4 sm:p-5 bg-white reveal-on-scroll flex flex-col justify-between group transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-pillar="development">
           <div>
-            <!-- Service Visual -->
-            <div class="mb-6 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-video relative">
-              <img src="assets/services/software-erp.jpg" alt="Custom Software & Enterprise ERP Solutions" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"></div>
+            <!-- Visual -->
+            <div class="mb-4 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-[16/10] relative">
+              <img src="assets/services/software-erp.jpg" alt="Custom Software & Business ERP" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none"></div>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-zinc-950/80 backdrop-blur-sm text-[10px] font-mono text-zinc-300 font-bold uppercase tracking-wider">
+                06 / SOFTWARE
+              </span>
             </div>
 
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600">
-                <i data-lucide="cpu" class="w-6 h-6"></i>
+            <!-- Pillar Badge -->
+            <div class="flex items-center space-x-2 mb-2">
+              <div class="w-6 h-6 rounded-md bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600">
+                <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
               </div>
-              <span class="text-xs font-mono text-zinc-400 uppercase font-bold tracking-wider">06 / SOFTWARE</span>
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-600">Development Pillar</span>
             </div>
-            <h2 class="text-2xl font-extrabold text-zinc-950 mb-3">Custom Software & Business ERP</h2>
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-6">
-              Tailored software systems engineered to streamline agency operations, attendance tracking, lead generation pipelines, and client data management with zero friction.
+
+            <h3 class="text-base sm:text-lg font-extrabold text-zinc-950 leading-snug mb-1.5 group-hover:text-emerald-600 transition-colors">
+              Custom Software & Business ERP
+            </h3>
+            <p class="text-xs text-zinc-600 leading-relaxed mb-3">
+              Tailored software systems, business dashboards, operational ERP pipelines, and data management solutions.
             </p>
-            <div class="space-y-2 mb-8 text-xs font-mono text-zinc-700">
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Custom ERP & Business Dashboards</span>
+
+            <!-- Highlights -->
+            <div class="space-y-1.5 mb-4 text-[11px] font-mono text-zinc-700 border-t border-zinc-100 pt-3">
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Custom ERP & Business Dashboards</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Lead Intelligence & Automated Scraping Funnels</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Lead Automation & Scraping Funnels</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Hardware & RFID Attendance Integrations</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Secure Local & Cloud Database Systems</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Hardware & Cloud Integrations</span>
               </div>
             </div>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Custom%20Software%20or%20ERP%20solutions." target="_blank" class="w-full btn-outline-clean py-3 text-center text-xs flex items-center justify-center space-x-2 hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-200">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>Discuss Custom Software</span>
+
+          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Custom%20Software%20or%20ERP%20solutions." target="_blank" class="w-full btn-outline-clean py-2 text-center text-xs flex items-center justify-center space-x-1.5 font-bold hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-200">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+            <span>Discuss on WhatsApp</span>
           </a>
         </div>
 
-        <!-- Service 7: Print Media & Packaging -->
-        <div class="luxury-card p-6 sm:p-8 bg-white reveal-on-scroll flex flex-col justify-between group">
+        <!-- Service 7: Print Media & Packaging (Design Pillar) -->
+        <div class="service-card luxury-card p-4 sm:p-5 bg-white reveal-on-scroll flex flex-col justify-between group transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-pillar="design">
           <div>
-            <!-- Service Visual -->
-            <div class="mb-6 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-video relative">
-              <img src="assets/services/print-packaging.jpg" alt="Luxury Print Media, Packaging & Corporate Collateral" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"></div>
+            <!-- Visual -->
+            <div class="mb-4 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-[16/10] relative">
+              <img src="assets/services/print-packaging.jpg" alt="Print Media & Packaging" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none"></div>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-zinc-950/80 backdrop-blur-sm text-[10px] font-mono text-zinc-300 font-bold uppercase tracking-wider">
+                07 / PRINT
+              </span>
             </div>
 
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600">
-                <i data-lucide="printer" class="w-6 h-6"></i>
+            <!-- Pillar Badge -->
+            <div class="flex items-center space-x-2 mb-2">
+              <div class="w-6 h-6 rounded-md bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600">
+                <i data-lucide="printer" class="w-3.5 h-3.5"></i>
               </div>
-              <span class="text-xs font-mono text-zinc-400 uppercase font-bold tracking-wider">07 / PRINT</span>
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-600">Design Pillar</span>
             </div>
-            <h2 class="text-2xl font-extrabold text-zinc-950 mb-3">Print Media, Packaging & Collateral</h2>
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-6">
-              Tangible brand collateral designed for flawless, high-DPI offset and digital print execution. From luxury visiting cards to retail product packaging and exhibition hoardings.
+
+            <h3 class="text-base sm:text-lg font-extrabold text-zinc-950 leading-snug mb-1.5 group-hover:text-amber-600 transition-colors">
+              Print Media & Packaging
+            </h3>
+            <p class="text-xs text-zinc-600 leading-relaxed mb-3">
+              High-DPI print collateral, luxury visiting cards, retail packaging boxes, and outdoor exhibition standees.
             </p>
-            <div class="space-y-2 mb-8 text-xs font-mono text-zinc-700">
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Executive Visiting Cards with Spot UV & Foil Ready Vectors</span>
+
+            <!-- Highlights -->
+            <div class="space-y-1.5 mb-4 text-[11px] font-mono text-zinc-700 border-t border-zinc-100 pt-3">
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Visiting Cards with Spot UV & Foil</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Multi-Page Corporate Brochures & Catalogues</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Corporate Brochures & Catalogues</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Custom Retail Product Box & Label Packaging</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Large Format Outdoor Banners & Standees</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Retail Packaging Boxes & Labels</span>
               </div>
             </div>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Print%20Media%20and%20Packaging%20design." target="_blank" class="w-full btn-outline-clean py-3 text-center text-xs flex items-center justify-center space-x-2 hover:bg-amber-50 hover:text-amber-700 hover:border-amber-200">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>Inquire About Print Media</span>
+
+          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Print%20Media%20and%20Packaging%20design." target="_blank" class="w-full btn-outline-clean py-2 text-center text-xs flex items-center justify-center space-x-1.5 font-bold hover:bg-amber-50 hover:text-amber-700 hover:border-amber-200">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+            <span>Inquire on WhatsApp</span>
           </a>
         </div>
 
-        <!-- Service 8: SEO & Local Presence -->
-        <div class="luxury-card p-6 sm:p-8 bg-white reveal-on-scroll flex flex-col justify-between group">
+        <!-- Service 8: SEO & Local Presence (Digital Pillar) -->
+        <div class="service-card luxury-card p-4 sm:p-5 bg-white reveal-on-scroll flex flex-col justify-between group transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-pillar="digital">
           <div>
-            <!-- Service Visual -->
-            <div class="mb-6 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-video relative">
-              <img src="assets/services/local-seo.jpg" alt="Local SEO & Google Business Presence Nashik" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"></div>
+            <!-- Visual -->
+            <div class="mb-4 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 aspect-[16/10] relative">
+              <img src="assets/services/local-seo.jpg" alt="Local SEO & Google Business Presence" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none"></div>
+              <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-zinc-950/80 backdrop-blur-sm text-[10px] font-mono text-zinc-300 font-bold uppercase tracking-wider">
+                08 / SEO
+              </span>
             </div>
 
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-12 h-12 rounded-xl bg-rose-50 border border-rose-200 flex items-center justify-center text-rose-600">
-                <i data-lucide="search" class="w-6 h-6"></i>
+            <!-- Pillar Badge -->
+            <div class="flex items-center space-x-2 mb-2">
+              <div class="w-6 h-6 rounded-md bg-rose-50 border border-rose-200 flex items-center justify-center text-rose-600">
+                <i data-lucide="search" class="w-3.5 h-3.5"></i>
               </div>
-              <span class="text-xs font-mono text-zinc-400 uppercase font-bold tracking-wider">08 / SEO</span>
+              <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-rose-600">Digital Pillar</span>
             </div>
-            <h2 class="text-2xl font-extrabold text-zinc-950 mb-3">Local SEO & Google Business Presence</h2>
-            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-6">
-              Dominate local map searches and high-intent Google queries in Nashik and across targeted regions. Ensure customers finding your category find you first.
+
+            <h3 class="text-base sm:text-lg font-extrabold text-zinc-950 leading-snug mb-1.5 group-hover:text-rose-600 transition-colors">
+              Local SEO & Google Business
+            </h3>
+            <p class="text-xs text-zinc-600 leading-relaxed mb-3">
+              Dominate Google local search results and map rankings in Nashik and targeted regions for local buyer inquiries.
             </p>
-            <div class="space-y-2 mb-8 text-xs font-mono text-zinc-700">
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Google Business Profile Optimization & Verification</span>
+
+            <!-- Highlights -->
+            <div class="space-y-1.5 mb-4 text-[11px] font-mono text-zinc-700 border-t border-zinc-100 pt-3">
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Google Business Profile Verification</span>
               </div>
               <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Local Map Pack 3-Pack Ranking Strategy</span>
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">Local Map 3-Pack Ranking Strategy</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>On-Page Metadata, Speed & Schema Markup</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-                <span>5-Star Review Generation Playbook</span>
+              <div class="flex items-center space-x-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                <span class="truncate">5-Star Review Generation Playbook</span>
               </div>
             </div>
           </div>
-          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Local%20SEO%20and%20Google%20Business%20growth." target="_blank" class="w-full btn-outline-clean py-3 text-center text-xs flex items-center justify-center space-x-2 hover:bg-rose-50 hover:text-rose-700 hover:border-rose-200">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>Inquire About Local SEO</span>
+
+          <a href="https://wa.me/918087084597?text=Hi%20Durvesh,%20I'm%20interested%20in%20Local%20SEO%20and%20Google%20Business%20growth." target="_blank" class="w-full btn-outline-clean py-2 text-center text-xs flex items-center justify-center space-x-1.5 font-bold hover:bg-rose-50 hover:text-rose-700 hover:border-rose-200">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+            <span>Inquire on WhatsApp</span>
           </a>
         </div>
 

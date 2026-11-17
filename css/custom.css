@@ -353,3 +353,53 @@ body {
                     linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   background-size: 36px 36px;
 }
+
+/* 3 Main Pillars Filter Tabs & Compact Service Cards */
+.pillar-tab {
+  background: transparent;
+  color: #52525b;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.pillar-tab:hover {
+  color: #09090b;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.pillar-tab.active {
+  background: #09090b;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.pillar-tab.active .tab-count {
+  background: #ea580c;
+  color: #ffffff;
+}
+
+.pillar-tab .tab-count {
+  background: #e4e4e7;
+  color: #71717a;
+  transition: all 0.2s ease;
+}
+
+/* Service Card Filter Animation */
+.service-card {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.service-card.is-hidden {
+  display: none !important;
+}
+
+.service-card.is-animating-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.service-card.is-animating-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
